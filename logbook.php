@@ -12,8 +12,7 @@
     <?php require_once "inc/menu.inc.php"; ?>
     
     <div class="main">
-        <h2>Sidenav Example</h2>
-        <p>This sidenav is always shown.</p>
+        <h2>Log Drive</h2>
 
         <label>Date</label>
     </div>
