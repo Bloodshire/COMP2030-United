@@ -49,3 +49,10 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  #time1{
+    width: 100px;
+  }
+  #time2{
+    width: 100px;
+  }
