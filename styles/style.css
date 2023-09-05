@@ -1,5 +1,5 @@
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #231f20;
   }
   
@@ -16,15 +16,17 @@ body {
   }
   
   .sidenav a {
-    padding: 6px 6px 6px 32px;
+    padding: 
+    text-align: center;
+    padding: 6px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 14px;
     color: #231f20;
     display: block;
   }
   
   .sidenav a:hover {
-    color: #f1f1f1;
+    background-color: #f1f1f1;
   }
   
   .main {
