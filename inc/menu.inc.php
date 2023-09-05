@@ -1,5 +1,12 @@
-<ul id="menu">
-    <li><a href="index.php">Tasks</a></li>
-    <li><a href="add.php">Add</a></li>
-    <li><a href="history.php">History</a></li>
-</ul>
+<div class="sidenav">
+    <h1>TLDR</h1>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="main">
+    <h2>Sidenav Example</h2>
+    <p>This sidenav is always shown.</p>
+</div>

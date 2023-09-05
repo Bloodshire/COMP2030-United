@@ -8,7 +8,7 @@
     </head>
     <body>
     <?php require_once "inc/menu.inc.php"; ?>
-
+    
     TEST
     </body>
 </html>
