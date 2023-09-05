@@ -13,9 +13,19 @@
     
     <div class="main">
         <h2>Log Drive</h2>
-
+        <hr>
+        <br>
         <label>Date</label>
-    </div>
+        <br>
+        <input type="Date" required>
+        <br>
+        <br>
+        <label>Time</label>
+        <br>
+        <input type="time" required>
+        <input type="time" required>
+        <br>
+        </div>
 </body>
     </body>
 </html>
