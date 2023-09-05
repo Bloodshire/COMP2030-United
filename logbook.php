@@ -10,10 +10,13 @@
 
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
+    
     <div class="main">
         <h2>Sidenav Example</h2>
         <p>This sidenav is always shown.</p>
+
+        <label>Date</label>
     </div>
 </body>
-
+    </body>
 </html>
