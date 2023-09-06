@@ -59,6 +59,45 @@
         }
          </script>
         <br>
+        <Label>Route</Label>
+        <br>
+        <br>
+        <label>From</label>
+        <input type="text" required> 
+        <label>To</label>
+        <input type="text" required> 
+        <br>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418336.63960122806!2d138.2815111742472!3d-35.000321384801715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab735c7c526b33f%3A0x4033654628ec640!2sAdelaide%20SA!5e0!3m2!1sen!2sau!4v1694003301837!5m2!1sen!2sau" 
+        width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br>
+        <br>
+        <label>Conditions</label>
+        <br>
+        <br>
+        
+        <label for="Road Type For">Road Type</label>
+        <label for="Weather For">Weather</label>
+        <label for="Traffic Density For">Traffic Density</label>
+        <br>
+        <select id="RoadTypeID" name="Road Type Name">
+        <option value="S">Sealed</option>
+        <option value="U">Unsealed</option>
+        <option value="Q">Quiet Street</option>
+        <option value="B">Busy Road</option>
+        <option value="ML">Multi-laned Road</option>
+        </select>
+        
+        <select id="WeatherID" name="Weather Name">
+        <option value="D">Dry</option>
+        <option value="W">Wet</option>
+        </select>
+        
+        <select id="TrafficDensityID" name="Traffic Density Name">
+        <option value="L">Light</option>
+        <option value="M">Medium</option>
+        <option value="H">Heavy</option>
+        </select>
         </div>
 </body>
     </body>
