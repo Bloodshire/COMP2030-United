@@ -60,16 +60,19 @@ body {
     margin-bottom: 20px; 
 }
 
-label {
-    display: inline-block;
-    width: 120px; 
-}
+
 
 select {
     display: inline-block;
     width: 200px; 
     margin-right: 20px; 
 }
-  #WeatherID{
-     margin-right: 100px;
-    }
+#WeatherID{
+  margin-right: 50px;
+ }
+ #RoadTypeID{
+  margin-right: 50px;
+ }
+ #TrafficDensityID{
+  margin-right: 50px;
+ }
