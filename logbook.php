@@ -100,6 +100,16 @@
         <option value="M">Medium</option>
         <option value="H">Heavy</option>
         </select>
+    <label>E-Signature</label>
+    <p>Draw your signature below:</p>
+
+    <div id="signature-container">
+        <div id="signature-pad">
+            <canvas></canvas>
+        </div>
+    </div>
+
+    
         </div>
 </body>
     </body>
