@@ -100,6 +100,37 @@
         <option value="M">Medium</option>
         <option value="H">Heavy</option>
         </select>
+        <label>E-Signature</label>
+    <p>Please draw your signature below:</p>
+
+    <div id="signature-container">
+        <div id="signature-pad">
+            <canvas></canvas>
+        </div>
+        <button id="clear-button">Clear</button>
+    </div>
+
+    <form action="your-server-side-script.php" method="POST">
+        <input type="hidden" name="signature" id="signature-data">
+        <button type="submit">Submit Signature</button>
+    </form>
+
+    <script>
+        const canvas = document.querySelector("canvas");
+        const signaturePad = new SignaturePad(canvas);
+        const clearButton = document.querySelector("#clear-button");
+        const signatureDataInput = document.querySelector("#signature-data");
+
+        clearButton.addEventListener("click", () => {
+            signaturePad.clear();
+        });
+
+        document.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const signatureData = signaturePad.toDataURL();
+            signatureDataInput.value = signatureData;
+        });
+    </script>
         </div>
 </body>
     </body>
