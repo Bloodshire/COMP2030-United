@@ -76,3 +76,21 @@ select {
  #TrafficDensityID{
   margin-right: 50px;
  }
+ #signature-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+}
+
+#signature-pad {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000;
+  cursor: crosshair;
+}
+
+#signature-pad canvas {
+  width: 100%;
+  height: 100%;
+}
