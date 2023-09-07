@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Add Drive</title>
+    <title>Log Drive</title>
     <meta charset="utf-8">
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
@@ -12,20 +12,29 @@
 
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    
+
     <div class="main">
         <h2>Log Drive</h2>
         <hr>
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Column 1</h2>
+                <p>Some text..</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                <p>Some text..</p>
+            </div>
+        </div>
         <label>E-Signature</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <p>Draw your signature below:</p>
+        <p>Draw your signature below:</p>
 
         <div id="signature-container">
-        <div id="signature-pad">
-            <canvas></canvas>
-        </div>
+            <div id="signature-pad">
+                <canvas></canvas>
+            </div>
         </div>
         <label>Date</label>
         <br>
@@ -35,84 +44,82 @@
         <label>Time</label>
         <br>
         <br>
-        <label>Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration</label>
+        <label>Start Finish Duration</label>
         <br>
         <Form id="timeForm">
-        <label for="time1"></label>
-        <input type="time" id="time1" required>
-        <label for="time2"></label>
-        <input type="time" id="time2" required>
-        <input type="text" id="resultBox" readonly>
+            <label for="time1"></label>
+            <input type="time" id="time1" required>
+            <label for="time2"></label>
+            <input type="time" id="time2" required>
+            <input type="text" id="resultBox" readonly>
         </Form>
 
-        
+
 
 
         <script>
-        const time1Input = document.getElementById('time1');
-        const time2Input = document.getElementById('time2');
-        const resultBox = document.getElementById('resultBox');
+            const time1Input = document.getElementById('time1');
+            const time2Input = document.getElementById('time2');
+            const resultBox = document.getElementById('resultBox');
 
-        time1Input.addEventListener('input', calculateTimeDifference);
-        time2Input.addEventListener('input', calculateTimeDifference);
+            time1Input.addEventListener('input', calculateTimeDifference);
+            time2Input.addEventListener('input', calculateTimeDifference);
 
-        function calculateTimeDifference() {
-            const time1 = new Date(`2023-09-05T${time1Input.value}`);
-            const time2 = new Date(`2023-09-05T${time2Input.value}`);
+            function calculateTimeDifference() {
+                const time1 = new Date(`2023-09-05T${time1Input.value}`);
+                const time2 = new Date(`2023-09-05T${time2Input.value}`);
 
-            if (isNaN(time1.getTime()) || isNaN(time2.getTime())) {
-                resultBox.value = 'Invalid input';
-            } else {
-                const timeDifference = Math.abs(time2 - time1);
-                const hours = Math.floor(timeDifference / 3600000); // 1 hour = 3600000 milliseconds
-                const minutes = Math.floor((timeDifference % 3600000) / 60000); // 1 minute = 60000 milliseconds
-                resultBox.value = `${hours} hours and ${minutes} minutes`;
+                if (isNaN(time1.getTime()) || isNaN(time2.getTime())) {
+                    resultBox.value = 'Invalid input';
+                } else {
+                    const timeDifference = Math.abs(time2 - time1);
+                    const hours = Math.floor(timeDifference / 3600000); // 1 hour = 3600000 milliseconds
+                    const minutes = Math.floor((timeDifference % 3600000) / 60000); // 1 minute = 60000 milliseconds
+                    resultBox.value = `${hours} hours and ${minutes} minutes`;
+                }
             }
-        }
-         </script>
+        </script>
         <br>
         <Label>Route</Label>
         <br>
         <br>
         <label>From</label>
-        <input type="text" required> 
+        <input type="text" required>
         <label>To</label>
-        <input type="text" required> 
+        <input type="text" required>
         <br>
         <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418336.63960122806!2d138.2815111742472!3d-35.000321384801715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab735c7c526b33f%3A0x4033654628ec640!2sAdelaide%20SA!5e0!3m2!1sen!2sau!4v1694003301837!5m2!1sen!2sau" 
-        width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418336.63960122806!2d138.2815111742472!3d-35.000321384801715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab735c7c526b33f%3A0x4033654628ec640!2sAdelaide%20SA!5e0!3m2!1sen!2sau!4v1694003301837!5m2!1sen!2sau" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <br>
         <br>
         <label>Conditions</label>
         <br>
         <br>
-        
+
         <label for="Road Type For">Road Type</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label for="Weather For">Weather</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label for="Traffic Density For">Traffic Density</label>
         <br>
         <select id="RoadTypeID" name="Road Type Name">
-        <option value="S">Sealed</option>
-        <option value="U">Unsealed</option>
-        <option value="Q">Quiet Street</option>
-        <option value="B">Busy Road</option>
-        <option value="ML">Multi-laned Road</option>
+            <option value="S">Sealed</option>
+            <option value="U">Unsealed</option>
+            <option value="Q">Quiet Street</option>
+            <option value="B">Busy Road</option>
+            <option value="ML">Multi-laned Road</option>
         </select>
-        
+
         <select id="WeatherID" name="Weather Name">
-        <option value="D">Dry</option>
-        <option value="W">Wet</option>
+            <option value="D">Dry</option>
+            <option value="W">Wet</option>
         </select>
-        
+
         <select id="TrafficDensityID" name="Traffic Density Name">
-        <option value="L">Light</option>
-        <option value="M">Medium</option>
-        <option value="H">Heavy</option>
+            <option value="L">Light</option>
+            <option value="M">Medium</option>
+            <option value="H">Heavy</option>
         </select>
-        </div>
+    </div>
 </body>
-    </body>
+</body>
+
 </html>
