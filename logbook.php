@@ -100,59 +100,6 @@
         <option value="M">Medium</option>
         <option value="H">Heavy</option>
         </select>
-        <Label>E-Signature</Label>
-    <p>Draw your signature below:</p>
-
-    <div id="signature-container">
-        <div id="signature-pad">
-            <canvas></canvas>
-        </div>
-    </div>
-
-    <div id="saved-signature">
-        <p>Saved Signature:</p>
-        <img id="signature-image" alt="Saved Signature">
-    </div>
-
-    <script>
-        // JavaScript for handling the signature pad
-        const canvas = document.querySelector("canvas");
-        const signaturePad = new SignaturePad(canvas);
-
-        // Handle drawing events
-        canvas.addEventListener("touchstart", (e) => {
-            signaturePad.handleTouchStart(e);
-        });
-
-        canvas.addEventListener("touchmove", (e) => {
-            signaturePad.handleTouchMove(e);
-        });
-
-        canvas.addEventListener("mousedown", (e) => {
-            signaturePad.handleMouseDown(e);
-        });
-
-        canvas.addEventListener("mousemove", (e) => {
-            signaturePad.handleMouseMove(e);
-        });
-
-        signaturePad.onEnd = () => {
-            const signatureData = signaturePad.toDataURL();
-            const signatureImage = document.querySelector("#signature-image");
-            signatureImage.src = signatureData;
-        };
-    </script>
-    
-
-
-
-
-
-
-
-
-
-
         </div>
 </body>
     </body>
