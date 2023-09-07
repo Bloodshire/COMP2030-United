@@ -1,90 +1,101 @@
 body {
-    font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #231f20;
-  }
-  
-  .nav-bar-title {
-    font-size: 25px;
-    text-align: center;
-    padding-bottom: 10px;
-  }
-
-  .sidenav {
-    height: 100%;
-    width: 84px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #ffcb08;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-
-  .logout {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
- .sidenav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidenav a {
-    text-align: center;
-    padding: 15px 6px;
-    text-decoration: none;
-    font-size: 14px;
-    color: white;
-    display: block;
-    background-color: #231f20;
-  }
-  
-  .sidenav a:hover {
-    color: #231f20;
-    background-color: #f1f1f1;
-  }
-
-  
-  .main {
-    margin-left: 150px; /* Same as the width of the sidenav */
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-  #time1{
-    width: 100px;
-  }
-  #time2{
-    width: 100px;
-  }
-  .input-container {
-    margin-bottom: 20px; 
+  font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #231f20;
 }
 
+.nav-bar-title {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 
+.sidenav {
+  height: 100%;
+  width: 84px;
+  position: fixed;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  background-color: #ffcb08;
+  overflow-x: hidden;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav i {
+  padding-bottom: 15px;
+}
+
+.sidenav a {
+  /* line-height: 18px; */
+  text-align: center;
+  padding: 15px 6px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  display: block;
+  background-color: #231f20;
+}
+
+.sidenav a:hover {
+  color: #231f20;
+  background-color: #f1f1f1;
+}
+
+#menu .selected {
+  color: #231f20;
+  background-color: #ffffff;
+}
+
+.main {
+  margin-left: 150px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#time1 {
+  width: 100px;
+}
+#time2 {
+  width: 100px;
+}
+.input-container {
+  margin-bottom: 20px;
+}
 
 select {
-    display: inline-block;
-    width: 200px; 
-    margin-right: 20px; 
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
 }
-#WeatherID{
+#WeatherID {
+  margin-right: 50px;
+}
+#RoadTypeID {
+  margin-right: 50px;
+}
+#TrafficDensityID {
   margin-right: 50px;
  }
- #RoadTypeID{
-  margin-right: 50px;
- }
- #TrafficDensityID{
-  margin-right: 50px;
- }
- 
  #signature-container {
   width: 100%;
   max-width: 300px;
