@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    
+
     <?php require_once "inc/menu.inc.php"; ?>
     <h2>Log Drive</h2>
     <hr>
