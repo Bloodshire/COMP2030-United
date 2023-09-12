@@ -60,6 +60,7 @@
             <div>
                 <label for="Road Type For">Road Type</label>
                 <select id="RoadTypeID" name="Road Type Name">
+                    <option value="Select">Select</option>
                     <option value="S">Sealed</option>
                     <option value="U">Unsealed</option>
                     <option value="Q">Quiet Street</option>
@@ -70,6 +71,7 @@
             <div>
                 <label for="Weather For">Weather</label>
                 <select id="WeatherID" name="Weather Name">
+                    <option value="Select">Select</option>
                     <option value="D">Dry</option>
                     <option value="W">Wet</option>
                 </select>
@@ -77,6 +79,7 @@
             <div>
                 <label for="Traffic Density For">Traffic Density</label>
                 <select id="TrafficDensityID" name="Traffic Density Name">
+                    <option value="Select">Select</option>
                     <option value="L">Light</option>
                     <option value="M">Medium</option>
                     <option value="H">Heavy</option>
