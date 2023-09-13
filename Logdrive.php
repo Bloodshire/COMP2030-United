@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <title>Log Drive</title>
     <meta charset="utf-8">
