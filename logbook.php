@@ -99,7 +99,9 @@
                 </div>
             </div>
             <br>
+            <a href="logdrive.php">
             <button class="back-button" type="button">Back</button>
+            </a>
             <br>
             <input type="submit" class="sub-button" value="Submit Drive" />
             

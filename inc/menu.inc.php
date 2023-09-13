@@ -4,7 +4,7 @@
     <h1 class="nav-bar-title">TLDR</h1>
     <ul>
     <li><a href="dashboard.php"><i class="fa-xl fa-solid fa-house"></i><br>Dashboard</a></li>
-    <li><a href="logbook.php"><i class="fa-xl fa-solid fa-car-side"></i><br>Logbook</a></li>
+    <li><a href="logdrive.php"><i class="fa-xl fa-solid fa-car-side"></i><br>Logbook</a></li>
     <li><a href="cbta.php"><i class="fa-xl fa-solid fa-book"></i><br>CBT&A</a></li>
     <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li>
     <li><a href="drivesummary.php"><i class="fa-xl fa-regular fa-clipboard"></i><br>Drive Summary</a></li>
