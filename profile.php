@@ -5,6 +5,8 @@
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/edit-and-save-details.js" defer></script>
+
 </head>
 
 <html>
@@ -15,23 +17,37 @@
     <br>
     <label>First Name</label>
     <br>
-    <input type="text" value="John">
+    <br>
+    <input type="text" value="John" id="firstName" readonly>
+    <br>
     <br>
     <label>Last Name</label>
     <br>
-    <input type="text" value="Doe">
+    <br>
+    <input type="text" value="Doe" id="lastName" readonly>
+    <br>
     <br>
     <label>Email</label>
     <br>
-    <input type="text" value="example@gmail.com">
+    <br>
+    <input type="text" value="example@gmail.com" id="email" readonly>
+    <br>
     <br>
     <label>Password</label>
     <br>
-    <input type="text" value="********">
+    <br>
+    <input type="text" value="********" id="password" readonly>
+    <br>
     <br>
     <label>Permit Number</label>
     <br>
-    <input type="text" value="T1876">
-
+    <br>
+    <input type="text" value="T1876" id="permitNumber" readonly>
+    <br>
+    <br>
+    <button class="edit-details-button" type="button" onclick="enableEdit()">Edit Details</button>
+    <br>
+    <br>
+    <button class="save-details-button" type="button" onclick="saveDetails()">Save Details</button>
 </body>
 </html>
