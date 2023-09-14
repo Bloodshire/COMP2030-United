@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Log Drive</title>
     <meta charset="utf-8">
@@ -10,15 +11,15 @@
 </head>
 
 <html>
+
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>  
+    <?php require_once "inc/menu.inc.php"; ?>
+    <h1>Progress & Hours</h1>
+    <hr>
 
 
 
 
-
-
-
-    
 </body>
+
 </html>
