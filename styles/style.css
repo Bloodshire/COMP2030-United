@@ -177,3 +177,240 @@ div label {
   color: white;
   border: 2px solid #4CAF50;
 }
+.back-button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #000000;
+}
+.top-buttons {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.logbook-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.logbook-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.view-logbook-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.view-logbook-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+.edit-details-button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.edit-details-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.save-details-button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.save-details-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.centre-payments {
+  text-align: center;
+  margin-top: 200px; 
+}
+.paypal{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.paypal:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.mastercard{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.mastercard:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.visa{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.visa:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.venmo{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.venmo:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.apple-pay{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.apple-pay:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.efpos{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.efpos:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.payments-b {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.payments-b:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}

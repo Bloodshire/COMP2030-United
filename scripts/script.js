@@ -26,8 +26,8 @@ function calculateTimeDifference() {
         resultBox.value = 'Invalid input';
     } else {
         const timeDifference = Math.abs(time2 - time1);
-        const hours = Math.floor(timeDifference / 3600000); // 1 hour = 3600000 milliseconds
-        const minutes = Math.floor((timeDifference % 3600000) / 60000); // 1 minute = 60000 milliseconds
+        const hours = Math.floor(timeDifference / 3600000); 
+        const minutes = Math.floor((timeDifference % 3600000) / 60000);
         resultBox.value = `${hours} hours and ${minutes} minutes`;
     }
 }
