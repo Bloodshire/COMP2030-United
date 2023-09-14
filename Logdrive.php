@@ -99,9 +99,7 @@
                 </div>
             </div>
             <br>
-            <a href="logbook.php">
-            <button class="btn-custom btn-black" type="button">Back</button>
-            </a>
+            <a href="logbook.php"><button class="btn-custom btn-black" type="button">Back</button></a>
             <input type="submit" class="btn-custom" value="Submit Drive" />
             
 
