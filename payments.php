@@ -16,14 +16,14 @@
     <div class="centre">
     <label><b>Payment options</b></label>
     <br>
-    <button class="btn-custom btn-black" type="button">Paypal</button>
-    <a href="mastercard.php"><button class="btn-custom btn-black" type="button">Mastercard</button></a>
-    <button class="btn-custom btn-black" type="button">Visa</button>
+    <button class="btn-custom btn-black" type="button"><i class="fa-brands fa-paypal"></i> Paypal</button>
+    <a href="mastercard.php"><button class="btn-custom btn-black" type="button"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</button></a>
+    <button class="btn-custom btn-black" type="button"><i class="fa-brands fa-cc-visa"></i> Visa</button>
     <br>    
     <br>
     <button class="btn-custom btn-black" type="button">Venmo</button>
-    <button class="btn-custom btn-black" type="button">Apple Pay</button>
-    <button class="btn-custom btn-black" type="button">Efpos</button>
+    <button class="btn-custom btn-black" type="button"><i class="fa-brands fa-apple"></i> Apple Pay</button>
+    <button class="btn-custom btn-black" type="button">Eftpos</button>
     </div>
 </body>
 </html>

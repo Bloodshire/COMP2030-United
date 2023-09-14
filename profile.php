@@ -42,8 +42,8 @@
         <input type="text" value="T1876" id="permitNumber" readonly>
     </div>
     <br>
-    <button class="btn-custom btn-black" type="button" onclick="enableEdit()">Edit Details</button>
-    <button class="btn-custom btn-black" type="button" onclick="saveDetails()" disabled>Save Details</button>
+    <button class="btn-custom btn-black" type="button" onclick="enableEdit()"><i class="fa-solid fa-pen-to-square"></i> Edit Details</button>
+    <button class="btn-custom btn-black" type="button" onclick="saveDetails()" disabled><i class="fa-solid fa-floppy-disk"></i> <i class="fa-solid fa-floppy-disk"></i>Save Details</button>
 </body>
 
 </html>

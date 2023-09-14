@@ -52,8 +52,8 @@
     </div>
     <br>
     <br>
-    <a href="payments.php"><input type="button" class="btn-custom btn-black" value="Back"></a>
-    <input type="submit" class="btn-custom bold" value="Submit" />
+    <a href="payments.php"><button type="button" class="btn-custom btn-black"><i class="fa-solid fa-chevron-left"></i> Back</button></a>
+    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
 </form>
 </body>
 
