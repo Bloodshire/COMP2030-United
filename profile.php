@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Log Drive</title>
     <meta charset="utf-8">
@@ -10,42 +11,39 @@
 </head>
 
 <html>
+
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
     <h1>Profile</h1>
     <hr>
     <br>
-    <label>First Name</label>
+    <div>
+        <label class="section-header">First name</label>
+        <input type="text" value="John" id="firstName" readonly>
+    </div>
     <br>
+    <div>
+        <label class="section-header">Last name</label>
+        <input type="text" value="Doe" id="lastName" readonly>
+    </div>
     <br>
-    <input type="text" value="John" id="firstName" readonly>
+    <div>
+        <label class="section-header">Email</label>
+        <input type="text" value="example@gmail.com" id="email" readonly>
+    </div>
     <br>
+    <div>
+        <label class="section-header">Password</label>
+        <input type="password" value="password123" id="password" readonly>
+    </div>
     <br>
-    <label>Last Name</label>
-    <br>
-    <br>
-    <input type="text" value="Doe" id="lastName" readonly>
-    <br>
-    <br>
-    <label>Email</label>
-    <br>
-    <br>
-    <input type="text" value="example@gmail.com" id="email" readonly>
-    <br>
-    <br>
-    <label>Password</label>
-    <br>
-    <br>
-    <input type="text" value="********" id="password" readonly>
-    <br>
-    <br>
-    <label>Permit Number</label>
-    <br>
-    <br>
-    <input type="text" value="T1876" id="permitNumber" readonly>
-    <br>
+    <div>
+        <label class="section-header">Permit number</label>
+        <input type="text" value="T1876" id="permitNumber" readonly>
+    </div>
     <br>
     <button class="btn-custom btn-black" type="button" onclick="enableEdit()">Edit Details</button>
     <button class="btn-custom btn-black" type="button" onclick="saveDetails()" disabled>Save Details</button>
 </body>
+
 </html>
