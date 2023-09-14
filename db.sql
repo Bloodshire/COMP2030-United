@@ -58,11 +58,10 @@ CREATE TABLE pending_entries (
 );
 
 CREATE user IF NOT EXISTS dbadmin@localhost;
-GRANT all privileges ON TLDR.Account TO dbadmin@localhost;
-GRANT all privileges ON TLDR.Logbook TO dbadmin@localhost;
-GRANT all privileges ON TLDR.Learner TO dbadmin@localhost;
-GRANT all privileges ON TLDR.Instructor TO dbadmin@localhost;
-GRANT all privileges ON TLDR.QSD TO dbadmin@localhost;
+GRANT all privileges ON TLDR.users TO dbadmin@localhost;
+GRANT all privileges ON TLDR.roles TO dbadmin@localhost;
+GRANT all privileges ON TLDR.logbook TO dbadmin@localhost;
+GRANT all privileges ON TLDR.pending_entries TO dbadmin@localhost;
 
 -- Insert users into the 'roles' table
 INSERT INTO roles (role_name) VALUES
@@ -72,9 +71,9 @@ INSERT INTO roles (role_name) VALUES
 
 -- Insert users into the 'users' table with their respective roles and hashed passwords
 INSERT INTO users (email, password, full_name, role_id) VALUES
-    ('instructor1@example.com', PASSWORD('password1'), 'Instructor 1', 1), -- Instructor
-    ('instructor2@example.com', PASSWORD('password2'), 'Instructor 2', 1), -- Instructor
-    ('qsd1@example.com', PASSWORD('password3'), 'QSD 1', 2),             -- Qualified Supervisor Driver
-    ('qsd2@example.com', PASSWORD('password4'), 'QSD 2', 2),             -- Qualified Supervisor Driver
-    ('student1@example.com', PASSWORD('password5'), 'Student 1', 3),     -- Student
-    ('student2@example.com', PASSWORD('password6'), 'Student 2', 3);     -- Student
+    ('instructor1@example.com', 'password1', 'Instructor 1', 1),
+    ('instructor2@example.com', PASSWORD('password2'), 'Instructor 2', 1),
+    ('qsd1@example.com', PASSWORD('password3'), 'QSD 1', 2),
+    ('qsd2@example.com', PASSWORD('password4'), 'QSD 2', 2),
+    ('student1@example.com', PASSWORD('password5'), 'Student 1', 3), 
+    ('student2@example.com', PASSWORD('password6'), 'Student 2', 3); 
