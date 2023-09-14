@@ -17,7 +17,9 @@
     <label><b>Payment options</b></label>
     <br>
     <button class="paypal" type="button">Paypal</button>
+    <a href="mastercard.php">
     <button class="mastercard" type="button">Mastercard</button>
+    </a>
     <button class="visa" type="button">Visa</button>
     <br>    
     <br>
