@@ -256,9 +256,67 @@ div label {
   border: 2px solid black !important;
 }
 
+.btn-red {
+  background-color: red;
+  border: 2px solid red !important;
+}
+
 .centre {
   text-align: center;
   margin-top: 200px; 
+}
+
+.modal {
+  margin: 100px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.modal h2 { margin-top: 0; }
+.modal .content {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay .cancel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*  UNNECESSARY STYLES

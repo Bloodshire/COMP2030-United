@@ -100,10 +100,21 @@
             </div>
             <br>
             <a href="logbook.php"><button class="btn-custom btn-black" type="button">Back</button></a>
-            <input type="submit" class="btn-custom" value="Submit Drive" />
-
-
+            <a href="#modal1" class="button"><input type="button" class="btn-custom" value="Submit Drive" /></a>
         </div>
+
+        <div id="modal1" class="overlay">
+            <a class="cancel" href="#"></a>
+            <div class="modal centre">
+            <!-- <a href="#"><span class="close">&times;</span></a> -->
+                <h2>Are you sure you want to submit the drive?</h2>
+                <div class="content">
+                    <a href="#"><button class="btn-custom btn-red" type="button">Cancel</button></a>
+                    <input type="submit" class="btn-custom" value="Submit" />
+                </div>
+            </div>
+        </div>
+
         </form>
 </body>
 
