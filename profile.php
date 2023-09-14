@@ -46,8 +46,6 @@
     <br>
     <br>
     <button class="btn-custom btn-black" type="button" onclick="enableEdit()">Edit Details</button>
-    <br>
-    <br>
-    <button class="btn-custom btn-black" type="button" onclick="saveDetails()">Save Details</button>
+    <button class="btn-custom btn-black" type="button" onclick="saveDetails()" disabled>Save Details</button>
 </body>
 </html>

@@ -102,7 +102,6 @@
             <a href="logbook.php">
             <button class="btn-custom btn-black" type="button">Back</button>
             </a>
-            <br>
             <input type="submit" class="btn-custom" value="Submit Drive" />
             
 

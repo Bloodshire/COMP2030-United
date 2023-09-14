@@ -241,6 +241,13 @@ div label {
   color: black;
 }
 
+.btn-custom[disabled] {
+  color: lightgray !important;
+  background-color: #807478 !important;
+  cursor:default;
+  border: 0px !important;
+}
+
 .btn-black {
   background-color: black;
   border: 2px solid black !important;
