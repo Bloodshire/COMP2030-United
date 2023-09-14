@@ -14,9 +14,9 @@
     <hr>
     <br>
     <div class="top-buttons">
-        <button class="view-logbook-button" type="button">View My Logbook</button>
+        <button class="btn-custom" type="button">View My Logbook</button>
         <a href="logdrive.php">
-            <button class="logbook-button" type="button">Log a Drive</button>
+            <button class="btn-custom" type="button">Log a Drive</button>
         </a>
     </div>
 

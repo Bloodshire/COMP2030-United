@@ -100,10 +100,10 @@
             </div>
             <br>
             <a href="logbook.php">
-            <button class="back-button" type="button">Back</button>
+            <button class="btn-custom btn-black" type="button">Back</button>
             </a>
             <br>
-            <input type="submit" class="sub-button" value="Submit Drive" />
+            <input type="submit" class="btn-custom" value="Submit Drive" />
             
 
         </div>
