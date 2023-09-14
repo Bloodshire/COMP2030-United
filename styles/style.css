@@ -278,3 +278,121 @@ div label {
   color: black;
   border: 2px solid black;
 }
+.centre-payments {
+  text-align: center;
+  margin-top: 200px; 
+}
+.paypal{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.paypal:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.mastercard{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.mastercard:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.visa{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.visa:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.venmo{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.venmo:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.apple-pay{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.apple-pay:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.efpos{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 100px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.efpos:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
