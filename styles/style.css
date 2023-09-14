@@ -253,6 +253,12 @@ div label {
   border: 2px solid black !important;
 }
 
+.centre {
+  text-align: center;
+  margin-top: 200px; 
+}
+
+/*  UNNECESSARY STYLES
 .view-logbook-button {
   background-color: #4CAF50;
   border: none;
@@ -310,10 +316,7 @@ div label {
   color: black;
   border: 2px solid black;
 }
-.centre-payments {
-  text-align: center;
-  margin-top: 200px; 
-}
+
 .paypal{
   background-color: black;
   border: none;
@@ -429,7 +432,7 @@ div label {
   border: 2px solid black;
 }
 .payments-b {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -441,8 +444,9 @@ div label {
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
 .payments-b:hover {
   background-color: white; 
   color: black; 
   border: 2px solid #4CAF50;
-}
+} */

@@ -52,10 +52,8 @@
     <input type="text" value="Account Number" required>
     <br>
     <br>
-    <a href="payments.php">
-    <button class="btn-custom btn-black">Back</button>
-    </a>
-    <input type="submit" class="btn-custom" value="Submit Drive" />
+    <a href="payments.php"><button class="btn-custom btn-black">Back</button></a>
+    <input type="submit" class="btn-custom" value="Submit" />
 
 </body>
 </html>

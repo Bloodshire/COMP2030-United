@@ -13,7 +13,7 @@
     <h1>Payments</h1>
     <hr>
     <br>
-    <div class="centre-payments">
+    <div class="centre">
     <label><b>Payment options</b></label>
     <br>
     <button class="btn-custom btn-black" type="button">Paypal</button>
