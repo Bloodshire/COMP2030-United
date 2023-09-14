@@ -6,6 +6,9 @@ body {
 
 }
 
+h1 {
+  padding-top: 20px;
+}
 
 .nav-bar-title {
   font-size: 25px;
