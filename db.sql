@@ -16,7 +16,8 @@ CREATE TABLE Logbook (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     approved BIT DEFAULT 0,
     learner_id INT NOT NULL,
-    QSD_id INT NOT NULL,
+    QSD_id INT NULL,
+    instructor_id INT NULL,
     date DATE NOT NULL,
     startTime TIME NOT NULL,
     finishTime TIME NOT NULL,
@@ -27,7 +28,8 @@ CREATE TABLE Logbook (
     weather_condition VARCHAR(255) NOT NULL,
     traffic_condition VARCHAR(255) NOT NULL,
     FOREIGN KEY (learner_id) REFERENCES Learner(learner_id),
-    FOREIGN KEY (QSD_id) REFERENCES QSD(QSD_id)
+    FOREIGN KEY (QSD_id) REFERENCES QSD(QSD_id),
+    FOREIGN KEY (instructor_id) REFERENCES Instructor(instructor_id)
 );
 
 CREATE TABLE Instructor (
@@ -45,6 +47,8 @@ CREATE TABLE Learner (
     permitNo VARCHAR(255) NOT NULL,
     firstName VARCHAR(255) NOT NULL,
     lastName VARCHAR(255) NOT NULL,
+    foreignCountry VARCHAR(255) NULL,
+    yearsHeld INT NULL,
     FOREIGN KEY (account_id) REFERENCES account(account_id)
 );
 
@@ -58,7 +62,12 @@ CREATE TABLE QSD (
 );
 
 CREATE user IF NOT EXISTS dbadmin@localhost;
-GRANT all privileges ON Practical3.Task TO dbadmin@localhost;
+GRANT all privileges ON TLDR.Account TO dbadmin@localhost;
+GRANT all privileges ON TLDR.Logbook TO dbadmin@localhost;
+GRANT all privileges ON TLDR.Learner TO dbadmin@localhost;
+GRANT all privileges ON TLDR.Instructor TO dbadmin@localhost;
+GRANT all privileges ON TLDR.QSD TO dbadmin@localhost;
+
 
 -- INSERT INTO Task(name) VALUES('Complete Checkpoint 1');
 -- INSERT INTO Task(name) VALUES('Complete Checkpoint 2');
