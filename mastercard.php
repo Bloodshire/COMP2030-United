@@ -52,7 +52,7 @@
     <input type="text" value="Account Number" required>
     <br>
     <br>
-    <input type="submit" class="sub-button-payments" value="Submit Drive" />
+    <input type="submit" class="payments-b" value="Submit Drive" />
 
 </body>
 </html>

@@ -396,7 +396,7 @@ div label {
   color: black;
   border: 2px solid black;
 }
-.sub-button-payments {
+.payments-b {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -409,8 +409,7 @@ div label {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-
-.sub-button-payments:hover {
+.payments-b:hover {
   background-color: white; 
   color: black; 
   border: 2px solid #4CAF50;
