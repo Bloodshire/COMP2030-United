@@ -1,7 +1,7 @@
 <?php
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "Practical3");
+define("DB_NAME", "TLDR");
 define("DB_USER", "dbadmin");
 define("DB_PASS", "");
 
