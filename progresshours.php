@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Log Drive</title>
+    <title>Progress & Hours</title>
     <meta charset="utf-8">
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
@@ -14,8 +14,6 @@
 
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    <h1>Progress & Hours</h1>
-    <hr>
 
 
 

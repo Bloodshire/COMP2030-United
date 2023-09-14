@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Log Drive</title>
+    <title>Profile</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Callum">
     <link rel="stylesheet" href="styles/style.css">
@@ -14,9 +14,6 @@
 
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    <h1>Profile</h1>
-    <hr>
-    <br>
     <div>
         <label class="section-header">First name</label>
         <input type="text" value="John" id="firstName" readonly>

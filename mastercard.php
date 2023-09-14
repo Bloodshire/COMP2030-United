@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Log Drive</title>
+    <title>Mastercard</title>
     <meta charset="utf-8">
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
@@ -13,9 +13,6 @@
 
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    <h1>Mastercard</h1>
-    <hr>
-    <br>
     <form>
     <div>
         <label class="section-header">Card number</label>

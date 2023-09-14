@@ -13,3 +13,6 @@
     </ul>
     <div class="logout"><a href="logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>    
 </div>
+
+<h1 id="page-heading"></h1>
+    <hr>

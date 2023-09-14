@@ -12,9 +12,6 @@
 <html>
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    <h1>CBT&A</h1>
-    <hr>
-
 
 
 

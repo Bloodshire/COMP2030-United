@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Log Book</title>
+    <title>Log Drive</title>
     <meta charset="utf-8">
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
@@ -12,9 +12,6 @@
 
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    <h1>Log Drive</h1>
-    <hr>
-    <br>
     <div class="row">
         <div class="column">
             <form id="logbook-entry" method="POST">

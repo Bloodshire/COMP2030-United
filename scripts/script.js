@@ -1,7 +1,11 @@
 function setMenuSelected()
 {
     const menu = document.querySelectorAll("#menu a");
-    const menuSelected = document.querySelector("#menu-selected")
+    const menuSelected = document.querySelector("#menu-selected");
+    const pageHeading = document.querySelector("#page-heading");
+
+    pageHeading.innerHTML = document.title.toString();
+
     for (let opt of menu) {
         if (menuSelected.href.includes(opt.href)) {
             opt.classList.add("selected");

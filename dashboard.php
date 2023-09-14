@@ -12,8 +12,6 @@
 <html>
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
-    <h1>Dashboard</h1>
-    <hr>
 
 
 
