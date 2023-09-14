@@ -12,7 +12,6 @@
     <?php require_once "inc/menu.inc.php"; ?>
     <h1>Payments</h1>
     <hr>
-    <br>
     <div class="centre">
     <label><b>Payment options</b></label>
     <br>

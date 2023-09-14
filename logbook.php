@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Log Drive</title>
     <meta charset="utf-8">
@@ -8,12 +9,14 @@
 </head>
 
 <html>
+
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
     <h1>Log Book</h1>
     <hr>
-    <br>
-    <div class="top-buttons">
+    <div class="centre">
+        <label><b>Log book options</b></label>
+        <br>
         <button class="btn-custom" type="button">View My Logbook</button>
         <a href="logdrive.php">
             <button class="btn-custom" type="button">Log a Drive</button>
@@ -50,4 +53,5 @@
 
 
 </body>
+
 </html>
