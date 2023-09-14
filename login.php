@@ -9,15 +9,16 @@
     <script src="scripts/script.js" defer></script>
 </head>
 
-<body id="loginBody">
+<body class="loginBody">
 
     <div id="loginContainer">
 
-        <form id="loginForm" method="POST" action="dashboard.php">
+        <form id="loginForm" method="POST" action="login_process.php">
             <h1>Login</h1>
             <div id="loginInputs">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
+                <input type="submit" value="LOGIN">
             </div>
             <a href="register.php">Register</a>
             <a href="forgot.php">Forgot Password</a>
