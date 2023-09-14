@@ -17,7 +17,7 @@
     <br>
     <div class="row">
         <div class="column">
-            <form>
+            <form id="logbook-entry" method="POST">
                 <div>
                     <label class="section-header">Date</label>
                     <input type="date" required />
@@ -47,11 +47,11 @@
                 <label class="section-header">Route</Label>
                 <div>
                     <label>From</label>
-                    <input type="text" required>
+                    <input type="text" placeholder="e.g. Mt Barker" required>
                 </div>
                 <div>
                     <label>To</label>
-                    <input type="text" required>
+                    <input type="text" placeholder="e.g. Port Adelaide" required>
                 </div>
                 <br>
                 <br>
