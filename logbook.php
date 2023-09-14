@@ -15,7 +15,7 @@
     <h1>Log Book</h1>
     <hr>
     <div class="centre">
-        <label><b>Log book options</b></label>
+        <label><b>Logbook options</b></label>
         <br>
         <button class="btn-custom" type="button">View My Logbook</button>
         <a href="logdrive.php">
