@@ -7,10 +7,10 @@
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
+    <a href="logbook.php" id="menu-selected"></a>
 </head>
 
 <body>
-
     <?php require_once "inc/menu.inc.php"; ?>
     <h1>Log Drive</h1>
     <hr>
@@ -27,18 +27,18 @@
                 <div>
                     <label for="timeForm" class="section-header">Time</label>
                     <!-- <form id="timeForm"> -->
-                        <div>
-                            <label>Start</label>
-                            <input type="time" id="time1" required>
-                        </div>
-                        <div>
-                            <label>Finish</label>
-                            <input type="time" id="time2" required>
-                        </div>
-                        <div>
-                            <label>Duration</label>
-                            <input type="text" id="resultBox" readonly>
-                        </div>
+                    <div>
+                        <label>Start</label>
+                        <input type="time" id="time1" required>
+                    </div>
+                    <div>
+                        <label>Finish</label>
+                        <input type="time" id="time2" required>
+                    </div>
+                    <div>
+                        <label>Duration</label>
+                        <input type="text" id="resultBox" readonly>
+                    </div>
                     <!-- </form> -->
                 </div>
                 <br>
@@ -101,7 +101,7 @@
             <br>
             <a href="logbook.php"><button class="btn-custom btn-black" type="button">Back</button></a>
             <input type="submit" class="btn-custom" value="Submit Drive" />
-            
+
 
         </div>
         </form>

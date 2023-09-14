@@ -6,11 +6,13 @@
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
+    <a href="logbook.php" id="menu-selected"></a>
 </head>
 
 <html>
 
 <body>
+
     <?php require_once "inc/menu.inc.php"; ?>
     <h1>Log Book</h1>
     <hr>

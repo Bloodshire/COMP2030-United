@@ -1,8 +1,9 @@
 function setMenuSelected()
 {
     const menu = document.querySelectorAll("#menu a");
+    const menuSelected = document.querySelector("#menu-selected")
     for (let opt of menu) {
-        if (document.location.href.includes(opt.href)) {
+        if (menuSelected.href.includes(opt.href)) {
             opt.classList.add("selected");
             break;
         }

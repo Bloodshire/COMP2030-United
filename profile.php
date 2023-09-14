@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
     <script src="scripts/edit-and-save-details.js" defer></script>
-
+    <a href="profile.php" id="menu-selected"></a>
 </head>
 
 <html>

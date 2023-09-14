@@ -6,6 +6,7 @@
     <meta name="Authors" content=" Callum and Michael">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
+    <a href="payments.php" id="menu-selected"></a>
 </head>
 
 <html>
