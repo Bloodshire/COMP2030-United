@@ -14,6 +14,8 @@
     <hr>
     <br>
     <div class="centre-payments">
+    <label><b>Payment options</b></label>
+    <br>
     <button class="paypal" type="button">Paypal</button>
     <button class="mastercard" type="button">Mastercard</button>
     <button class="visa" type="button">Visa</button>
