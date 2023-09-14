@@ -16,24 +16,25 @@
     <h1>Mastercard</h1>
     <hr>
     <br>
+    <form>
     <div>
         <label class="section-header">Card number</label>
-        <input type="text" value="Card Number" required>
+        <input type="number" placeholder="5555 5555 5555 4444" required>
     </div>
     <br>
     <div>
         <label class="section-header">Expiry date</label>
-        <input type="text" value="MM/YY" required>
+        <input type="text" placeholder="MM/DD" required>
     </div>
     <br>
     <div>
         <label class="section-header">Card security number</label>
-        <input type="text" value="MM/YY" required>
+        <input type="number" placeholder="333" required>
     </div>
     <br>
     <div>
         <label class="section-header">Amount</label>
-        <input type="number" value="amount" required>
+        <input type="number" placeholder="$105.05" required>
     </div>
     <br>
     <br>
@@ -42,18 +43,18 @@
     <br>
     <div>
         <label class="section-header">BSB</label>
-        <input type="text" value="BSB" required>
+        <input type="text" placeholder="306-123" required>
     </div>
     <br>
     <div>
         <label class="section-header">Account number</label>
-        <input type="text" value="Account Number" required>
+        <input type="number" placeholder="0001234" required>
     </div>
     <br>
     <br>
-    <a href="payments.php"><button class="btn-custom btn-black">Back</button></a>
+    <a href="payments.php"><input type="button" class="btn-custom btn-black" value="Back"></a>
     <input type="submit" class="btn-custom" value="Submit" />
-
+</form>
 </body>
 
 </html>
