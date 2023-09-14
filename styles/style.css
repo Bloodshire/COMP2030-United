@@ -241,7 +241,17 @@ div label {
 
 .btn-custom:hover {
   background-color: white;
+  color: #4CAF50;
+}
+
+.btn-black:hover {
+  background-color: white;
   color: black;
+}
+
+.btn-red:hover {
+  background-color: white;
+  color: red;
 }
 
 .btn-custom[disabled] {

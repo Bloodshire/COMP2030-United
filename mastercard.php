@@ -53,7 +53,7 @@
     <br>
     <br>
     <a href="payments.php"><input type="button" class="btn-custom btn-black" value="Back"></a>
-    <input type="submit" class="btn-custom" value="Submit" />
+    <input type="submit" class="btn-custom bold" value="Submit" />
 </form>
 </body>
 
