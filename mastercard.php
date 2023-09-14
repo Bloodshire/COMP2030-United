@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Log Drive</title>
     <meta charset="utf-8">
@@ -8,52 +9,50 @@
 </head>
 
 <html>
+
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
     <h1>Mastercard</h1>
     <hr>
     <br>
-    <label>Card Number</label>
+    <div>
+        <label class="section-header">Card number</label>
+        <input type="text" value="Card Number" required>
+    </div>
+    <br>
+    <div>
+        <label class="section-header">Expiry date</label>
+        <input type="text" value="MM/YY" required>
+    </div>
+    <br>
+    <div>
+        <label class="section-header">Card security number</label>
+        <input type="text" value="MM/YY" required>
+    </div>
+    <br>
+    <div>
+        <label class="section-header">Amount</label>
+        <input type="number" value="amount" required>
+    </div>
     <br>
     <br>
-    <input type="text" value="Card Number" required>
+    <label class="section-header bold">Recipient</label>
     <br>
     <br>
-    <label>Expiry Date</label>
+    <div>
+        <label class="section-header">BSB</label>
+        <input type="text" value="BSB" required>
+    </div>
     <br>
-    <br>
-    <input type="text" value="MM/YY" required>
-    <br>
-    <br>
-    <label>Card Security Number</label>
-    <br>
-    <br>
-    <input type="text" value="Card Security Number" required>
-    <br>
-    <br>
-    <label>Amount</label>
-    <br>
-    <br>
-    <input type="number" value="amount" required>
-    <br>
-    <br>
-    <label><b>Recipient</b></label>
-    <br>
-    <br>
-    <label>BSB</label>
-    <br>
-    <br>
-    <input type="text" value="BSB" required>
-    <br>
-    <br>
-    <label>Account Number</label>
-    <br>
-    <br>
-    <input type="text" value="Account Number" required>
+    <div>
+        <label class="section-header">Account number</label>
+        <input type="text" value="Account Number" required>
+    </div>
     <br>
     <br>
     <a href="payments.php"><button class="btn-custom btn-black">Back</button></a>
     <input type="submit" class="btn-custom" value="Submit" />
 
 </body>
+
 </html>

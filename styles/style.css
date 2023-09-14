@@ -147,9 +147,12 @@ div label {
 }
 
 .section-header {
-  font-weight: bold;
   padding-bottom: 8px;
   padding-top: 5px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .sub-button {
