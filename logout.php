@@ -2,6 +2,7 @@
 
 <?php
 //Logout by destroying the session
+session_start();
 session_destroy();
 
 // Redirect to the login page
