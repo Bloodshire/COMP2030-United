@@ -32,6 +32,6 @@ if (!isset($_SESSION['user_id'])) {
 $user_full_name = isset($_SESSION['user_full_name']) ? $_SESSION['user_full_name'] : "Unknown User";
 
 // Display the welcome message
-echo "Welcome, " . htmlspecialchars($user_full_name) . "!";
+echo "Welcome, " . $user_full_name . "!";
 ?>
 <hr>
