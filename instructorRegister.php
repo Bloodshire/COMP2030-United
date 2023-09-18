@@ -14,15 +14,15 @@
     <div id="loginContainer">
 
         <form id="registrationForm" method="POST">
-            <!-- <h1>Are you a:</h1> -->
-            <button id="student" formaction="studentRegister.php">Student</button>
-            <button id="instructor" formaction="instructorRegister.php">Instructor</button>
-            <button id="QSD" formaction="QSDRegister.php">Supervising Driver</button>
-
+            <input type="email" name="email">
+            <input type="text" name="givenName">
+            <input type="text" name="surname">
         </form>
+        
+        <input type="button" id="nextButton" value="NEXT">
 
     </div>
-
+    
 </body>
 
 </html>
