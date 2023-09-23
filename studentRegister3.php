@@ -18,12 +18,12 @@
             <h1>Register</h1>
             <div id="loginInputs">
 
-                <input type="text" placeholder="Street Address" id="streetAddress" required>
+                <input type="text" placeholder="Street Address" name="streetAddress" id="streetAddress" required>
 
-                <input type="text" placeholder="Suburb" id="suburb" required>
+                <input type="text" placeholder="Suburb" name="suburb" id="suburb" required>
 
                 <label for="state">State</label>
-                <select id="state" name="state" required>
+                <select id="state" name="state" id="state" required>
                     <option id="SA">SA</option>
                     <option id="SA">WA</option>
                     <option id="SA">NT</option>
@@ -34,7 +34,7 @@
                 </select>
                 
                 <label for="postcode">Postcode</label>
-                <input type="postal" id="postcode" required>
+                <input type="postal" name = "postcode" id="postcode" required>
 
             </div>        
             <input type="submit" value="BACK" formaction="studentRegister2.php"> 

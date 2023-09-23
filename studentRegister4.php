@@ -18,10 +18,10 @@
             <h1>Register</h1>
             <div id="loginInputs">
 
-                <input type="text" placeholder="Permit Number" required>
+                <input type="text" placeholder="Permit Number" id="permitNumber" name="permitNumber" required>
 
                 <label for="expiry">Expiry Date</label>
-                <input type="date" name="expiry" required>
+                <input type="date" name="expiry" id="expiry" required>
 
             </div>        
             <input type="submit" value="BACK" formaction="studentRegister3.php"> 

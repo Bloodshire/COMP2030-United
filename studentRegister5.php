@@ -18,8 +18,8 @@
             <h1>Register</h1>
             <div id="loginInputs">
 
-                <input type="password" placeholder="Password" id="password" required>
-                <input type="password" placeholder="Confirm Password" id="passwordConfirm" required>
+                <input type="password" placeholder="Password" id="password" name ="password" required>
+                <input type="password" placeholder="Confirm Password" id="passwordConfirm" name="passwordConfirm" required>
 
             </div>        
             <input type="submit" value="BACK" formaction="studentRegister4.php"> 
