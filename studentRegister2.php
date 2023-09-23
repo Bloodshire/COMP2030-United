@@ -17,13 +17,11 @@
 
             <h1>Register</h1>
             <div id="loginInputs">
-                <p><i>Please give information as stated on your permit</i></p>
-                <input type="text" placeholder="Given Name" id="givenName" required>
-                <input type="text" placeholder="Surname" id="surname" required>
-                <label for="DOB">Date of Birth</label>
-                <input type="date" name="DOB" id="DOB" required>
-            </div>          
-            <input type="submit" value="NEXT" formaction="studentRegister2.php">
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="email" placeholder="Confirm Email" id="emailConfirm" required>
+            </div>
+            <input type="submit" value="BACK" formaction="studentRegister.php">          
+            <input type="submit" value="NEXT" formaction="studentRegister3.php">
         </form>
 
     </div>

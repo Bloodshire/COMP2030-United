@@ -17,13 +17,15 @@
 
             <h1>Register</h1>
             <div id="loginInputs">
-                <p><i>Please give information as stated on your permit</i></p>
-                <input type="text" placeholder="Given Name" id="givenName" required>
-                <input type="text" placeholder="Surname" id="surname" required>
-                <label for="DOB">Date of Birth</label>
-                <input type="date" name="DOB" id="DOB" required>
-            </div>          
-            <input type="submit" value="NEXT" formaction="studentRegister2.php">
+
+                <input type="text" placeholder="Permit Number" required>
+
+                <label for="expiry">Expiry Date</label>
+                <input type="date" name="expiry" required>
+
+            </div>        
+            <input type="submit" value="BACK" formaction="studentRegister3.php"> 
+            <input type="submit" value="NEXT" formaction="studentRegister5.php">
         </form>
 
     </div>
