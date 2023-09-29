@@ -63,39 +63,41 @@
                 <p class="labelish">User Type:</p>
                 <div id="radioContainer" name="radioContainer" class="radioOptions">
 
-                    <div id="student" class="floatBlock">
-                        <label for="student"> <input id="studentIn" name="userType" type="radio" value="Student" />  Student </label>
+                    <div id="student" class="floatBlock" onclick="show()">
+                        <label for="studentIn"> <input id="studentIn" name="userType" type="radio" value="student"checked/>  Student </label>
                     </div>
 
-                    <div id="instructor" class="floatBlock">
-                        <label for="instructor"> <input id="instructorIn" name="userType" type="radio" value="Instructor" /> Instructor </label>
+                    <div id="instructor" class="floatBlock" onclick="show()">
+                        <label for="instructorIn"> <input id="instructorIn" name="userType" type="radio" value="instructor"/> Instructor </label>
                     </div>
 
-                    <div id="QSD" class="floatBlock">
-                        <label for="QSD"> <input id="QSDIn" name="userType" type="radio" value="Supervising Driver"/> Supervising Driver </label>
+                    <div id="QSD" class="floatBlock" onclick="show()">
+                        <label for="QSDIn"> <input id="QSDIn" name="userType" type="radio" value="qsd"/> Supervising Driver </label>
                     </div>
 
                 </div>
 
+                <button onclick="show()">SHOW</button>
+
                 <div id="learnerInput" class="show-hide">
                     <label for="learnerPermit">Permit Number</label>
                     <input type="text" id="learnerPermit" name="learnerPermit" required>
-                    <label for="expiry">Expiry Date</label>
-                    <input type="date" name="expiry" id="expiry" required>
+                    <label for="permitExpiry">Expiry Date</label>
+                    <input type="date" name="expiry" id="permitExpiry" required>
                 </div>
 
                 <div id="instructorInput" class="show-hide">
                     <label for="instructorLicence">Licence Number</label>
                     <input type="text" id="instructorLicence" name="instructorLicence" required>
-                    <label for="expiry">Expiry Date</label>
-                    <input type="date" name="expiry" id="expiry" required>
+                    <label for="iLicenceExpiry">Expiry Date</label>
+                    <input type="date" name="expiry" id="iLicenceExpiry" required>
                 </div>
 
                 <div id="qsdInput" class="show-hide">
                     <label for="qsdLicence">Licence Number</label>
                     <input type="text" id="qsdLicence" name="qsdLicence" required>
-                    <label for="expiry">Expiry Date</label>
-                    <input type="date" name="expiry" id="expiry" required>
+                    <label for="qLicenceExpiry">Expiry Date</label>
+                    <input type="date" name="expiry" id="qLicenceExpiry" required>
                 </div>
 
                 <h2>Password Information</h2>
