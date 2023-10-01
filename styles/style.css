@@ -278,7 +278,6 @@ div label {
 #loginContainer{
   width: 400px;
   height: 100%;
-  /* background-color: #4CAF50; */
   padding-top: 20%;
   margin:auto;
 }
@@ -299,13 +298,6 @@ div label {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 5px 0px;
 }
-/* #loginForm input:not(input[type="submit"]){
-  display: block;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 10px;
-  height: 30px;
-} */
 #loginInputs{
   margin: 20px 0px 10px 0px;
 }
