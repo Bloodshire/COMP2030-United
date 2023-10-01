@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -264,4 +266,152 @@ div label {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.loginBody{
+  background-image: url("../images/Login-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-left: 0px;
+}
+#loginContainer{
+  width: 400px;
+  height: 100%;
+  /* background-color: #4CAF50; */
+  padding-top: 20%;
+  margin:auto;
+}
+#loginForm{
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  height: fit-content;
+  width: 400px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#loginForm h1{
+  width: 100%;
+  border-bottom: solid black 1px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #ffcb08;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 5px 0px;
+}
+/* #loginForm input:not(input[type="submit"]){
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 30px;
+} */
+#loginInputs{
+  margin: 20px 0px 10px 0px;
+}
+#loginInputs input[type="text"], input[type="password"]{
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 150px;
+}
+#loginForm a{
+  text-decoration: none;
+  color: black;
+}
+#loginForm a:hover{
+  text-shadow: 0px 0px black;
+}
+#loginForm input[type="submit"]{
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #4CAF50;
+  width: 100px;
+  height: 30px;
+}
+#loginForm input[type="submit"]:hover{
+  background-color: white;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+#registrationContainer{
+  width: fit-content;
+  padding-top: 100px;
+  margin:auto;
+}
+#registrationForm{
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 300px;
+}
+#registrationForm input[type="submit"],  input[type="button"]{
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #4CAF50;
+  width: 150px;
+  height: 30px;
+  margin-top: 5px;
+}
+#registrationForm input[type="submit"]:hover, input[type="button"]:hover{
+  background-color: white;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+#registrationForm input[type="text"], input[type="email"], select, input[type="date"], input[type="postal"]{
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 150px;
+}
+#registrationForm option{
+  text-align: left;
+}
+#registrationForm h1{
+  width: 100%;
+  border-bottom: solid black 1px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #ffcb08;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+#radioContainer label {
+  display: block;
+}
+
+.floatBlock{
+  margin: 0 1.81em 0 0;
+}
+
+.radioOptions {
+  margin: auto;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	break-before: always;
+}
+
+#purchaseOrder {
+	margin: 0 0 2em 0;
+}
+
+#learnerInput{
+  display: none;
+}
+#instructorInput{
+  display: none;
+}
+#qsdInput{
+  display: none;
 }
