@@ -389,12 +389,8 @@ div label {
   display: block;
 }
 
-.floatBlock {
+.floatBlock{
   margin: 0 1.81em 0 0;
-}
-
-.labelish {
-	margin: 0;
 }
 
 .radioOptions {
@@ -410,7 +406,12 @@ div label {
 	margin: 0 0 2em 0;
 }
 
-.show-hide{
+#learnerInput{
   display: none;
 }
-
+#instructorInput{
+  display: none;
+}
+#qsdInput{
+  display: none;
+}
