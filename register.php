@@ -12,8 +12,6 @@
 <body class="loginBody">
 
     <div id="registrationContainer">
-        <button onclick="passStr()">Click me</button>
-
         <form id="registrationForm" method="POST" action="adduser.php">
 
             <h1>Register</h1>
