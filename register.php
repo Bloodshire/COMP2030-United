@@ -49,12 +49,12 @@
                 <label for="state">State</label>
                 <select id="state" name="state" id="state" required>
                     <option id="SA">SA</option>
-                    <option id="SA">WA</option>
-                    <option id="SA">NT</option>
-                    <option id="SA">QLD</option>
-                    <option id="SA">NSW</option>
-                    <option id="SA">VIC</option>
-                    <option id="SA">TAS</option>
+                    <option id="WA">WA</option>
+                    <option id="NT">NT</option>
+                    <option id="QLD">QLD</option>
+                    <option id="NSW">NSW</option>
+                    <option id="VIC">VIC</option>
+                    <option id="TAS">TAS</option>
                 </select>
 
                 <label for="postcode">Postcode</label>
