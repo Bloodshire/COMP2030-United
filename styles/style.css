@@ -301,7 +301,8 @@ div label {
 #loginInputs{
   margin: 20px 0px 10px 0px;
 }
-#loginInputs input[type="text"], input[type="password"]{
+#loginInputs input[type="email"],
+#loginInputs input[type="password"]{
   display: block;
   margin: auto;
   text-align: center;
@@ -343,7 +344,8 @@ div label {
   padding-bottom: 10px;
   margin-bottom: 300px;
 }
-#registrationForm input[type="submit"],  input[type="button"]{
+#registrationForm input[type="submit"],
+#registrationForm input[type="button"]{
   background-color: #4CAF50;
   color: white;
   border: 2px solid #4CAF50;
@@ -351,12 +353,17 @@ div label {
   height: 30px;
   margin-top: 5px;
 }
-#registrationForm input[type="submit"]:hover, input[type="button"]:hover{
+#registrationForm input[type="submit"]:hover,
+#registrationForm input[type="button"]:hover{
   background-color: white;
   color: #4CAF50;
   border: 2px solid #4CAF50;
 }
-#registrationForm input[type="text"], input[type="email"], select, input[type="date"], input[type="number"]{
+#registrationForm input[type="text"], 
+#registrationForm input[type="email"],
+#registrationForm select,
+#registrationForm input[type="date"],
+#registrationForm input[type="number"]{
   display: block;
   margin: auto;
   text-align: center;
