@@ -12,7 +12,7 @@
 <body class="loginBody">
 
     <div id="registrationContainer">
-        <form id="registrationForm" method="POST" action="adduser.php">
+        <form id="registrationForm" method="POST" action="register_process.php">
 
             <h1>Register</h1>
             <div id="loginInputs">
@@ -110,7 +110,7 @@
                 <h2>Password Information</h2>
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name ="password" minlength="10" onchange="passStr()">
+                <input type="password" id="password" name ="password" minlength="10" oninput="passStr()">
 
                 <div>
                     <img src="images/no-pass.png" id="strengthImg">
@@ -118,7 +118,7 @@
 
                 <div id="passwordContainer">
                     <label for="passwordConfirm">Confirm Password</label>
-                    <input type="password" id="passwordConfirm" name="passwordConfirm" onchange="passVal()">
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" oninput="passVal()">
                     <p id="pWarning"></p>
                 </div>
             
