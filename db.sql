@@ -10,9 +10,13 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     full_name VARCHAR(255) NOT NULL,
+    license_no VARCHAR(50) NOT NULL,
     role_id INT NOT NULL,
-    UNIQUE (email)
+    instructor_id INT,  -- Self-referential foreign key to users table
+    UNIQUE (email),
+    FOREIGN KEY (instructor_id) REFERENCES users(user_id)
 );
+
 
 CREATE TABLE roles (
     role_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -70,10 +74,12 @@ INSERT INTO roles (role_name) VALUES
     ('Student');
 
 -- Insert users into the 'users' table with their respective roles and hashed passwords
-INSERT INTO users (email, password, full_name, role_id) VALUES
-    ('instructor1@example.com', 'password1', 'Instructor 1', 1),
-    ('instructor2@example.com', PASSWORD('password2'), 'Instructor 2', 1),
-    ('qsd1@example.com', PASSWORD('password3'), 'QSD 1', 2),
-    ('qsd2@example.com', PASSWORD('password4'), 'QSD 2', 2),
-    ('student1@example.com', PASSWORD('password5'), 'Student 1', 3), 
-    ('student2@example.com', PASSWORD('password6'), 'Student 2', 3); 
+INSERT INTO users (email, password, full_name, license_no, role_id) VALUES
+    ('instructor1@example.com', 'password1', 'Hans Zimmer', "1020304059", 1),
+    ('instructor2@example.com', PASSWORD('password2'), 'Christopher Nolan', "1020304012",  1),
+    ('qsd1@example.com', PASSWORD('password3'), 'James Cameron', "1020304084", 2),
+    ('qsd2@example.com', PASSWORD('password4'), 'Michael Bay', "1020304041", 2);
+
+INSERT INTO users (email, password, full_name, license_no, role_id, instructor_id) VALUES
+    ('student1@example.com', PASSWORD('password5'), 'Michael Kayal', "1020304091", 3, 1), 
+    ('student2@example.com', PASSWORD('password6'), 'Harrison Reeve', "1020304080", 3, 1); 
