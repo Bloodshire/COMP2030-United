@@ -12,7 +12,7 @@
 <body class="loginBody">
 
     <div id="registrationContainer">
-
+      
         <form id="registrationForm" method="POST" action="register_process.php">
 
             <h1>Register</h1>
@@ -22,19 +22,22 @@
                 <h2>Personal Information</h2>
 
                 <label for="givenName">Given Name</label>
-                <input type="text" name="givenName" id="givenName" required>
+                <input type="text" name="givenName" id="givenName" maxlength="20" required>
 
                 <label for="givenName">Surname</label>
-                <input type="text" name="surname" id="surname" required>
+                <input type="text" name="surname" id="surname" maxlength="20" required>
 
                 <label for="DOB">Date of Birth</label>
                 <input type="date" name="DOB" id="DOB" min="1923-01-01" max="2006-01-01" required>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <div id="emailContainer">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
 
-                <label for="emailConfirm">Confirm Email</label>
-                <input type="email" name="emailConfirm" id="emailConfirm" required>
+                    <label for="emailConfirm">Confirm Email</label>
+                    <input type="email" name="emailConfirm" id="emailConfirm" required onchange="emailVal()">
+                    <p id="eWarning"></p>
+                </div>
 
                 <h2>Address Information</h2>
 
@@ -56,7 +59,7 @@
                 </select>
 
                 <label for="postcode">Postcode</label>
-                <input type="postal" name = "postcode" id="postcode" required>
+                <input type="number" name = "postcode" id="postcode" max="9999" min="0000" placeholder="5555" required>
 
                 <h2>Licence Information</h2>
 
@@ -108,10 +111,18 @@
                 <h2>Password Information</h2>
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name ="password">
+                <input type="password" id="password" name ="password" minlength="10" onchange="passStr()">
 
-                <label for="passwordConfirm">Confirm Password</label>
-                <input type="password" id="passwordConfirm" name="passwordConfirm">
+                <div>
+                    <img src="images/no-pass.png" id="strengthImg">
+                </div>
+
+                <div id="passwordContainer">
+                    <label for="passwordConfirm">Confirm Password</label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" onchange="passVal()">
+                    <p id="pWarning"></p>
+                </div>
+            
             </div>
             <input type="submit" value="REGISTER">
         </form>

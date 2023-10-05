@@ -278,7 +278,6 @@ div label {
 #loginContainer{
   width: 400px;
   height: 100%;
-  /* background-color: #4CAF50; */
   padding-top: 20%;
   margin:auto;
 }
@@ -299,17 +298,11 @@ div label {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 5px 0px;
 }
-/* #loginForm input:not(input[type="submit"]){
-  display: block;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 10px;
-  height: 30px;
-} */
 #loginInputs{
   margin: 20px 0px 10px 0px;
 }
-#loginInputs input[type="text"], input[type="password"]{
+#loginInputs input[type="email"],
+#loginInputs input[type="password"]{
   display: block;
   margin: auto;
   text-align: center;
@@ -351,7 +344,8 @@ div label {
   padding-bottom: 10px;
   margin-bottom: 300px;
 }
-#registrationForm input[type="submit"],  input[type="button"]{
+#registrationForm input[type="submit"],
+#registrationForm input[type="button"]{
   background-color: #4CAF50;
   color: white;
   border: 2px solid #4CAF50;
@@ -359,12 +353,17 @@ div label {
   height: 30px;
   margin-top: 5px;
 }
-#registrationForm input[type="submit"]:hover, input[type="button"]:hover{
+#registrationForm input[type="submit"]:hover,
+#registrationForm input[type="button"]:hover{
   background-color: white;
   color: #4CAF50;
   border: 2px solid #4CAF50;
 }
-#registrationForm input[type="text"], input[type="email"], select, input[type="date"], input[type="postal"]{
+#registrationForm input[type="text"], 
+#registrationForm input[type="email"],
+#registrationForm select,
+#registrationForm input[type="date"],
+#registrationForm input[type="number"]{
   display: block;
   margin: auto;
   text-align: center;
@@ -415,6 +414,7 @@ div label {
 #qsdInput{
   display: none;
 }
+
 .subtext {
   font-size: 14px;
   margin: 0;
@@ -426,4 +426,19 @@ div label {
   border-radius: 15px;
   width: 100%;
   padding: 10px;
+
+#emailConfirm{
+  border: default;
 }
+#emailContainer p{
+  font-size: 10px;
+  color: red;
+  font-weight: bold;
+}
+#password{
+  margin-bottom: 0px !important;
+}
+#passwordContainer p{
+  font-size: 10px;
+  color: red;
+  font-weight: bold;
