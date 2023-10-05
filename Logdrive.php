@@ -84,16 +84,6 @@
         </div>
 
         <div class="column">
-                <!-- <div>
-
-                    <label for="InstructorQSD">Instructor / QSD</label>
-                    <div>
-                        <select id="InstructorQSD" name="Instructor QSD Select" required>
-                            <option value="">Select</option>
-                        </select>
-                    </div>
-                </div>
-                <br> -->
             <label class="section-header">Instructor / QSD</label>
                 <div>
                     <label>Name</label>
