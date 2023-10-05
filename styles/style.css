@@ -414,6 +414,19 @@ div label {
 #qsdInput{
   display: none;
 }
+
+.subtext {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: solid 1px rgb(160, 160, 160);
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+
 #emailConfirm{
   border: default;
 }
@@ -429,4 +442,3 @@ div label {
   font-size: 10px;
   color: red;
   font-weight: bold;
-}

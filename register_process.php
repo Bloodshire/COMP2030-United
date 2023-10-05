@@ -1,3 +1,5 @@
+<!-- Copied from login_process.php -->
+
 <?php
 session_start();
 
@@ -41,16 +43,6 @@ if ($stmt->num_rows == 1) {
         $_SESSION['user_id'] = $user_id;
         $_SESSION['user_email'] = $db_email;
         $_SESSION['user_full_name'] = $db_full_name;
-
-        // Retrieve and store the instructor ID
-        $query_instructor = "SELECT instructor_id FROM users WHERE user_id = ?";
-        $stmt_instructor = $conn->prepare($query_instructor);
-        $stmt_instructor->bind_param("s", $user_id);
-        $stmt_instructor->execute();
-        $stmt_instructor->bind_result($instructor_id);
-        $stmt_instructor->fetch();
-        $_SESSION['instructor_id'] = $instructor_id;
-
         // Redirect to a welcome or dashboard page
         header("Location: dashboard.php");
     } else {
@@ -64,5 +56,5 @@ if ($stmt->num_rows == 1) {
 
 // Close the database connection
 $stmt->close();
-$stmt_instructor->close();
 $conn->close();
+?>

@@ -23,7 +23,6 @@
                 <br>
                 <div>
                     <label for="timeForm" class="section-header">Time</label>
-                    <!-- <form id="timeForm"> -->
                     <div>
                         <label>Start</label>
                         <input type="time" id="time1" required>
@@ -36,11 +35,9 @@
                         <label>Duration</label>
                         <input type="text" id="resultBox" readonly>
                     </div>
-                    <!-- </form> -->
                 </div>
                 <br>
                 <br>
-
                 <label class="section-header">Route</Label>
                 <div>
                     <label>From</label>
@@ -87,9 +84,22 @@
         </div>
 
         <div class="column">
-            <label class="section-header">E-Signature</label>
-            <p>Draw your signature below:</p>
+            <label class="section-header">Instructor / QSD</label>
+                <div>
+                    <label>Name</label>
+                    <input type="text" placeholder="" value="" required>
+                </div>
+                <div>
+                    <label>License No.</label>
+                    <input type="text" placeholder="" value="" required>
+                </div>
+                <br>
+                
+            <br>
+            <br>
 
+            <label class="section-header">Signature</label>
+            <p class="subtext">Draw your signature below:</p>
             <div id="signature-container">
                 <div id="signature-pad">
                     <canvas></canvas>
@@ -103,8 +113,20 @@
         <div id="modal1" class="overlay">
             <a class="cancel" href="#"></a>
             <div class="modal centre">
-            <!-- <a href="#"><span class="close">&times;</span></a> -->
+                <!-- <a href="#"><span class="close">&times;</span></a> -->
                 <h2>Are you sure you want to submit the drive?</h2>
+                <div class="content">
+                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
+                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="overlay">
+            <a class="cancel" href="#"></a>
+            <div class="modal centre">
+                <!-- <a href="#"><span class="close">&times;</span></a> -->
+                <h2>Add QSD</h2>
                 <div class="content">
                     <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
                     <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>

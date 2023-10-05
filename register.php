@@ -12,7 +12,8 @@
 <body class="loginBody">
 
     <div id="registrationContainer">
-        <form id="registrationForm" method="POST" action="adduser.php">
+      
+        <form id="registrationForm" method="POST" action="register_process.php">
 
             <h1>Register</h1>
             <div id="loginInputs">
