@@ -21,7 +21,7 @@
             
         <div class="list-item">
 
-            <li><a href="cabin_drill_and_control.php">Cabin Drill and Control</a></li>
+            <li><a href="cbta/cabin_drill_and_control.php">Cabin Drill and Control</a></li>
             <input type="checkbox" class="checkboxs">  
             </div>
             <p></p>
