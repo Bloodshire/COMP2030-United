@@ -14,10 +14,10 @@
     <?php require_once "inc/menu.inc.php"; ?>
     <div class="row">
         <div class="column">
-            <form id="logbook-entry" method="POST">
+            <form id="logbook-entry" method="POST" action="logdrive_process.php">
                 <div>
                     <label class="section-header">Date</label>
-                    <input type="date" required />
+                    <input type="date" name="date" required />
                 </div>
                 <br>
                 <br>
@@ -25,15 +25,15 @@
                     <label for="timeForm" class="section-header">Time</label>
                     <div>
                         <label>Start</label>
-                        <input type="time" id="time1" required>
+                        <input type="time" id="time1" name="start_time" required>
                     </div>
                     <div>
                         <label>Finish</label>
-                        <input type="time" id="time2" required>
+                        <input type="time" id="time2" name="finish_time" required>
                     </div>
                     <div>
                         <label>Duration</label>
-                        <input type="text" id="resultBox" readonly>
+                        <input type="text" id="resultBox" name="duration" readonly>
                     </div>
                 </div>
                 <br>
@@ -41,11 +41,11 @@
                 <label class="section-header">Route</Label>
                 <div>
                     <label>From</label>
-                    <input type="text" placeholder="e.g. Mt Barker" required>
+                    <input type="text" name="from_location" placeholder="e.g. Mt Barker" required>
                 </div>
                 <div>
                     <label>To</label>
-                    <input type="text" placeholder="e.g. Port Adelaide" required>
+                    <input type="text" name="to_location" placeholder="e.g. Port Adelaide" required>
                 </div>
                 <br>
                 <br>
@@ -55,7 +55,7 @@
                 <label class="section-header">Conditions</label>
                 <div>
                     <label for="Road Type For">Road Type</label>
-                    <select id="RoadTypeID" name="Road Type Name" required>
+                    <select id="RoadTypeID" name="road_type" required>
                         <option value="">Select</option>
                         <option value="S">Sealed</option>
                         <option value="U">Unsealed</option>
@@ -66,7 +66,7 @@
                 </div>
                 <div>
                     <label for="Weather For">Weather</label>
-                    <select id="WeatherID" name="Weather Name" required>
+                    <select id="WeatherID" name="weather" required>
                         <option value="">Select</option>
                         <option value="D">Dry</option>
                         <option value="W">Wet</option>
@@ -74,7 +74,7 @@
                 </div>
                 <div>
                     <label for="Traffic Density For">Traffic Density</label>
-                    <select id="TrafficDensityID" name="Traffic Density Name" required>
+                    <select id="TrafficDensityID" name="traffic_density" required>
                         <option value="">Select</option>
                         <option value="L">Light</option>
                         <option value="M">Medium</option>
@@ -87,11 +87,11 @@
             <label class="section-header">Instructor / QSD</label>
                 <div>
                     <label>Name</label>
-                    <input type="text" placeholder="" value="" required>
+                    <input type="text" placeholder="" value="" name="instructor_name" required>
                 </div>
                 <div>
                     <label>License No.</label>
-                    <input type="text" placeholder="" value="" required>
+                    <input type="text" placeholder="" value="" name="instructor_license" required>
                 </div>
                 <br>
                 
