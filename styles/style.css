@@ -430,6 +430,25 @@ div label {
   color: red;
   font-weight: bold;
 }
+.passCriteria{
+  /* border: 1px solid black; */
+  width: fit-content;
+  height: fit-content;
+  text-wrap: wrap;
+  margin: 0px;
+  margin: auto;
+  padding: 0px;
+  position: relative;
+}
+.passCriteria ul{
+  font-size: 12px;
+  text-align: justify;
+  padding: 0px;
+  margin: 0px;
+}
+.passCriteria p{
+  margin: 0px;
+}
 
 .reportContainer{
   width: 200px;
@@ -450,7 +469,7 @@ div label {
   border-top-left-radius: 5px;
   background-color: #ffcb08;
 }
-.reportContainer a{
+.reportContainer button{
   margin: auto;
   margin-top: 5px;
   border: 2px solid #4CAF50;
@@ -465,7 +484,7 @@ div label {
   padding: 5px;
   border-radius: 5px;
 }
-.reportContainer a:hover{
+.reportContainer button:hover{
   background-color: white;
   color: #4CAF50;
   border: 2px solid #4CAF50;

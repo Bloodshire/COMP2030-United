@@ -34,7 +34,7 @@
                     <input type="email" name="email" id="email" required>
 
                     <label for="emailConfirm">Confirm Email</label>
-                    <input type="email" name="emailConfirm" id="emailConfirm" required onchange="emailVal()">
+                    <input type="email" name="emailConfirm" id="emailConfirm" required oninput="emailVal()">
                     <p id="eWarning"></p>
                 </div>
 
@@ -109,18 +109,36 @@
 
                 <h2>Password Information</h2>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name ="password" minlength="10" oninput="passStr()">
+                <div class="passCriteria">
 
-                <div>
-                    <img src="images/no-pass.png" id="strengthImg">
+                    <p><b><u>Strength Criteria</u></b></p>
+                    <ul>
+                        <li>Minimum 12 characters</li>
+                        <li>Mix of lower and upper case</li>
+                        <li>Includes at least 1 number</li>
+                        <li>Includes at least one of these:</li>
+                        <p>!"#$%&'()*+,-./:;<=>?@[]^_`{|}~</p>
+                    </ul>
+
                 </div>
 
-                <div id="passwordContainer">
-                    <label for="passwordConfirm">Confirm Password</label>
-                    <input type="password" id="passwordConfirm" name="passwordConfirm" oninput="passVal()">
-                    <p id="pWarning"></p>
+                <div class="passContainer">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name ="password" minlength="10" oninput="passStr()">
+
+                    <div>
+                        <img src="images/no-pass.png" id="strengthImg">
+                    </div>
+
+                    <div id="passwordContainer">
+                        <label for="passwordConfirm">Confirm Password</label>
+                        <input type="password" id="passwordConfirm" name="passwordConfirm" oninput="passVal()">
+                        <p id="pWarning"></p>
+                    </div>
+
                 </div>
+
             
             </div>
             <input type="submit" value="REGISTER">
