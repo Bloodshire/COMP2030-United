@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Reports</title>
+    <title>Reports: Students</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Harrison">
     <link rel="stylesheet" href="styles/style.css">
@@ -13,32 +13,25 @@
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
 
-    <div class="bigReportContainer">
-        <div class="reportContainer">
-            <p class="rHead">Student Name</p>
-            <div id="" class="reportItem">
-                <p>Completed Drives: XX</p>
+    <form class="reportContainer" method="POST" action="reports.php">
+            <div class="selectWrapper">
+                <select id="insName" name="insName">
+                    <option>Student1</option>
+                    <option>Student2</option>
+                    <option>Student3</option>
+                </select>
             </div>
-            <div id="" class="reportItem">
-                <p>Total Hours: XX</p>
+            <div id="timeWithIns" class="reportItem">
+                <p>H:MM</p>
             </div>
-            <div id="" class="reportItem">
-                <p>Pending Drives</p>
+            <div id="signedDrives" class="reportItem">
+                <p>XX</p>
             </div>
-        </div>
-        <div class="reportContainer">
-            <p class="rHead">Student Name</p>
-            <div id="" class="reportItem">
-                <p>Completed Drives: XX</p>
+            <div id="totalStudentPayment" class="reportItem">
+                <p>$$$</p>
             </div>
-            <div id="" class="reportItem">
-                <p>Total Hours: XX</p>
-            </div>
-            <div id="" class="reportItem">
-                <p>Pending Drives</p>
-            </div>
-        </div>
-    </div>
+            <button>Back</button>
+        </form>
 
 </body>
 

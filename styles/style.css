@@ -451,12 +451,12 @@ div label {
 }
 
 .reportContainer{
-  width: 200px;
+  width: 500px;
   height: fit-content;
   border: 2px gray solid;
   border-radius: 5px;
   padding-bottom: 5px;
-  margin-left: 10px;
+  margin:auto;
 }
 .reportContainer .rHead{
   margin: 0px;
@@ -494,12 +494,23 @@ div label {
   text-align: center;
   width: 190px;
   height: 30px;
-  margin: 5px 5px 0px 5px;
+  margin: 5px auto 5px auto;
 }
 .reportItem p{
   margin: 0px;
   padding: 5px;
 }
-.bigReportContainer{
-  display: flex;
+.selectWrapper{
+  overflow: hidden;
+  border-radius: 10px;
+  background: #4CAF50;
+  border: 2px solid #4CAF50;
+  margin: 5px auto 0px auto;
+  width: fit-content;
+}
+#insName{
+  width:140px;
+  height:40px;
+  border:0px;
+  outline:none;
 }

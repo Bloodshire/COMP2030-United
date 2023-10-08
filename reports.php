@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Reports</title>
+    <title>Reports: Instructors</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Harrison">
     <link rel="stylesheet" href="styles/style.css">
@@ -13,15 +13,14 @@
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
 
-    <div class="bigReportContainer">
         <form class="reportContainer" method="POST" action="studentList.php">
-            <!-- <p class="rHead">Instructor Name</p> -->
-            <label>
-            Instructor Name
-                <select id="insName">
+            <div class="selectWrapper">
+                <select id="insName" name="insName">
                     <option>Instructor1</option>
+                    <option>Instructor2</option>
+                    <option>Instructor3</option>
                 </select>
-            </label>
+            </div>
             <div id="insIncome" class="reportItem">
                 <p>$$$</p>
             </div>
@@ -33,34 +32,7 @@
             </div>
             <button>Students</button>
         </form>
-        <div class="reportContainer">
-            <p class="rHead">Instructor Name</p>
-            <div id="insIncome" class="reportItem">
-                <p>$$$</p>
-            </div>
-            <div id="insHours" class="reportItem">
-                <p>H:MM</p>
-            </div>
-            <div id="insDriveCount" class="reportItem">
-                <p>XX</p>
-            </div>
-            <a href="studentList.php">Students</a>
-        </div>
-        <div class="reportContainer">
-            <p class="rHead">Instructor Name</p>
-            <div id="insIncome" class="reportItem">
-                <p>$$$</p>
-            </div>
-            <div id="insHours" class="reportItem">
-                <p>H:MM</p>
-            </div>
-            <div id="insDriveCount" class="reportItem">
-                <p>XX</p>
-            </div>
-            <a href="studentList.php">Students</a>
-        </div>
     </div>
-
 </body>
 
 </html>
