@@ -11,25 +11,28 @@
 </head>
 
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "inc/menu.inc.php";?>
 
         <form class="reportContainer" method="POST" action="studentList.php">
             <div class="selectWrapper">
                 <select id="insName" name="insName">
-                    <option>Instructor1</option>
-                    <option>Instructor2</option>
-                    <option>Instructor3</option>
+                    <option>Hans Zimmer</option>
+                    <option>Christopher Nolan</option>
                 </select>
             </div>
+
             <div id="insIncome" class="reportItem">
-                <p>$$$</p>
+                    <p>Total Income: $$$</p>
             </div>
+
             <div id="insHours" class="reportItem">
-                <p>H:MM</p>
+                <p>Total Hours: H:MM</p>
             </div>
+
             <div id="insDriveCount" class="reportItem">
-                <p>XX</p>
+                <p>Total Signed Drives: XX</p>
             </div>
+
             <button>Students</button>
         </form>
     </div>
