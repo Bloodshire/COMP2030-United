@@ -29,9 +29,9 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Get the user's full name from the session data
-$user_full_name = isset($_SESSION['user_full_name']) ? $_SESSION['user_full_name'] : "Unknown User";
+$user_given_name = isset($_SESSION['user_given_name']) ? $_SESSION['user_given_name'] : "Unknown User";
 
 // Display the welcome message
-echo "Welcome, " . $user_full_name . "!";
+echo "Welcome, " . $user_given_name . "!";
 ?>
 <hr>

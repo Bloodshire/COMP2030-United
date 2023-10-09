@@ -15,18 +15,33 @@
 <body>
     <?php require_once "inc/menu.inc.php"; ?>
     <div>
-        <label class="section-header">First name</label>
-        <input type="text" value="John" id="firstName" readonly>
+        <?php
+        // Get the user's full name from the session data
+        $user_given_name = isset($_SESSION['user_given_name']) ? $_SESSION['user_given_name'] : "Unknown";
+        $user_surname = isset($_SESSION['user_surname']) ? $_SESSION['user_surname'] : "Unknown";
+        $user_email = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : "Unknown";
+        $user_password = isset($_SESSION['user_password']) ? $_SESSION['user_password'] : "Unknown";
+        $user_license = isset($_SESSION['user_license']) ? $_SESSION['user_license'] : "Unknown";
+        $user_date_of_birth = isset($_SESSION['user_date_of_birth']) ? $_SESSION['user_date_of_birth'] : "Unknown";
+
+        ?>
+        <label class="section-header">Given name</label>
+        <input type="text" value="<?php echo $user_given_name ?>" id="firstName" readonly>
     </div>
     <br>
     <div>
-        <label class="section-header">Last name</label>
-        <input type="text" value="Doe" id="lastName" readonly>
+        <label class="section-header">Surname</label>
+        <input type="text" value="<?php echo $user_surname ?>" id="lastName" readonly>
     </div>
     <br>
     <div>
         <label class="section-header">Email</label>
-        <input type="text" value="example@gmail.com" id="email" readonly>
+        <input type="email" value="<?php echo $user_email ?>" id="email" readonly>
+    </div>
+    <br>
+    <div>
+        <label class="section-header">Date of Birth</label>
+        <input type="text" value="<?php echo $user_date_of_birth ?>" id="dob" readonly>
     </div>
     <br>
     <div>
@@ -36,7 +51,7 @@
     <br>
     <div>
         <label class="section-header">Permit number</label>
-        <input type="text" value="T1876" id="permitNumber" readonly>
+        <input type="text" value="<?php echo $user_license ?>" id="permitNumber" readonly>
     </div>
     <br>
     <button class="btn-custom btn-black" type="button" onclick="enableEdit()"><i class="fa-solid fa-pen-to-square"></i> Edit Details</button>

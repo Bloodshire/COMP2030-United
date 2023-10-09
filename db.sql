@@ -9,13 +9,20 @@ CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    full_name VARCHAR(255) NOT NULL,
+    given_name VARCHAR(255) NOT NULL,
+    surname VARCHAR(255) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    street_address VARCHAR(255) NOT NULL,
+    suburb VARCHAR(50) NOT NULL,
+    state VARCHAR(50) NOT NULL,
+    postcode VARCHAR(10) NOT NULL,
     license_no VARCHAR(50) NOT NULL,
     role_id INT NOT NULL,
-    instructor_id INT,  -- Self-referential foreign key to users table
+    instructor_id INT,
     UNIQUE (email),
     FOREIGN KEY (instructor_id) REFERENCES users(user_id)
 );
+
 
 
 CREATE TABLE roles (
@@ -74,12 +81,16 @@ INSERT INTO roles (role_name) VALUES
     ('Student');
 
 -- Insert users into the 'users' table with their respective roles and hashed passwords
-INSERT INTO users (email, password, full_name, license_no, role_id) VALUES
-    ('instructor1@example.com', 'password1', 'Hans Zimmer', "1020304059", 1),
-    ('instructor2@example.com', PASSWORD('password2'), 'Christopher Nolan', "1020304012",  1),
-    ('qsd1@example.com', PASSWORD('password3'), 'James Cameron', "1020304084", 2),
-    ('qsd2@example.com', PASSWORD('password4'), 'Michael Bay', "1020304041", 2);
+INSERT INTO users (email, password, given_name, surname, date_of_birth, street_address, suburb, state, postcode, license_no, role_id)
+VALUES
+    ('instructor1@example.com', PASSWORD('password1'), 'Hans', 'Zimmer', '1980-01-15', '123 Main St', 'Hendon', 'CA', '90210', 'FN1023', 1),
+    ('instructor2@example.com', PASSWORD('password2'), 'Christopher', 'Nolan', '1975-07-30', '456 Elm St', 'Hendon', 'NY', '10001', 'FN7829', 1),
+    ('qsd1@example.com', PASSWORD('password3'), 'James', 'Cameron', '1982-03-22', '789 Oak St', 'TX', 'Hendon', '77002', 'FN2710', 2),
+    ('qsd2@example.com', PASSWORD('password4'), 'Michael', 'Bay', '1978-12-10', '101 Pine St', 'FL', 'Hendon', '33001', 'FN7291', 2);
 
-INSERT INTO users (email, password, full_name, license_no, role_id, instructor_id) VALUES
-    ('student1@example.com', PASSWORD('password5'), 'Michael Kayal', "1020304091", 3, 1), 
-    ('student2@example.com', PASSWORD('password6'), 'Harrison Reeve', "1020304080", 3, 1); 
+
+INSERT INTO users (email, password, given_name, surname, date_of_birth, street_address, suburb, state, postcode, license_no, role_id, instructor_id)
+VALUES
+    ('student1@example.com', PASSWORD('password5'), 'Michael', 'Kayal', '1995-05-20', '111 Cedar St', 'Hendon', 'CA', '90210', 'FN8972', 3, 1),
+    ('student2@example.com', PASSWORD('password6'), 'Harrison', 'Reeve', '1993-09-12', '222 Maple St', 'Conolly', 'NY', '10001', 'FN0908', 3, 2);
+
