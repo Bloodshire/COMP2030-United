@@ -36,3 +36,7 @@ function calculateTimeDifference() {
         resultBox.value = `${hours} hours and ${minutes} minutes`;
     }
 }
+
+const canvas = document.querySelector('canvas');
+const form = document.querySelector('.signature-pad-form');
+const clearButton = document.querySelector('.clear-button');
