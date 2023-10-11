@@ -1,4 +1,4 @@
-<?php require_once "inc/dbconn.inc.php"; ?>
+<?php require_once "../inc/dbconn.inc.php"; ?>
 
 <?php
 //Logout by destroying the session

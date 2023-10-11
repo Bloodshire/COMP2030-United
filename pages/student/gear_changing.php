@@ -3,15 +3,15 @@
     <title>Unit 1: Task 6 – Gear changing (up and down)</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
 
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>(1) The learner will be able to change gears (in either a manual or automatic vehicle) up and down in the transmission in a reasonably smooth manner without looking at the gear lever while maintaining full steering control; and</p> 

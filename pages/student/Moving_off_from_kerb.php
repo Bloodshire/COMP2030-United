@@ -3,15 +3,15 @@
     <title>Unit 1: Task 3 – Moving off from the kerb</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
 
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>The learner will be able to move off from the left kerb in a safe and efficient manner with the vehicle under full control at the first attempt.</p> 

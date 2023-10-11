@@ -33,9 +33,23 @@ function calculateTimeDifference() {
         const timeDifference = Math.abs(time2 - time1);
         const hours = Math.floor(timeDifference / 3600000); 
         const minutes = Math.floor((timeDifference % 3600000) / 60000);
-        resultBox.value = `${hours} hours and ${minutes} minutes`;
+        resultBox.value = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
     }
 }
+
+// function calculateTimeDifference() {
+//     const time1 = new Date(`2023-09-05T${time1Input.value}`);
+//     const time2 = new Date(`2023-09-05T${time2Input.value}`);
+
+//     if (isNaN(time1.getTime()) || isNaN(time2.getTime())) {
+//         resultBox.value = 'Invalid input';
+//     } else {
+//         const timeDifference = Math.abs(time2 - time1);
+//         const hours = Math.floor(timeDifference / 3600000); 
+//         const minutes = Math.floor((timeDifference % 3600000) / 60000);
+//         resultBox.value = `${hours} hours and ${minutes} minutes`;
+//     }
+// }
 
 const canvas = document.querySelector('canvas');
 const form = document.querySelector('.signature-pad-form');
