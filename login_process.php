@@ -57,15 +57,26 @@ if ($stmt->num_rows == 1) {
         $stmt_instructor->fetch();
         $_SESSION['instructor_id'] = $instructor_id;
 
-        // Redirect to a welcome or dashboard page
-        header("Location: dashboard.php");
+        if ($db_role_id == 1) {
+            // Redirect to a welcome or dashboard page
+            header("Location: instructor-dashboard.php");
+        } else if ($db_role_id == 2) {
+            // Redirect to a welcome or dashboard page
+            header("Location: qsd-dashboard.php");
+        } else if ($db_role_id == 3) {
+            // Redirect to a welcome or dashboard page
+            header("Location: student-dashboard.php");
+        } else if ($db_role_id == 4) {
+            // Redirect to a welcome or dashboard page
+            header("Location: government-dashboard.php");
+        }
     } else {
         // Password is incorrect, show an error message
         header("Location: login_failed_incorrect_password.php");
     }
 } else {
     // User with the provided email does not exist, show an error message
-        header("Location: login_failed_no_user_found.php");
+    header("Location: login_failed_no_user_found.php");
 }
 
 // Close the database connection
