@@ -24,7 +24,7 @@ $password = $_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Query the database to check if the user exists
-$query = "SELECT user_id, email, password, given_name, surname, license_no, date_of_birth FROM users WHERE email = ?";
+$query = "SELECT user_id, email, password, given_name, surname, license_no, date_of_birth, role_id FROM users WHERE email = ?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("s", $email);
 $stmt->execute();
@@ -32,7 +32,7 @@ $stmt->store_result();
 
 // Check if a user with the provided email exists
 if ($stmt->num_rows == 1) {
-    $stmt->bind_result($user_id, $db_email, $db_password, $db_given_name, $db_surname, $db_license, $db_date_of_birth);
+    $stmt->bind_result($user_id, $db_email, $db_password, $db_given_name, $db_surname, $db_license, $db_date_of_birth, $db_role_id);
     $stmt->fetch();
 
     // Verify the hashed password
@@ -45,6 +45,8 @@ if ($stmt->num_rows == 1) {
         $_SESSION['user_password'] = $db_password;
         $_SESSION['user_license'] = $db_license;
         $_SESSION['user_date_of_birth'] = $db_date_of_birth;
+        $_SESSION['role_id'] = $db_role_id;
+
 
         // Retrieve and store the instructor ID
         $query_instructor = "SELECT instructor_id FROM users WHERE user_id = ?";
