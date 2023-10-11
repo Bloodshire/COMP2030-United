@@ -61,13 +61,13 @@ if ($stmt->num_rows == 1) {
 
     
     // Define the INSERT query
-    $insert_query = "INSERT INTO users (given_name, surname, date_of_birth, email, street_address, suburb, state, postcode, role_id, password, license_no) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, PASSWORD(?), ?)";
+    $insert_query = "INSERT INTO users (given_name, surname, date_of_birth, email, street_address, suburb, state, postcode, role_id, password, license_no) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     // Prepare the INSERT statement
     $insert_stmt = $conn->prepare($insert_query);
 
     // Bind parameters
-    $insert_stmt->bind_param("sssssssssss", $given_name, $surname, $date_of_birth, $email, $street_address, $suburb, $state, $postcode, $role_id, $password, $license_no);
+    $insert_stmt->bind_param("sssssssssss", $given_name, $surname, $date_of_birth, $email, $street_address, $suburb, $state, $postcode, $role_id, $hashed_password, $license_no);
 
     // Execute the INSERT statement
     if ($insert_stmt->execute()) {

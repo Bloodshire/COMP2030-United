@@ -17,7 +17,7 @@
             <h1>Login</h1>
             <div id="loginInputs">
                 <input type="email" placeholder="Email" name="email" required>
-                <input type="password" placeholder="Password" name="password "required>
+                <input type="password" placeholder="Password" name="password" required>
                 <input type="submit" value="LOGIN">
             </div>
             <a href="register.php">Register</a>

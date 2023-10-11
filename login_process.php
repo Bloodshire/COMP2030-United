@@ -36,7 +36,7 @@ if ($stmt->num_rows == 1) {
     $stmt->fetch();
 
     // Verify the hashed password
-    if ($hashed_password = $db_password) {
+    if (password_verify($password, $db_password)) {
         // Password is correct, start a session
         $_SESSION['user_id'] = $user_id;
         $_SESSION['user_email'] = $db_email;
@@ -61,14 +61,13 @@ if ($stmt->num_rows == 1) {
         header("Location: dashboard.php");
     } else {
         // Password is incorrect, show an error message
-        echo "Incorrect password. <a href='login.php'>Try again</a>";
+        header("Location: login_failed_incorrect_password.php");
     }
 } else {
     // User with the provided email does not exist, show an error message
-    echo "No user found with this email. <a href='login.php'>Try again</a>";
+        header("Location: login_failed_no_user_found.php");
 }
 
 // Close the database connection
 $stmt->close();
-$stmt_instructor->close();
 $conn->close();
