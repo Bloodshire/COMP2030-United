@@ -3,15 +3,15 @@
     <title>CBT&A Units</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
 
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
 
     <div class="cbta-Container1">
         <h1 class="cbta-h1">Unit 1 - Basic Driving Procedures</h1>

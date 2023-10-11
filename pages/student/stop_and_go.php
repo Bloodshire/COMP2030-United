@@ -3,15 +3,15 @@
     <title>Unit 1: Task 5 – Stop and go (using the park brake)</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
 
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>The learner will be able to bring the vehicle to a smooth stop in first gear (manuals only) and, with the aid of the park brake, immediately move off smoothly while maintaining full control of the vehicle.</p> 

@@ -8,7 +8,24 @@ session_start();
 $role_id = $_SESSION['role_id'];
 
 // Define a list of allowed URIs
-$student_allowed_uris = ['/drivesummary.php', '/logbook.php', '/logdrive.php', '/profile.php', '/student-dashboard.php', '/cbta.php', '/payments.php', '/cabin_drill_and_control.php', '/stop_and_go.php', '/starting_up_and_shutting_down_engine.php', '/Moving_off_from_kerb.php', '/stopping_and_securing_vehicle.php', '/gear_changing.php', '/steering.php', '/review_basic_procedures.php'];
+$student_allowed_uris = [
+    '/drivesummary.php',
+    '/logbook.php',
+    '/logdrive.php',
+    '/profile.php',
+    '/student-dashboard.php',
+    '/cbta.php',
+    '/payments.php',
+    '/cabin_drill_and_control.php',
+    '/stop_and_go.php',
+    '/starting_up_and_shutting_down_engine.php',
+    '/Moving_off_from_kerb.php',
+    '/stopping_and_securing_vehicle.php',
+    '/gear_changing.php',
+    '/steering.php',
+    '/review_basic_procedures.php',
+    '/mastercard.php'
+];
 $qsd_allowed_uris = ['/reports.php', '/qsd-dashboard.php', '/profile.php'];
 $instructor_allowed_uris = ['/reports.php', '/instructor-dashboard.php', '/profile.php'];
 $government_allowed_uris = ['/reports.php', '/government-dashboard.php', '/profile.php'];
@@ -75,7 +92,7 @@ if ($role_id == 3) {
         echo "You do not have permission to access this page as a Government user.";
         exit;
     }
-} 
+}
 
 // Check if the current user is a Student (role_id 3)
 if ($role_id == 3) {
@@ -90,10 +107,9 @@ if ($role_id == 3) {
         <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Payments</a></li>
         <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
-    <div class="logout"><a href="logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
+    <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
 </div>';
-
-} 
+}
 
 // Check if current user is a QSD (role_id 2)
 else if ($role_id == 2) {
@@ -108,10 +124,9 @@ else if ($role_id == 2) {
         <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Payments</a></li>
         <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
-    <div class="logout"><a href="logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
+    <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
 </div>';
-
-} 
+}
 
 // Check if current user is an Instructor (role_id 1)
 else if ($role_id == 1) {
@@ -124,11 +139,9 @@ else if ($role_id == 1) {
         <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Billing & Payments</a></li>
         <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
     </ul>
-    <div class="logout"><a href="logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
+    <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
 </div>';
-
-
-} 
+}
 // Check if current user is the government (role_id 4)
 
 else if ($role_id == 4) {
@@ -142,13 +155,13 @@ else if ($role_id == 4) {
         <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
         <li><a href="drivesummary.php"><i class="fa-xl fa-regular fa-clipboard"></i><br>Drive Summary</a></li>
     </ul>
-    <div class="logout"><a href="logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
+    <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
 </div>';
 }
 ?>
 
 <h1 id="page-heading"></h1>
-<?php require_once "inc/dbconn.inc.php"; ?>
+<?php require_once __DIR__ . "/dbconn.inc.php"; ?>
 
 <?php
 

@@ -3,15 +3,15 @@
     <title>Task 1: Cabin Drill and Control</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
 
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>The learner will be able to set up the cabin of the vehicle in order to safely, efficiently and effectively drive the vehicle (cabin drill) and be able to locate and identify all controls</p>

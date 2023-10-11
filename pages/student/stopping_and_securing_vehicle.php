@@ -3,15 +3,15 @@
     <title>Unit 1: Task 4 – Stopping and securing the vehicle</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
 
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>(1) The learner will bring the vehicle to a smooth and controlled stop at the left kerb from 30-60km/h with safety, without stalling and when requested; and </p> 

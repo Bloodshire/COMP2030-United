@@ -3,14 +3,14 @@
     <title>Payments</title>
     <meta charset="utf-8">
     <meta name="Authors" content= "Callum">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
     <a href="payments.php" id="menu-selected"></a>
 </head>
 
 <html>
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/menu.inc.php"; ?>
     <div class="centre">
     <label><b>Payment options</b></label>
     <br>

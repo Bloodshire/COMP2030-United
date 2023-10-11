@@ -1,19 +1,7 @@
 <?php
 session_start();
 
-define("DB_HOST", "localhost");
-define("DB_NAME", "TLDR");
-define("DB_USER", "dbadmin");
-define("DB_PASS", "");
-
-$conn = @mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-if (!$conn) {
-    // Something went wrong...
-    echo "Error: Unable to connect to database.<br>";
-    echo "Debugging errno: " . mysqli_connect_errno() . "<br>";
-    echo "Debugging error: " . mysqli_connect_error() . "<br>";
-    exit;
-}
+require_once "../inc/dbconn.inc.php";
 
 
 // Get user input
@@ -59,16 +47,16 @@ if ($stmt->num_rows == 1) {
 
         if ($db_role_id == 1) {
             // Redirect to a welcome or dashboard page
-            header("Location: instructor-dashboard.php");
+            header("Location: instructor/instructor-dashboard.php");
         } else if ($db_role_id == 2) {
             // Redirect to a welcome or dashboard page
-            header("Location: qsd-dashboard.php");
+            header("Location: qsd/qsd-dashboard.php");
         } else if ($db_role_id == 3) {
             // Redirect to a welcome or dashboard page
-            header("Location: student-dashboard.php");
+            header("Location: student/student-dashboard.php");
         } else if ($db_role_id == 4) {
             // Redirect to a welcome or dashboard page
-            header("Location: government-dashboard.php");
+            header("Location: government/government-dashboard.php");
         }
     } else {
         // Password is incorrect, show an error message
