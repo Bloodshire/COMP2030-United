@@ -18,29 +18,14 @@ function show(){
     }
 }
 
-function emailVal(){
-    let email = document.getElementById("email").value;
-    let emailConfirm = document.getElementById("emailConfirm").value;
-
-    if(email != emailConfirm){
-        document.getElementById("emailConfirm").style.border = "2px solid red";
-        document.getElementById("eWarning").innerHTML = "Email does not match.";
-    }else if(email == emailConfirm){
-        document.getElementById("emailConfirm").style.border = "1px solid gray";
-        document.getElementById("eWarning").innerHTML = "";
-    }
-}
-
 function passStr(){
     let password = document.getElementById("password").value;
     let strength = document.getElementById("strengthImg");
 
     //Length check
     if(password.length < 12){
-        console.log("PASS TOO SHORT");
         strength.src = "images/no-pass.png";
     }else{
-        console.log("PASS LONG ENOUGH");
         strength.src = "images/bad-pass.png";
         let caps = 0;
         let lows = 0
@@ -57,7 +42,6 @@ function passStr(){
 
         }
         if(caps > 0 && lows > 0){
-            console.log("PASS IS MEH");
             strength.src = "images/meh-pass.png";
             let nums = 0;
             for(let i=0; i < password.length; i++){
@@ -67,7 +51,6 @@ function passStr(){
                 }
             }
             if(nums > 0){
-                console.log("PASS IS BETTER");
                 strength.src = "images/better-pass.png";
 
                 let special = "!\"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~"
@@ -86,7 +69,6 @@ function passStr(){
                 }
 
                 if(specials > 0){
-                    console.log("PASS IS GOOD");
                     strength.src = "images/good-pass.png";
                 }
 
@@ -105,5 +87,18 @@ function passVal(){
     }else if(confirm == password){
         document.getElementById("passwordConfirm").style.border = "1px solid gray";
         document.getElementById("pWarning").innerHTML = "";
+    }
+}
+
+function emailVal(){
+    let email = document.getElementById("email").value;
+    let emailConfirm = document.getElementById("emailConfirm").value;
+
+    if(email != emailConfirm){
+        document.getElementById("emailConfirm").style.border = "2px solid red";
+        document.getElementById("eWarning").innerHTML = "Email does not match.";
+    }else if(email == emailConfirm){
+        document.getElementById("emailConfirm").style.border = "1px solid gray";
+        document.getElementById("eWarning").innerHTML = "";
     }
 }
