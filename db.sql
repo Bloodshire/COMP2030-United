@@ -88,9 +88,12 @@ VALUES
     ('qsd1@example.com', '$2y$10$JvTv5GkQhn5TB89e23lapuqs/0cMzTW0lr6A8FgcUWMLYEq1ab.Ei', 'James', 'Cameron', '1982-03-22', '789 Oak St', 'TX', 'Hendon', '77002', 'FN2710', 2),
     ('qsd2@example.com', '$2y$10$JvTv5GkQhn5TB89e23lapuqs/0cMzTW0lr6A8FgcUWMLYEq1ab.Ei', 'Michael', 'Bay', '1978-12-10', '101 Pine St', 'FL', 'Hendon', '33001', 'FN7291', 2);
 
-
 INSERT INTO users (email, password, given_name, surname, date_of_birth, street_address, suburb, state, postcode, license_no, role_id, instructor_id)
 VALUES
     ('student1@example.com', '$2y$10$Yt2kewZAyQC.ywQkUA9NIu88LGuB3avxobGmQtpB18WUwrkpObO6K', 'Michael', 'Kayal', '1995-05-20', '111 Cedar St', 'Hendon', 'CA', '90210', 'FN8972', 3, 1),
     ('student2@example.com', '$2y$10$Yt2kewZAyQC.ywQkUA9NIu88LGuB3avxobGmQtpB18WUwrkpObO6K', 'Harrison', 'Reeve', '1993-09-12', '222 Maple St', 'Conolly', 'NY', '10001', 'FN0908', 3, 2);
 
+
+    -- Instructor password: PasswordI1
+    -- QSD password: PasswordQ1
+    -- Student password: PasswordS1
