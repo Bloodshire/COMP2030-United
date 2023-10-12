@@ -24,9 +24,9 @@ function passStr(){
 
     //Length check
     if(password.length < 12){
-        strength.src = "images/no-pass.png";
+        strength.src = "../images/no-pass.png";
     }else{
-        strength.src = "images/bad-pass.png";
+        strength.src = "../images/bad-pass.png";
         let caps = 0;
         let lows = 0
         for(let i=0; i < password.length; i++){
@@ -42,7 +42,7 @@ function passStr(){
 
         }
         if(caps > 0 && lows > 0){
-            strength.src = "images/meh-pass.png";
+            strength.src = "../images/meh-pass.png";
             let nums = 0;
             for(let i=0; i < password.length; i++){
 
@@ -51,7 +51,7 @@ function passStr(){
                 }
             }
             if(nums > 0){
-                strength.src = "images/better-pass.png";
+                strength.src = "../images/better-pass.png";
 
                 let special = "!\"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~"
                 let specials = 0;
@@ -69,7 +69,7 @@ function passStr(){
                 }
 
                 if(specials > 0){
-                    strength.src = "images/good-pass.png";
+                    strength.src = "../images/good-pass.png";
                 }
 
             }

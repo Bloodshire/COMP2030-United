@@ -110,10 +110,10 @@
 
                 <h2>Password Information</h2>
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="10" onchange="passStr()">
+                <input type="password" id="password" name="password" minlength="10" oninput="passStr()">
 
                 <div>
-                    <img src="images/no-pass.png" id="strengthImg">
+                    <img src="../images/no-pass.png" id="strengthImg">
                 </div>
 
                 <div id="passwordContainer">
