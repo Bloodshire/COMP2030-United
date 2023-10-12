@@ -11,7 +11,7 @@
 
 <html>
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>The learner will be able to bring the vehicle to a smooth stop in first gear (manuals only) and, with the aid of the park brake, immediately move off smoothly while maintaining full control of the vehicle.</p> 

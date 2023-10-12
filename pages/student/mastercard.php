@@ -12,7 +12,7 @@
 <html>
 
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
     <form>
     <div>
         <label class="section-header">Card number</label>

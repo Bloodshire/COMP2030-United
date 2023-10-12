@@ -11,7 +11,7 @@
 
 <html>
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>(1) The learner will be able to change gears (in either a manual or automatic vehicle) up and down in the transmission in a reasonably smooth manner without looking at the gear lever while maintaining full steering control; and</p> 

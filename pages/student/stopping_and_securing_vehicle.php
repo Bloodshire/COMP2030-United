@@ -11,7 +11,7 @@
 
 <html>
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>(1) The learner will bring the vehicle to a smooth and controlled stop at the left kerb from 30-60km/h with safety, without stalling and when requested; and </p> 

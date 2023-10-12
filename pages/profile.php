@@ -13,7 +13,7 @@
 <html>
 
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "inc/main.inc.php"; ?>
     <div>
         <?php
         // Get the user's full name from the session data

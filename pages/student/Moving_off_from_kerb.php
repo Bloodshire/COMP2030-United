@@ -11,7 +11,7 @@
 
 <html>
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
     <p>The learner will be able to move off from the left kerb in a safe and efficient manner with the vehicle under full control at the first attempt.</p> 

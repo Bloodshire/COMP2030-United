@@ -10,7 +10,7 @@
 
 <html>
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
     <div class="centre">
     <label><b>Payment options</b></label>
     <br>

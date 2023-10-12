@@ -28,7 +28,7 @@ $student_allowed_uris = [
 ];
 $qsd_allowed_uris = ['/reports.php', '/qsd-dashboard.php', '/profile.php'];
 $instructor_allowed_uris = ['/reports.php', '/instructor-dashboard.php', '/profile.php'];
-$government_allowed_uris = ['/reports.php', '/government-dashboard.php', '/profile.php'];
+$government_allowed_uris = ['/reports.php', '/government-dashboard.php', '/profile.php'];   
 
 // Get the current REQUEST_URI
 $current_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

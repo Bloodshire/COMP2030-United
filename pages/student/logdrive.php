@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <?php require_once "../../inc/main.inc.php"; ?>
     <div class="row">
         <div class="column">
             <form id="logbook-entry" method="POST" action="logdrive_process.php">

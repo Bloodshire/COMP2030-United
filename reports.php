@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php require_once "inc/menu.inc.php";?>
+    <?php require_once "inc/main.inc.php";?>
 
         <form class="reportContainer" method="POST" action="studentList.php">
             <div class="selectWrapper">
