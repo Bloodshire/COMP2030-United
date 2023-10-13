@@ -26,9 +26,23 @@ $student_allowed_uris = [
     '/review_basic_procedures.php',
     '/mastercard.php'
 ];
-$qsd_allowed_uris = ['/reports.php', '/qsd-dashboard.php', '/profile.php'];
-$instructor_allowed_uris = ['/reports.php', '/instructor-dashboard.php', '/profile.php'];
-$government_allowed_uris = ['/reports.php', '/government-dashboard.php', '/profile.php'];   
+$qsd_allowed_uris = [
+    '/reports.php',
+    '/qsd-dashboard.php',
+    '/profile.php',
+
+];
+$instructor_allowed_uris = [
+    '/reports.php',
+    '/instructor-dashboard.php',
+    '/profile.php',
+    '/studentList.php'
+];
+$government_allowed_uris = [
+    '/reports.php',
+    '/government-dashboard.php',
+    '/profile.php'
+];
 
 // Get the current REQUEST_URI
 $current_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -133,7 +147,7 @@ else if ($role_id == 1) {
     <ul>
         <li><a href="instructor-dashboard.php"><i class="fa-xl fa-solid fa-house"></i><br>Dashboard</a></li>
         <li><a href="logbook.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
-        <li><a href="cbta.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Repors</a></li>
+        <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Repors</a></li>
         <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Billing & Payments</a></li>
         <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
     </ul>
@@ -172,8 +186,5 @@ if (!isset($_SESSION['user_id'])) {
 
 // Get the user's full name from the session data
 $user_given_name = isset($_SESSION['user_given_name']) ? $_SESSION['user_given_name'] : "Unknown User";
-
-// Display the welcome message
-echo "Welcome, " . $user_given_name . "!";
 ?>
 <hr>

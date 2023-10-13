@@ -13,7 +13,7 @@
 <body>
     <?php require_once "../../inc/main.inc.php"; ?>
     <div class="row">
-        <div class="column">
+        <div class="column c-ib">
             <form id="logbook-entry" method="POST" action="logdrive_process.php">
                 <div>
                     <label class="section-header">Date</label>
@@ -83,7 +83,7 @@
                 </div>
         </div>
 
-        <div class="column">
+        <div class="column c-ib">
             <label class="section-header">Instructor / QSD</label>
                 <div>
                     <label>Name</label>
