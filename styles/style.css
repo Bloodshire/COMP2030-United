@@ -164,26 +164,26 @@ div label {
   display: block;
 }
 
-#students {
+#tldr-table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#students td, #students th {
+#tldr-table td, #tldr-table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#students tr:nth-child(even) {
+#tldr-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#students tr:hover {
-  background-color: #f3f3f3;
+#tldr-table tr:hover {
+  background-color: #d8d8d8;
 }
 
-#students th {
+#tldr-table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -211,7 +211,7 @@ div label {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   cursor: pointer;
   border: 2px solid #4CAF50;
 }
@@ -227,6 +227,7 @@ div label {
   border-radius: 0px;
   background-color: white;
   color: #4CAF50;
+  transform: scale(1.03);
 }
 
 .btn-black:hover {

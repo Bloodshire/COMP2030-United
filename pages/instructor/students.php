@@ -16,7 +16,7 @@
 
     <h2>List of Current Students</h2>
 
-    <table id="students">
+    <table id="tldr-table">
         <thead>
             <tr>
                 <th>Given Name</th>

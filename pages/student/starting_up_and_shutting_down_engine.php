@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Unit 1: Task 2 – Starting up and shutting down the engine</title>
     <meta charset="utf-8">
@@ -10,11 +11,14 @@
 </head>
 
 <html>
+
 <body>
+    <h1 id="heading-back-btn"><a href="cbta.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
     <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
-    <p>(1) The learner will be able to safely start the engine of the vehicle; and</p> 
+    <p>(1) The learner will be able to safely start the engine of the vehicle; and</p>
     <p>(2) The learner will be able to safely shut down the engine of the vehicle</p>
 
     <h2>Assesment Standard</h2>
@@ -132,8 +136,8 @@
     <p><b>Note:</b> This procedure may change due to manufacturer's requirements</p>
 
     <h2>Task Assesment Records</h2>
-    <p>(1)Starting the engine</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
-    <p>(2)Shutting down the engine</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs"> 
+    <p>(1)Starting the engine</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
+    <p>(2)Shutting down the engine</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
 
     <h2>Task 2 Sign Off</h2>
     <p>Driver Namer:</p>
@@ -155,4 +159,5 @@
 
 
 </body>
+
 </html>

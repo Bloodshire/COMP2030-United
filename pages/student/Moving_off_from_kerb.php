@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Unit 1: Task 3 – Moving off from the kerb</title>
     <meta charset="utf-8">
@@ -10,11 +11,14 @@
 </head>
 
 <html>
+
 <body>
+    <h1 id="heading-back-btn"><a href="cbta.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
     <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
-    <p>The learner will be able to move off from the left kerb in a safe and efficient manner with the vehicle under full control at the first attempt.</p> 
+    <p>The learner will be able to move off from the left kerb in a safe and efficient manner with the vehicle under full control at the first attempt.</p>
 
     <h2>Assesment Standard</h2>
     <p>The learner will accurately perform this task without assistance.</p>
@@ -85,7 +89,7 @@
     <p><b>Note:</b> This procedure may change due to manufacturer's requirements</p>
 
     <h2>Task Assesment Records</h2>
-    <p>Move off from the kerb</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
+    <p>Move off from the kerb</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
 
     <h2>Task 3 Sign Off</h2>
     <p>Driver Namer:</p>
@@ -107,4 +111,5 @@
 
 
 </body>
+
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Unit 1: Task 5 – Stop and go (using the park brake)</title>
     <meta charset="utf-8">
@@ -10,11 +11,14 @@
 </head>
 
 <html>
+
 <body>
+    <h1 id="heading-back-btn"><a href="cbta.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
     <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
-    <p>The learner will be able to bring the vehicle to a smooth stop in first gear (manuals only) and, with the aid of the park brake, immediately move off smoothly while maintaining full control of the vehicle.</p> 
+    <p>The learner will be able to bring the vehicle to a smooth stop in first gear (manuals only) and, with the aid of the park brake, immediately move off smoothly while maintaining full control of the vehicle.</p>
 
     <h2>Assesment Standard</h2>
     <p>The learner will accurately perform this task without assistance.</p>
@@ -79,7 +83,7 @@
     </table>
 
     <h2>Task Assesment Records</h2>
-    <p>Stop and go (using the park brake)</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">   
+    <p>Stop and go (using the park brake)</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
 
     <p><b>Authorised Examiners Note:</b> This exercise is not ‘stopping at the kerb’ / ‘moving off from the kerb’ but may be assessed when stopping and moving away from a stop line, or stopping and moving away when turning right or left, or when momentarily stopping on a slight gradient in a line of traffic</p>
 
@@ -105,4 +109,5 @@
 
 
 </body>
+
 </html>

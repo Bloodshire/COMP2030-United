@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Task 1: Cabin Drill and Control</title>
     <meta charset="utf-8">
@@ -10,7 +11,10 @@
 </head>
 
 <html>
+
 <body>
+    <h1 id="heading-back-btn"><a href="cbta.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
     <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
@@ -80,7 +84,7 @@
             <li>Gear lever (including autos)</li>
         </ul>
     </div>
-    
+
     <div class="task_column">
         <h3>Group 2 (any 1)</h3>
         <ul class="task_list">
@@ -90,7 +94,7 @@
             <li>Signals</li>
         </ul>
     </div>
-    
+
     <div class="task_column">
         <h3>Group 3 (any 1)</h3>
         <ul class="task_list">
@@ -105,10 +109,10 @@
     <p><b>Note:</b> This procedure may change due to manufacturer's requirements</p>
 
     <h2>Task Assesment Records</h2>
-    <p>Cabin Drill</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
+    <p>Cabin Drill</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
     <p>Controls (Selected from the respective group)</p>
     <div>
-        <label for="Group 1">Group 1 - Control Name</label><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
+        <label for="Group 1">Group 1 - Control Name</label><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
         <select id="group1ID" name="Group 1 Control" required>
             <option value="">Select</option>
             <option>Brake</option>
@@ -119,7 +123,7 @@
     </div>
     <p></p>
     <div>
-        <label for="Group 2">Group 2 - Control Name</label><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
+        <label for="Group 2">Group 2 - Control Name</label><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
         <select id="group2ID" name="Group 2 Control" required>
             <option value="">Select</option>
             <option>Clutch</option>
@@ -130,7 +134,7 @@
     </div>
     <p></p>
     <div>
-        <label for="Group 3">Group 3 - Control Name</label><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
+        <label for="Group 3">Group 3 - Control Name</label><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
         <select id="group3ID" name="Group 3 Control" required>
             <option value="">Select</option>
             <option>Heater/Demister</option>
@@ -165,4 +169,5 @@
 
 
 </body>
+
 </html>

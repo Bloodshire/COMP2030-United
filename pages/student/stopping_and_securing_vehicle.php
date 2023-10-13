@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>Unit 1: Task 4 – Stopping and securing the vehicle</title>
     <meta charset="utf-8">
@@ -10,11 +11,14 @@
 </head>
 
 <html>
+
 <body>
+    <h1 id="heading-back-btn"><a href="cbta.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
     <?php require_once "../../inc/main.inc.php"; ?>
 
     <h2>Learning Outcome</h2>
-    <p>(1) The learner will bring the vehicle to a smooth and controlled stop at the left kerb from 30-60km/h with safety, without stalling and when requested; and </p> 
+    <p>(1) The learner will bring the vehicle to a smooth and controlled stop at the left kerb from 30-60km/h with safety, without stalling and when requested; and </p>
     <p>(2) The learner will correctly secure the vehicle to avoid rolling.</p>
 
     <h2>Assesment Standard</h2>
@@ -100,8 +104,8 @@
     </table>
 
     <h2>Task Assesment Records</h2>
-    <p>(1) Stop the vehicle (including slowing)</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs">  
-    <p>(2) Secure the vehicle to prevent rolling (a prolonged stop)</p><input type="checkbox" class="checkboxs">  <input type="checkbox" class="checkboxs"> 
+    <p>(1) Stop the vehicle (including slowing)</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
+    <p>(2) Secure the vehicle to prevent rolling (a prolonged stop)</p><input type="checkbox" class="checkboxs"> <input type="checkbox" class="checkboxs">
 
     <p><b>Note:</b> This procedure may change due to manufacturer's requirements</p>
 
@@ -125,4 +129,5 @@
 
 
 </body>
+
 </html>
