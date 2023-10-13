@@ -36,7 +36,9 @@ $instructor_allowed_uris = [
     '/reports.php',
     '/instructor-dashboard.php',
     '/profile.php',
-    '/studentList.php'
+    '/studentList.php',
+    '/students.php',
+    '/billing.php'
 ];
 $government_allowed_uris = [
     '/reports.php',
@@ -146,10 +148,10 @@ else if ($role_id == 1) {
     <h1 class="nav-bar-title">TLDR</h1>
     <ul>
         <li><a href="instructor-dashboard.php"><i class="fa-xl fa-solid fa-house"></i><br>Dashboard</a></li>
-        <li><a href="logbook.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
-        <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Repors</a></li>
-        <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Billing & Payments</a></li>
-        <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
+        <li><a href="students.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
+        <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Reports</a></li>
+        <li><a href="billing.php"><i class="fa-solid fa-xl fa-file-invoice-dollar"></i><br>Billing & Payments</a></li>
+        <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
     <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
 </div>';

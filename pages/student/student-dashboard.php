@@ -3,7 +3,7 @@
 <head>
     <title>Student Dashboard</title>
     <meta charset="utf-8">
-    <meta name="Authors" content=" Callum and Michael">
+    <meta name="Authors" content="Michael">
     <link rel="stylesheet" href="../../styles/style.css">
     <script src="../../scripts/script.js" defer></script>
     <a href="student-dashboard.php" id="menu-selected"></a>
@@ -116,11 +116,11 @@
             <h3>CBT&A Units</h3>
         </div>
     </div>
-    <div class="column c-ib">
+    <!-- <div class="column c-ib">
         <div class="container">
             <h3>Conditions</h3>
         </div>
-    </div>
+    </div> -->
     <div class="column c-ib">
         <div class="container">
             <h3>Drive Map</h3>

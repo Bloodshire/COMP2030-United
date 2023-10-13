@@ -3,7 +3,7 @@
 <head>
     <title>CBT&A Units</title>
     <meta charset="utf-8">
-    <meta name="Authors" content="Connor">
+    <meta name="Authors" content="Connor and Michael">
     <link rel="stylesheet" href="../../styles/style.css">
     <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>

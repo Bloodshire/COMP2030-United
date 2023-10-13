@@ -4,7 +4,7 @@
 <head>
     <title>Register</title>
     <meta charset="utf-8">
-    <meta name="Authors" content="Harrison">
+    <meta name="Authors" content="Harrison and Michael">
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../scripts/registration.js" defer></script>
 </head>
