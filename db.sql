@@ -83,6 +83,9 @@ GRANT all privileges ON TLDR.users TO dbadmin@localhost;
 GRANT all privileges ON TLDR.roles TO dbadmin@localhost;
 GRANT all privileges ON TLDR.logbook TO dbadmin@localhost;
 GRANT all privileges ON TLDR.pending_entries TO dbadmin@localhost;
+GRANT all privileges ON TLDR.approvals TO dbadmin@localhost;
+GRANT all privileges ON TLDR.cbta_progress TO dbadmin@localhost;
+
 
 -- Insert users into the 'roles' table
 INSERT INTO roles (role_name) VALUES

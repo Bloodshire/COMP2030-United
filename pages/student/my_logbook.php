@@ -18,7 +18,7 @@
     require_once "../../inc/dbconn.inc.php";
 
     $userId = $_SESSION['user_id']; 
-    $query = "SELECT * FROM LOGBOOK WHERE student_id = ?";
+    $query = "SELECT * FROM LOGBOOK WHERE student_id = ? AND entry_id NOT IN (SELECT logbook_entry_id FROM approvals)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("i", $userId);
     $stmt->execute();

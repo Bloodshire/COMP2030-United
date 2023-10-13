@@ -46,7 +46,7 @@ $stmt->close();
 
 // Check if the instructor ID was found
 if ($instructor_id != 0) {
-    // Perform the database insert
+    // Perform the database insert into the logbook table
     $sql = "INSERT INTO logbook (student_id, approver_id, date, start_time, finish_time, duration, from_location, to_location, road_condition, weather_condition, traffic_condition)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -57,15 +57,31 @@ if ($instructor_id != 0) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("iisssssssss", $student_id, $instructor_id, $date, $start_time, $finish_time, $duration, $from_location, $to_location, $road_condition, $weather_condition, $traffic_condition);
 
-    
     // Execute the SQL statement
     if ($stmt->execute()) {
-        echo "Drive logged successfully.";
+        // Insertion into logbook succeeded; now insert a corresponding entry into the approvals table
+        $logbook_entry_id = $stmt->insert_id; // Get the ID of the inserted logbook entry
+
+        $sql_approvals = "INSERT INTO approvals (logbook_entry_id, approver_id, approval_date, approved)
+                         VALUES (?, ?, NOW(), 0)";
+
+        // Prepare the SQL statement for approvals
+        $stmt_approvals = $conn->prepare($sql_approvals);
+        $stmt_approvals->bind_param("ii", $logbook_entry_id, $instructor_id);
+
+        if ($stmt_approvals->execute()) {
+            echo "Drive logged successfully, awaiting approval.";
+        } else {
+            echo "Error: " . $stmt_approvals->error;
+        }
+
+        // Close the statement for approvals
+        $stmt_approvals->close();
     } else {
         echo "Error: " . $stmt->error;
     }
 
-    // Close the statement
+    // Close the statement for logbook
     $stmt->close();
 } else {
     echo "Instructor with the provided license number not found.";
