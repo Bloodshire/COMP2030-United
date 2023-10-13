@@ -30,7 +30,7 @@
             $stmt->bind_param("ii", $approval_status, $entry_id);
             if ($stmt->execute()) {
                 // Approval status updated successfully
-                echo "<span class='notification'>Logbook entry approved!</span>";
+                echo "<span id='notification' class='notification fade-out'>Logbook entry approved!</span>";
                 echo '<br>';
             } else {
                 echo "Error updating approval status: " . $stmt->error;
@@ -105,6 +105,15 @@
     ?>
     </tbody>
     </table>
+    <script>
+        var notification = document.getElementById('notification');
+        if (notification) {
+            // Remove the element after the animation ends
+            notification.addEventListener('animationend', function () {
+                notification.remove();
+            });
+        }
+    </script>
 </body>
 
 </html>

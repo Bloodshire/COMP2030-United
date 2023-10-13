@@ -171,6 +171,21 @@ select {
   text-align: center;
 }
 
+/* CSS for the fade-out animation */
+.fade-out {
+  animation: fadeOut 3s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
 div label {
   display: block;
 }
