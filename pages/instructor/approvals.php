@@ -33,7 +33,6 @@
                 echo "Logbook entry approved!";
                 echo '<br>';
                 echo '<br>';
-
             } else {
                 echo "Error updating approval status: " . $stmt->error;
             }
@@ -56,7 +55,10 @@
 
     // Check if there are rows to display
     if ($result->num_rows > 0) {
-        echo "<table id='tldr-table' class='tldr-table-blue'>
+        echo "
+         <h2>List of Drives Awaiting Approval</h2>
+        
+        <table id='tldr-table' class='tldr-table-blue'>
         <thead>
             <tr>
                 <th>Date</th>

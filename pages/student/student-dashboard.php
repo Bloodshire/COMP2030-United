@@ -31,7 +31,7 @@
             $loggedStudentId = $_SESSION['user_id'];
 
             // Query the database to retrieve the total driving hours for the student
-            $query = "SELECT SUM(duration) AS total_minutes FROM logbook WHERE student_id = ?";
+            $query = "SELECT SUM(duration) AS total_minutes FROM logbook WHERE student_id = ? AND entry_id IN (SELECT logbook_entry_id FROM approvals WHERE approved=1)";
             $stmt = $conn->prepare($query);
             $stmt->bind_param("i", $loggedStudentId);
             $stmt->execute();
@@ -55,7 +55,7 @@
 
             // Iterate through each driving entry to determine day and night hours
             // Replace this with your actual data retrieval logic
-            $query = "SELECT start_time, finish_time FROM logbook WHERE student_id = ?";
+            $query = "SELECT start_time, finish_time FROM logbook WHERE student_id = ? AND entry_id IN (SELECT logbook_entry_id FROM approvals WHERE approved=1)";
             $stmt = $conn->prepare($query);
             $stmt->bind_param("i", $loggedStudentId);
             $stmt->execute();
