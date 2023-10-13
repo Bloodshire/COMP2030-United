@@ -110,7 +110,7 @@
                 </form>
                 <form method='post'>
                     <input type='hidden' name='dispprove_entry_id' value='" . $row['entry_id'] . "'>
-                    <button class='btn-custom btn-small' type='submit'><i class='fa-solid fa-thumbs-up'></i></button>
+                    <button class='btn-custom btn-red btn-small' type='submit'><i class='fa-solid fa-thumbs-down'></i></button>
                 </form>
                     
 
@@ -129,10 +129,10 @@
     </tbody>
     </table>
     <script>
-        var notification = document.getElementById('notification');
+        var notification = document.getElementById("notification");
         if (notification) {
             // Remove the element after the animation ends
-            notification.addEventListener('animationend', function() {
+            notification.addEventListener("animationend", function() {
                 notification.remove();
             });
         }
