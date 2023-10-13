@@ -110,3 +110,15 @@ VALUES
     -- Instructor password: PasswordI1
     -- QSD password: PasswordQ1
     -- Student password: PasswordS1
+
+    -- Insert logbook entries for students that need approval
+INSERT INTO logbook (student_id, approver_id, date, start_time, finish_time, duration, from_location, to_location, road_condition, weather_condition, traffic_condition)
+VALUES
+    (5, 1, '2023-05-01', '08:00:00', '09:30:00', 90, '123 Elm St', '456 Oak St', 'Dry', 'Clear', 'Light Traffic'),
+    (6, 2, '2023-05-02', '09:30:00', '11:00:00', 90, '789 Pine St', '101 Cedar St', 'Wet', 'Rainy', 'Heavy Traffic');
+
+-- Insert approvals for logbook entries that need approval
+INSERT INTO approvals (logbook_entry_id, approver_id, approval_date, approved)
+VALUES
+    (1, 1, '2023-05-03', 0),  -- Logbook entry 1 needs approval from instructor 1
+    (2, 2, '2023-05-03', 0);  -- Logbook entry 2 needs approval from instructor 2

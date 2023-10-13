@@ -18,7 +18,7 @@
     require_once "../../inc/dbconn.inc.php";
 
     $userId = $_SESSION['user_id']; 
-    $query = "SELECT * FROM LOGBOOK WHERE student_id = ? AND entry_id NOT IN (SELECT logbook_entry_id FROM approvals)";
+    $query = "SELECT * FROM LOGBOOK WHERE student_id = ? AND entry_id IN (SELECT logbook_entry_id FROM approvals WHERE approved=1)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("i", $userId);
     $stmt->execute();
@@ -39,6 +39,7 @@
         echo "<th>Road Condition</th>";
         echo "<th>Weather Condition</th>";
         echo "<th>Traffic Condition</th>";
+        echo "<th>Approval Status</th>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
@@ -54,6 +55,8 @@
             echo "<td>" . $row['road_condition'] . "</td>";
             echo "<td>" . $row['weather_condition'] . "</td>";
             echo "<td>" . $row['traffic_condition'] . "</td>";
+            echo "<td>Approved</td>";
+
             echo "</tr>";
         }
 

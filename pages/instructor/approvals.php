@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <title>Approvals</title>
@@ -9,114 +10,100 @@
     <a href="approvals.php" id="menu-selected"></a>
 </head>
 
-<html>
-
 <body>
-    <?php require_once "../../inc/main.inc.php"; ?>
+    <?php
+    require_once "../../inc/main.inc.php";
+    require_once "../../inc/dbconn.inc.php";
 
-    <h2>List of Current Students</h2>
+    // Check if the user is logged in and is an instructor (you can customize this check)
+    $instructor_id = $_SESSION['user_id'];
 
-    <table id="students">
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Handle the approval process when the form is submitted
+        if (isset($_POST['approve_entry_id'])) {
+            $entry_id = $_POST['approve_entry_id'];
+            $approval_status = 1; // Set to approved
+
+            // Update the approval status in the "approvals" table
+            $update_query = "UPDATE approvals SET approved = ? WHERE logbook_entry_id = ?";
+            $stmt = $conn->prepare($update_query);
+            $stmt->bind_param("ii", $approval_status, $entry_id);
+            if ($stmt->execute()) {
+                // Approval status updated successfully
+                echo "Logbook entry approved!";
+                echo '<br>';
+                echo '<br>';
+
+            } else {
+                echo "Error updating approval status: " . $stmt->error;
+            }
+            $stmt->close();
+        }
+    }
+
+    // Query to select logbook entries that need approval
+    $query = "SELECT l.entry_id, l.date, l.start_time, l.finish_time, l.duration, l.from_location, l.to_location, l.road_condition, l.weather_condition, l.traffic_condition, u.given_name, u.surname
+          FROM logbook AS l
+          JOIN approvals AS a ON l.entry_id = a.logbook_entry_id
+          JOIN users AS u ON l.student_id = u.user_id
+          WHERE l.approver_id = ? AND a.approved = 0";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $instructor_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+
+    // Check if there are rows to display
+    if ($result->num_rows > 0) {
+        echo "<table id='tldr-table' class='tldr-table-blue'>
         <thead>
             <tr>
-                <th>Given Name</th>
-                <th>Surname</th>
-                <th>Email</th>
-                <th>License No</th>
-                <th>Actions</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>Finish Time</th>
+                <th>Duration (minutes)</th>
+                <th>From Location</th>
+                <th>To Location</th>
+                <th>Road Condition</th>
+                <th>Weather Condition</th>
+                <th>Traffic Condition</th>
+                <th>Student Name</th>
+                <th>Action</th>
             </tr>
         </thead>
-        <tbody>
-            <?php
-            // Connect to the database (assuming you have a db connection)
-            // Replace 'your_db_connection' with the actual database connection code
-            // ...
+        <tbody>";
 
-            // Fetch data from the 'users' table for students under the instructor's ID
-            $query = "SELECT user_id, given_name, surname, email, license_no FROM users WHERE role_id = 3 AND instructor_id = ?";
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("i", $_SESSION['user_id']);
-            $stmt->execute();
-            $result = $stmt->get_result();
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row['date'] . "</td>";
+            echo "<td>" . $row['start_time'] . "</td>";
+            echo "<td>" . $row['finish_time'] . "</td>";
+            echo "<td>" . $row['duration'] . "</td>";
+            echo "<td>" . $row['from_location'] . "</td>";
+            echo "<td>" . $row['to_location'] . "</td>";
+            echo "<td>" . $row['road_condition'] . "</td>";
+            echo "<td>" . $row['weather_condition'] . "</td>";
+            echo "<td>" . $row['traffic_condition'] . "</td>";
+            echo "<td>" . $row['given_name'] . " " . $row['surname'] . "</td>";
+            echo "<td>
+                <form method='post'>
+                    <input type='hidden' name='approve_entry_id' value='" . $row['entry_id'] . "'>
+                    <button class='btn-custom btn-blue btn-small' type='submit'>Approve</button>
+                </form>
+            </td>";
+            echo "</tr>";
+        }
 
-            // Check if there are rows to display
-            if ($result->num_rows > 0) {
-                // Loop through the results and display them in the table
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['given_name'] . "</td>";
-                    echo "<td>" . $row['surname'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['license_no'] . "</td>";
-                    echo "<td>";
-                    echo "<button class='btn-custom btn-blue btn-small' onclick='manageStudent(" . $row['user_id'] . ', "' . $row['given_name'] . '", "' . $row['surname'] . '", "' . $row['license_no'] . '"' . ")'><i class='fa-solid fa-arrow-right-from-bracket'></i> Manage</button>";
-                    echo "<button class='btn-custom btn-red btn-small' onclick='removeStudent(" . $row['user_id'] . ")'><i class='fa-solid fa-xmark'></i> Remove Student</button>";
-                    echo "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                // Display a message if there are no current students
-                echo "<tr><td colspan='5'>You have no current students.</td></tr>";
-            }
+        echo "</tbody>
+    </table>";
+    } else {
+        echo "No drives awaiting approval.";
+    }
 
-            // Close the database connection
-            $stmt->close();
-            $conn->close();
-            ?>
-        </tbody>
+    ?>
+    </tbody>
     </table>
-    <br>
-    <button id="addStudentButton" class="btn-custom"><i class="fa-solid fa-plus"></i> Add Student</button>
-
-    <script>
-        // JavaScript function to remove a student
-        function removeStudent(userId) {
-            fetch('remove_student.php?user_id=' + userId, {
-                    method: 'POST'
-                })
-                .then(response => {
-                    location.reload();
-                })
-                .catch(error => {
-                    // Handle errors if needed
-                });
-        }
-
-        function manageStudent(userId, givenName, surname, licenseNo) {
-            const formData = new FormData();
-            formData.append('user_id', userId);
-            formData.append('given_name', givenName);
-            formData.append('surname', surname);
-            formData.append('license_no', licenseNo);
-
-            // Create a hidden form element and submit it
-            const form = document.createElement('form');
-            form.method = 'post';
-            form.action = 'manage_student.php';
-            form.style.display = 'hidden';
-
-            // Append the form data to the form
-            for (var pair of formData.entries()) {
-                var input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = pair[0];
-                input.value = pair[1];
-                form.appendChild(input);
-            }
-
-            // Append the form to the document body and submit it
-            document.body.appendChild(form);
-            form.submit();
-        }
-
-
-        // Add an event listener to the "Add Student" button (you can handle the addition of a student)
-        document.getElementById('addStudentButton').addEventListener('click', function() {
-            // You can add your logic for adding a student here
-            // For example, display a form or trigger a modal
-        });
-    </script>
-
 </body>
 
 </html>
