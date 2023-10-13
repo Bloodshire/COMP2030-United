@@ -62,7 +62,7 @@ CREATE TABLE approvals (
     logbook_entry_id INT NOT NULL,
     approver_id INT NOT NULL,
     approval_date DATE NOT NULL,
-    approved BOOLEAN NOT NULL,
+    approved TINYINT(1) NOT NULL,
     FOREIGN KEY (logbook_entry_id) REFERENCES logbook (entry_id),
     FOREIGN KEY (approver_id) REFERENCES users (user_id)
 );

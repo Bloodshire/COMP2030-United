@@ -30,7 +30,23 @@
             $stmt->bind_param("ii", $approval_status, $entry_id);
             if ($stmt->execute()) {
                 // Approval status updated successfully
-                echo "<span id='notification' class='notification fade-out'>Logbook entry approved!</span>";
+                echo "<span id='notification' class='notification fade-out'>Logbook entry <b>approved</b>!</span>";
+                echo '<br>';
+            } else {
+                echo "Error updating approval status: " . $stmt->error;
+            }
+            $stmt->close();
+        } else if (isset($_POST['dispprove_entry_id'])) {
+            $entry_id = $_POST['dispprove_entry_id'];
+            $approval_status = 2; // Set to dispproved
+
+            // Update the approval status in the "approvals" table
+            $update_query = "UPDATE approvals SET approved = ? WHERE logbook_entry_id = ?";
+            $stmt = $conn->prepare($update_query);
+            $stmt->bind_param("ii", $approval_status, $entry_id);
+            if ($stmt->execute()) {
+                // Approval status updated successfully
+                echo "<span id='notification' class='notification fade-out'>Logbook entry <b>disapproved</b>!</span>";
                 echo '<br>';
             } else {
                 echo "Error updating approval status: " . $stmt->error;
@@ -90,8 +106,15 @@
             echo "<td>
                 <form method='post'>
                     <input type='hidden' name='approve_entry_id' value='" . $row['entry_id'] . "'>
-                    <button class='btn-custom btn-blue btn-small' type='submit'>Approve</button>
+                    <button class='btn-custom btn-small' type='submit'><i class='fa-solid fa-thumbs-up'></i></button>
                 </form>
+                <form method='post'>
+                    <input type='hidden' name='dispprove_entry_id' value='" . $row['entry_id'] . "'>
+                    <button class='btn-custom btn-small' type='submit'><i class='fa-solid fa-thumbs-up'></i></button>
+                </form>
+                    
+
+                
             </td>";
             echo "</tr>";
         }
@@ -109,7 +132,7 @@
         var notification = document.getElementById('notification');
         if (notification) {
             // Remove the element after the animation ends
-            notification.addEventListener('animationend', function () {
+            notification.addEventListener('animationend', function() {
                 notification.remove();
             });
         }
