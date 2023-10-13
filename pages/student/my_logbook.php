@@ -17,7 +17,7 @@
     require_once "../../inc/main.inc.php";
     require_once "../../inc/dbconn.inc.php";
 
-    $userId = $_SESSION['user_id']; 
+    $userId = $_SESSION['user_id'];
     $query = "SELECT * FROM LOGBOOK WHERE student_id = ? AND entry_id IN (SELECT logbook_entry_id FROM approvals WHERE approved=1)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("i", $userId);
@@ -55,10 +55,30 @@
             echo "<td>" . $row['road_condition'] . "</td>";
             echo "<td>" . $row['weather_condition'] . "</td>";
             echo "<td>" . $row['traffic_condition'] . "</td>";
-            echo "<td>Approved</td>";
+
+            // Check if 'instructor_id' is not empty
+            if (!empty($row['approver_id'])) {
+                // Retrieve the instructor's name using the instructor's ID
+                $instructorId = $row['approver_id'];
+                $instructorName = ""; // Initialize instructor's name
+
+                // Make a query to fetch instructor's name based on their ID
+                $instructorQuery = "SELECT CONCAT(given_name, ' ', surname) AS instructor_name FROM users WHERE user_id = ?";
+                $stmtInstructor = $conn->prepare($instructorQuery);
+                $stmtInstructor->bind_param("i", $instructorId);
+                $stmtInstructor->execute();
+                $stmtInstructor->bind_result($instructorName);
+                $stmtInstructor->fetch();
+                $stmtInstructor->close();
+
+                echo "<td>Approved by " . $instructorName . "</td>";
+            } else {
+                echo "<td>Approved</td>";
+            }
 
             echo "</tr>";
         }
+
 
         echo "</tbody>";
         echo "</table>";

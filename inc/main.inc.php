@@ -25,7 +25,8 @@ $student_allowed_uris = [
     '/steering.php',
     '/review_basic_procedures.php',
     '/mastercard.php',
-    '/my_logbook.php'
+    '/my_logbook.php',
+    '/logdrive_process.php'
 ];
 $qsd_allowed_uris = [
     '/reports.php',
