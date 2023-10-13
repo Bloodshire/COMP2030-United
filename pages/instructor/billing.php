@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Billing</title>
+    <title>Billing & Payments</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Michael">
     <link rel="stylesheet" href="../../styles/style.css">

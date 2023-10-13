@@ -28,7 +28,7 @@
 
                 <?php
                 require_once "../../inc/dbconn.inc.php";
-                
+
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_entry_id'])) {
                     // Handle the deletion process
                     $entry_id = $_POST['delete_entry_id'];
@@ -46,7 +46,7 @@
                         $stmt_logbook->bind_param("i", $entry_id);
 
                         if ($stmt_logbook->execute()) {
-                            echo "<span id='notification' class='notification fade-out'>Entry deleted successfully.</span>";
+                            echo "<span id='notification' class='notification fade-out'>Entry removed successfully.</span>";
                         } else {
                             echo "Error deleting entry from logbook table: " . $stmt_logbook->error;
                         }
