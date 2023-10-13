@@ -23,6 +23,16 @@ CREATE TABLE users (
     FOREIGN KEY (instructor_id) REFERENCES users(user_id)
 );
 
+CREATE TABLE cbta_progress (
+    student_id INT NOT NULL,
+    cbta_unit INT NOT NULL,
+    cbta_task INT NOT NULL,
+    completion_status BOOLEAN NOT NULL,
+    completion_date DATE,
+    approver_id INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES users(user_id),
+    FOREIGN KEY (approver_id) REFERENCES users(user_id) -- Reference to the instructor who approved the unit/task
+);
 
 
 CREATE TABLE roles (
