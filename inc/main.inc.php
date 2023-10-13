@@ -38,7 +38,9 @@ $instructor_allowed_uris = [
     '/profile.php',
     '/studentList.php',
     '/students.php',
-    '/billing.php'
+    '/billing.php',
+    '/manage_student.php',
+    '/approvals.php'
 ];
 $government_allowed_uris = [
     '/reports.php',
@@ -149,6 +151,7 @@ else if ($role_id == 1) {
     <ul>
         <li><a href="instructor-dashboard.php"><i class="fa-xl fa-solid fa-house"></i><br>Dashboard</a></li>
         <li><a href="students.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
+        <li><a href="approvals.php"><i class="fa-xl fa-solid fa-stamp"></i><br>Approvals</a></li>
         <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Reports</a></li>
         <li><a href="billing.php"><i class="fa-solid fa-xl fa-file-invoice-dollar"></i><br>Billing & Payments</a></li>
         <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>

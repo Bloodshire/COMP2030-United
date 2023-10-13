@@ -129,6 +129,12 @@ select {
   padding: 10px;
 }
 
+.column3 {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -137,8 +143,11 @@ select {
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1500px) {
   .column {
+    width: 100%;
+  }
+  .column3 {
     width: 100%;
   }
 }
@@ -149,6 +158,33 @@ select {
 
 div label {
   display: block;
+}
+
+#students {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#students td, #students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#students tr:hover {
+  background-color: #f3f3f3;
+}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffcb08;
+  color: black;
 }
 
 .section-header {
@@ -176,6 +212,13 @@ div label {
   border: 2px solid #4CAF50;
 }
 
+.btn-small {
+  padding: 8px 8px;
+  transition-duration: 0.1s;
+  margin-right: 10px;
+
+}
+
 .btn-custom:hover {
   border-radius: 0px;
   background-color: white;
@@ -192,6 +235,23 @@ div label {
   color: red;
 }
 
+.btn-blue:hover {
+  background-color: white;
+  color: rgb(28, 119, 255);
+}
+
+.hover {
+  color: rgb(18, 112, 253);
+  background-color: white;  
+  transition-duration: 0.2;
+}
+
+.hover:hover {
+  color: rgb(126, 126, 220);
+  background-color: white;  
+}
+
+
 .btn-custom[disabled] {
   color: lightgray !important;
   background-color: #807478 !important;
@@ -203,6 +263,11 @@ div label {
 .btn-black {
   background-color: black;
   border: 2px solid black !important;
+}
+
+.btn-blue {
+  background-color: rgb(28, 119, 255); 
+  border: 2px solid rgb(28, 119, 255) !important;
 }
 
 .btn-red {
@@ -520,6 +585,66 @@ th {
   width: 100%;
   padding: 10px;
 }
+
+.column3 #one {
+  background-color: #4143DD;
+  color: white;
+}
+
+.column3 #two {
+  background-color: #4DAB59;
+  color: white;
+}
+
+.column3 #three {
+  background-color: #F38323;
+  color: white;
+}
+
+.column3 #four {
+  background-color: #EB3439;
+  color: white;
+}
+
+.column a {
+  text-decoration: none !important;
+}
+
+.column3 a {
+  text-decoration: none !important;
+}
+
+.dashboard {
+  border: none;
+  width: 400px;
+  height: 200px;
+  transition-duration: 0.2s;
+}
+
+.dashboard:hover {
+  transform: scale(1.03);
+}
+
+.dashboard span {
+  float: right;
+  margin-right: 130px;
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+}
+
+.dashboard h3 {
+  float: right;
+  margin-right: 20px;
+  position: relative;
+  bottom: 80px;
+}
+
+.dashboard h2 {
+  margin-left: 10px;
+  font-size: 60px;
+}
+
 #emailConfirm{
   border: default;
 }
