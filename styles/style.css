@@ -156,6 +156,10 @@ select {
   display: inline-block;
 }
 
+.column-full {
+  padding: 10px;
+}
+
 div label {
   display: block;
 }
@@ -240,15 +244,16 @@ div label {
   color: rgb(28, 119, 255);
 }
 
-.hover {
-  color: rgb(18, 112, 253);
+.heading-back-btn {
+  color: rgb(73, 73, 73);
   background-color: white;  
   transition-duration: 0.2;
 }
 
-.hover:hover {
-  color: rgb(126, 126, 220);
+.heading-back-btn:hover {
+  color: rgb(130, 130, 130);
   background-color: white;  
+  transform: scale(1.07);
 }
 
 
@@ -606,11 +611,7 @@ th {
   color: white;
 }
 
-.column a {
-  text-decoration: none !important;
-}
-
-.column3 a {
+a {
   text-decoration: none !important;
 }
 

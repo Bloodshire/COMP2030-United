@@ -66,7 +66,24 @@
         </tbody>
     </table>
     <br>
-    <button id="addStudentButton" class="btn-custom"><i class="fa-solid fa-plus"></i> Add Student</button>
+    <a href="#modal1" class="button"><button id="addStudentButton" class="btn-custom"><i class="fa-solid fa-plus"></i> Add Student</button></a>
+
+
+    <div id="modal1" class="overlay">
+            <a class="cancel" href="#"></a>
+            <div class="modal centre">
+                <!-- <a href="#"><span class="close">&times;</span></a> -->
+                <h2>Add Student</h2>
+                <div class="content">
+                    <form>
+                        <input type="email" name="student_email"/>
+                        <input type="text" name="student_license_no"/>
+                    </form>
+                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
+                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
+                </div>
+            </div>
+        </div>
 
     <script>
         // JavaScript function to remove a student

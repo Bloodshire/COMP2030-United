@@ -24,7 +24,8 @@ $student_allowed_uris = [
     '/gear_changing.php',
     '/steering.php',
     '/review_basic_procedures.php',
-    '/mastercard.php'
+    '/mastercard.php',
+    '/my_logbook.php'
 ];
 $qsd_allowed_uris = [
     '/reports.php',
@@ -185,7 +186,7 @@ else if ($role_id == 4) {
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     // Redirect to the login page or display an access denied message
-    header("Location: login.php");
+    header("Location: /www/TLDR/pages/login.php");
     exit;
 }
 

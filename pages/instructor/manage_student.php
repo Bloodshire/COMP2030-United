@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h1 id="heading-back-btn"><a href="students.php"><i class="hover fa-solid fa-arrow-left"></i></a></h1>
+    <h1 id="heading-back-btn"><a href="students.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
     <?php
     require_once "../../inc/main.inc.php";
 

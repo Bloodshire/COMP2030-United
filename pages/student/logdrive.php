@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <h1 id="heading-back-btn"><a href="logbook.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
     <?php require_once "../../inc/main.inc.php"; ?>
     <div class="row">
         <div class="column c-ib">
@@ -85,16 +87,16 @@
 
         <div class="column c-ib">
             <label class="section-header">Instructor / QSD</label>
-                <div>
-                    <label>Name</label>
-                    <input type="text" placeholder="" value="" name="instructor_name" required>
-                </div>
-                <div>
-                    <label>License No.</label>
-                    <input type="text" placeholder="" value="" name="instructor_license" required>
-                </div>
-                <br>
-                
+            <div>
+                <label>Name</label>
+                <input type="text" placeholder="" value="" name="instructor_name" required>
+            </div>
+            <div>
+                <label>License No.</label>
+                <input type="text" placeholder="" value="" name="instructor_license" required>
+            </div>
+            <br>
+
             <br>
             <br>
 
@@ -106,7 +108,6 @@
                 </div>
             </div>
             <br>
-            <a href="logbook.php"><button class="btn-custom btn-black" type="button"><i class="fa-solid fa-chevron-left"></i> Back</button></a>
             <a href="#modal1" class="button"><button type="button" class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit Drive</button></a>
         </div>
 
@@ -121,18 +122,17 @@
                 </div>
             </div>
         </div>
-
+        <!-- 
         <div id="modal2" class="overlay">
             <a class="cancel" href="#"></a>
             <div class="modal centre">
-                <!-- <a href="#"><span class="close">&times;</span></a> -->
                 <h2>Add QSD</h2>
                 <div class="content">
                     <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
                     <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         </form>
 </body>
