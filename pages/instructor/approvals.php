@@ -30,8 +30,7 @@
             $stmt->bind_param("ii", $approval_status, $entry_id);
             if ($stmt->execute()) {
                 // Approval status updated successfully
-                echo "Logbook entry approved!";
-                echo '<br>';
+                echo "<span class='notification'>Logbook entry approved!</span>";
                 echo '<br>';
             } else {
                 echo "Error updating approval status: " . $stmt->error;

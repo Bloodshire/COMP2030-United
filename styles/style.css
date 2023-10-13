@@ -160,6 +160,17 @@ select {
   padding: 10px;
 }
 
+.notification {
+  display: block;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: #214dffc8;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
 div label {
   display: block;
 }

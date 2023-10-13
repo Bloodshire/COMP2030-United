@@ -28,9 +28,13 @@
 
                 <?php
                 require_once "../../inc/dbconn.inc.php";
-
                 // Query for logbook entries that haven't been approved yet
-                $query = "SELECT * FROM logbook WHERE student_id = ? AND entry_id IN (SELECT logbook_entry_id FROM approvals WHERE approved=0)";
+                $query = "SELECT l.*, u.given_name AS instructor_given_name, u.surname AS instructor_surname
+          FROM logbook l
+          JOIN approvals a ON l.entry_id = a.logbook_entry_id
+          JOIN users u ON a.approver_id = u.user_id
+          WHERE l.student_id = ? AND l.entry_id IN (SELECT logbook_entry_id FROM approvals WHERE approved = 0)";
+
                 $stmt = $conn->prepare($query);
                 $stmt->bind_param("i", $_SESSION['user_id']);
                 $stmt->execute();
@@ -59,7 +63,7 @@
                         echo "<td>" . $row['duration'] . "</td>";
                         echo "<td>" . $row['from_location'] . "</td>";
                         echo "<td>" . $row['to_location'] . "</td>";
-                        echo "<td>Awaiting Approval</td>";
+                        echo "<td>Awaiting approval from " . $row['instructor_given_name'] . " " . $row['instructor_surname'] . "</td>";
 
                         echo "</tr>";
                     }
