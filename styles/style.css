@@ -287,13 +287,13 @@ div label {
 
 .heading-back-btn {
   color: rgb(73, 73, 73);
-  background-color: white;  
+  /* background-color: white;   */
   transition-duration: 0.2;
 }
 
 .heading-back-btn:hover {
   color: rgb(130, 130, 130);
-  background-color: white;  
+  /* background-color: white;   */
   transform: scale(1.07);
 }
 
@@ -542,6 +542,7 @@ th {
 }
 
 #registrationContainer{
+  position: relative;
   width: fit-content;
   padding-top: 100px;
   margin:auto;
@@ -555,17 +556,17 @@ th {
   padding-bottom: 10px;
   margin-bottom: 300px;
 }
-#registrationForm input[type="submit"],
-#registrationForm input[type="button"]{
+#registrationForm input[type="submit"]{
   background-color: #4CAF50;
   color: white;
   border: 2px solid #4CAF50;
   width: 150px;
   height: 30px;
-  margin-top: 5px;
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
-#registrationForm input[type="submit"]:hover,
-#registrationForm input[type="button"]:hover{
+#registrationForm input[type="submit"]:hover{
+  transform: scale(1.03);
   background-color: white;
   color: #4CAF50;
   border: 2px solid #4CAF50;
@@ -673,6 +674,15 @@ a {
   margin: 5px;
   padding: 15px;
 }
+
+.top-left {
+  position: absolute;
+  top: 1;
+  left: 0;
+  margin: 0px;
+  padding: 5px 25px;
+}
+
 
 .hover {
   margin-top: 5px;
