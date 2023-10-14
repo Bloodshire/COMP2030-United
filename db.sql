@@ -78,6 +78,19 @@ CREATE TABLE pending_entries (
     FOREIGN KEY (approver_id) REFERENCES users (user_id)
 );
 
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    instructor_id INT NOT NULL,
+    student_id INT NOT NULL,
+    invoice_amount DECIMAL(10, 2) NOT NULL,
+    due_date DATE NOT NULL,
+    payment_status TINYINT(1) NOT NULL, -- 0 = Outstanding payment; 1 = Paid; 2 = Unpaid and expired;
+    description TEXT,
+    FOREIGN KEY (instructor_id) REFERENCES users(user_id),
+    FOREIGN KEY (student_id) REFERENCES users(user_id)
+    
+);
+
 CREATE user IF NOT EXISTS dbadmin@localhost;
 GRANT all privileges ON TLDR.users TO dbadmin@localhost;
 GRANT all privileges ON TLDR.roles TO dbadmin@localhost;
@@ -85,6 +98,9 @@ GRANT all privileges ON TLDR.logbook TO dbadmin@localhost;
 GRANT all privileges ON TLDR.pending_entries TO dbadmin@localhost;
 GRANT all privileges ON TLDR.approvals TO dbadmin@localhost;
 GRANT all privileges ON TLDR.cbta_progress TO dbadmin@localhost;
+GRANT all privileges ON TLDR.payments TO dbadmin@localhost;
+
+
 
 
 -- Insert users into the 'roles' table
