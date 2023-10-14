@@ -160,7 +160,12 @@ select {
   padding: 10px;
 }
 
+body {
+  position: relative;
+}
+
 .notification {
+  position: absolute;
   display: block;
   /* font-weight: bold; */
   border-radius: 15px;

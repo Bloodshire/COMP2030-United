@@ -26,7 +26,9 @@ $student_allowed_uris = [
     '/review_basic_procedures.php',
     '/mastercard.php',
     '/my_logbook.php',
-    '/logdrive_process.php'
+    '/logdrive_process.php',
+    '/pay_payment.php',
+    '/process_payment.php'
 ];
 $qsd_allowed_uris = [
     '/reports.php',
@@ -154,8 +156,9 @@ else if ($role_id == 1) {
         <li><a href="instructor-dashboard.php"><i class="fa-xl fa-solid fa-house"></i><br>Dashboard</a></li>
         <li><a href="students.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
         <li><a href="approvals.php"><i class="fa-xl fa-solid fa-stamp"></i><br>Approvals</a></li>
-        <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Reports</a></li>
         <li><a href="billing.php"><i class="fa-solid fa-xl fa-file-invoice-dollar"></i><br>Billing & Payments</a></li>
+
+        <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Reports</a></li>
         <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
     <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
