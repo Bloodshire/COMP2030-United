@@ -27,6 +27,8 @@ CREATE TABLE cbta_progress (
     student_id INT NOT NULL,
     cbta_unit INT NOT NULL,
     cbta_task INT NOT NULL,
+    cbta_notes VARCHAR(250),
+    cbta_subtask VARCHAR(50),
     completion_status BOOLEAN NOT NULL,
     completion_date DATE,
     approver_id INT NOT NULL,
