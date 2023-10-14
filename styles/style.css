@@ -517,9 +517,13 @@ th {
 #loginForm a{
   text-decoration: none;
   color: black;
+  transition-duration: 0.2s;
+  border-radius: 5px;
 }
 #loginForm a:hover{
-  text-shadow: 0px 0px black;
+  padding: 0px 3px;
+  /* font-size:large; */
+  background-color: rgba(0, 102, 255, 0.089);
 }
 #loginForm input[type="submit"]{
   background-color: #4CAF50;
@@ -527,8 +531,11 @@ th {
   border: 2px solid #4CAF50;
   width: 100px;
   height: 30px;
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
 #loginForm input[type="submit"]:hover{
+  transform: scale(1.03);
   background-color: white;
   color: #4CAF50;
   border: 2px solid #4CAF50;
