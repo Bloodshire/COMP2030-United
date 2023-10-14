@@ -88,7 +88,6 @@ CREATE TABLE payments (
     description TEXT,
     FOREIGN KEY (instructor_id) REFERENCES users(user_id),
     FOREIGN KEY (student_id) REFERENCES users(user_id)
-    
 );
 
 CREATE user IF NOT EXISTS dbadmin@localhost;
@@ -99,8 +98,6 @@ GRANT all privileges ON TLDR.pending_entries TO dbadmin@localhost;
 GRANT all privileges ON TLDR.approvals TO dbadmin@localhost;
 GRANT all privileges ON TLDR.cbta_progress TO dbadmin@localhost;
 GRANT all privileges ON TLDR.payments TO dbadmin@localhost;
-
-
 
 
 -- Insert users into the 'roles' table
@@ -130,8 +127,8 @@ VALUES
     -- Insert logbook entries for students that need approval
 INSERT INTO logbook (student_id, approver_id, date, start_time, finish_time, duration, from_location, to_location, road_condition, weather_condition, traffic_condition)
 VALUES
-    (5, 1, '2023-05-01', '08:00:00', '09:30:00', 90, '123 Elm St', '456 Oak St', 'Dry', 'Clear', 'Light Traffic'),
-    (6, 2, '2023-05-02', '09:30:00', '11:00:00', 90, '789 Pine St', '101 Cedar St', 'Wet', 'Rainy', 'Heavy Traffic');
+    (5, 1, '2023-05-01', '08:00:00', '09:30:00', 90, '123 Elm St', '456 Oak St', 'D', 'C', 'L'),
+    (6, 2, '2023-05-02', '09:30:00', '11:00:00', 90, '789 Pine St', '101 Cedar St', 'W', 'R', 'H');
 
 -- Insert approvals for logbook entries that need approval
 INSERT INTO approvals (logbook_entry_id, approver_id, approval_date, approved)

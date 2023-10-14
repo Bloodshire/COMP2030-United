@@ -22,7 +22,9 @@
     <div class="column c-ib">
         <div class="container">
 
-            <h3>Driving Hours</h3>
+            <a href="my_logbook.php">
+                <h3 class="hover">Driving Hours <i class="fa-solid fa-angles-right "></i></h3>
+            </a>
             <?php
             require_once "../../inc/dbconn.inc.php";
 
@@ -112,9 +114,46 @@
         </div>
     </div>
     <div class="column c-ib">
+
         <div class="container">
-            <h3>CBT&A Units & Tasks</h3>
-            Functionality has not been implemented for this yet.
+            <a href="payments.php">
+                <h3 class="hover">Outstanding Bills <i class="fa-solid fa-angles-right "></i></h3>
+            </a>
+            <?php
+            $query = "SELECT COUNT(*) as bill_count FROM payments WHERE student_id = ? AND payment_status = 0;";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("i", $_SESSION['user_id']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $total_bills = $row['bill_count'];
+            } else {
+                $total_bills = 0; // Set to 0 if no results found
+            }
+
+            echo "You have " . $total_bills . " outstanding bills.";
+
+
+            // Close the database connection
+            $stmt->close();
+            $conn->close();
+
+
+            ?>
+        </div>
+        <!-- </a> -->
+        <br>
+        <br>
+
+        <div class="container">
+
+            <a href="cbta.php">
+                <h3 class="hover">CBT&A Units & Tasks <i class="fa-solid fa-angles-right "></i></h3>
+            </a>
+            <b>Unit 1: </b>
+            You have completed 3/8 tasks.
         </div>
     </div>
     <!-- <div class="column c-ib">

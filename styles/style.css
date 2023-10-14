@@ -626,6 +626,7 @@ th {
 }
 
 .container {
+  position: relative;
   border: solid 1px rgb(160, 160, 160);
   border-radius: 15px;
   width: 100%;
@@ -654,8 +655,25 @@ th {
 
 a {
   text-decoration: none !important;
+  color: inherit;
 }
 
+.top-right {
+  position: absolute;
+  top: 1;
+  right: 0;
+  margin: 5px;
+  padding: 15px;
+}
+
+.hover {
+  transform-origin: bottom left;
+  transition-duration: 0.2s;
+}
+
+.hover:hover {
+  transform: scale(1.03);
+}
 .dashboard {
   border: none;
   width: 400px;

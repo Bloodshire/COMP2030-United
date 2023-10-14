@@ -122,7 +122,7 @@ if ($role_id == 3) {
         <li><a href="cbta.php"><i class="fa-xl fa-solid fa-book"></i><br>CBT&A</a></li>
         <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
         <!-- <li><a href="drivesummary.php"><i class="fa-xl fa-regular fa-clipboard"></i><br>Drive Summary</a></li> -->
-        <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Payments</a></li>
+        <li><a href="payments.php"><i class="fa-solid fa-xl fa-file-invoice-dollar"></i><br>Bills & Payments</a></li>
         <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
     <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
