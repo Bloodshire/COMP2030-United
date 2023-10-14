@@ -108,32 +108,7 @@
                 </div>
             </div>
             <br>
-            <a href="#modal1" class="button"><button type="button" class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit Drive</button></a>
-        </div>
-
-        <div id="modal1" class="overlay">
-            <a class="cancel" href="#"></a>
-            <div class="modal centre">
-                <!-- <a href="#"><span class="close">&times;</span></a> -->
-                <h2>Are you sure you want to submit the drive?</h2>
-                <div class="content">
-                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
-                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
-                </div>
-            </div>
-        </div>
-        <!-- 
-        <div id="modal2" class="overlay">
-            <a class="cancel" href="#"></a>
-            <div class="modal centre">
-                <h2>Add QSD</h2>
-                <div class="content">
-                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
-                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
-                </div>
-            </div>
-        </div> -->
-
+            <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit Drive</button>
         </form>
 </body>
 

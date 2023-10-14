@@ -12,7 +12,16 @@
 <html>
 
 <body>
-    <?php require_once "../../inc/main.inc.php"; ?>
+    <?php
+    require_once "../../inc/main.inc.php";
+
+    // Check if success parameter is set to 1 in the URL
+    if (isset($_GET['success']) && $_GET['success'] == 1) {
+        echo "<span id='notification' class='notification fade-out'>Student has been added <b>successfully</b>!</span>";
+    } else if (isset($_GET['success']) && $_GET['success'] == 2) {
+        echo "<span id='notification' class='notification fade-out'>Student has been removed <b>successfully</b>!</span>";
+    }
+    ?>
 
     <h2>List of Current Students</h2>
 
@@ -66,34 +75,28 @@
         </tbody>
     </table>
     <br>
-    <a href="#modal1" class="button"><button id="addStudentButton" class="btn-custom"><i class="fa-solid fa-plus"></i> Add Student</button></a>
-
-
-    <div id="modal1" class="overlay">
-            <a class="cancel" href="#"></a>
-            <div class="modal centre">
-                <!-- <a href="#"><span class="close">&times;</span></a> -->
-                <h2>Add Student</h2>
-                <div class="content">
-                    <form>
-                        <input type="email" name="student_email"/>
-                        <input type="text" name="student_license_no"/>
-                    </form>
-                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
-                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
-                </div>
-            </div>
-        </div>
+    <a href="add_student.php"><button id="addStudentButton" class="btn-custom"><i class="fa-solid fa-plus"></i> Add Student</button></a>
+    <br>
+    <br>
 
 
     <script>
+        var notification = document.getElementById("notification");
+        if (notification) {
+            // Remove the element after the animation ends
+            notification.addEventListener("animationend", function() {
+                notification.remove();
+            });
+        }
+
         // JavaScript function to remove a student
         function removeStudent(userId) {
             fetch('remove_student.php?user_id=' + userId, {
                     method: 'POST'
                 })
                 .then(response => {
-                    location.reload();
+                    // Redirect to students.php with success=2
+                    window.location.href = "students.php?success=2";
                 })
                 .catch(error => {
                     // Handle errors if needed

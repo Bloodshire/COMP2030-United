@@ -128,6 +128,7 @@ VALUES
 INSERT INTO logbook (student_id, approver_id, date, start_time, finish_time, duration, from_location, to_location, road_condition, weather_condition, traffic_condition)
 VALUES
     (5, 1, '2023-05-01', '08:00:00', '09:30:00', 90, '123 Elm St', '456 Oak St', 'D', 'C', 'L'),
+    (5, 1, '2023-06-02', '18:00:00', '19:30:00', 90, '123 Elm St', '456 Oak St', 'W', 'R', 'H'),
     (6, 2, '2023-05-02', '09:30:00', '11:00:00', 90, '789 Pine St', '101 Cedar St', 'W', 'R', 'H');
 
 -- Insert approvals for logbook entries that need approval

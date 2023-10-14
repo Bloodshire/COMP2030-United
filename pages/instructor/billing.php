@@ -23,6 +23,7 @@
     ?>
 
     <div class="centre">
+
         <h2>Create Invoice for Student</h2>
 
         <?php
@@ -34,9 +35,8 @@
         $stmt->execute([$instructor_id]);
         $result = $stmt->get_result();
         ?>
-
-        <form action="process_invoice.php" method="post">
-            <label for="student">Select Student:</label>
+        <form id="invoiceForm" action="process_invoice.php" method="post">
+            <label for="student">Select Student</label>
             <select name="student" id="student" required>
                 <?php
                 while ($student = $result->fetch_assoc()) {
@@ -45,18 +45,19 @@
                 ?>
             </select>
 
-            <label for="invoice_date">Invoice Date:</label>
+            <label for="invoice_date">Invoice Date</label>
             <input type="date" name="invoice_date" id="invoice_date" required>
 
-            <label for="cost">Invoice Amount:</label>
+            <label for="cost">Invoice Amount</label>
             <input type="number" name="cost" id="cost" step="0.01" required>
 
-            <label for="due_date">Due Date:</label>
+            <label for="due_date">Due Date</label>
             <input type="date" name="due_date" id="due_date" required>
-
-            <input type="submit" value="Create Invoice">
+            <br>
+            <br><button class="btn-custom"><i class="fa-solid fa-square-plus"></i> Create Invoice</button>
         </form>
     </div>
+
 
     <script>
         var notification = document.getElementById("notification");

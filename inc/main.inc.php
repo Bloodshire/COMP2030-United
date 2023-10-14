@@ -44,7 +44,10 @@ $instructor_allowed_uris = [
     '/students.php',
     '/billing.php',
     '/manage_student.php',
-    '/approvals.php'
+    '/approvals.php',
+    '/add_student.php',
+    '/find_student.php',
+    '/process_add_student.php'
 ];
 $government_allowed_uris = [
     '/reports.php',

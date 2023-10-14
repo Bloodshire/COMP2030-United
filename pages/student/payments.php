@@ -46,7 +46,7 @@
                 echo '<td>' . $row['instructor_name'] . '</td>';
                 echo '<td>' . $row['invoice_amount'] . '</td>';
                 echo '<td>' . $row['due_date'] . '</td>';
-                echo '<td><a href="pay_payment.php?payment_id=' . $row['payment_id'] . '"><button class="btn-custom btn-blue btn-small">Pay Now</button></a></td>';
+                echo '<td><a href="pay_payment.php?payment_id=' . $row['payment_id'] . '"><button class="btn-custom btn-blue btn-small"><i class="fa-solid fa-angles-right fa-lg"></i> Pay Now</button></a></td>';
                 echo '</tr>';
             }
 

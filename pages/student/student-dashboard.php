@@ -133,7 +133,7 @@
                 $total_bills = 0; // Set to 0 if no results found
             }
 
-            echo "You have " . $total_bills . " outstanding bills.";
+            echo "You have <b>" . $total_bills . "</b> outstanding bills.";
 
 
             // Close the database connection

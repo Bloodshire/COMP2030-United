@@ -164,6 +164,17 @@ body {
   position: relative;
 }
 
+
+#invoiceForm input, select {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .notification {
   position: absolute;
   display: block;
@@ -328,7 +339,7 @@ div label {
 
 .centre {
   text-align: center;
-  margin-top: 200px; 
+  margin-top: 100px; 
 }
 
 .modal {
@@ -643,6 +654,13 @@ th {
   border: solid 1px rgb(160, 160, 160);
   border-radius: 15px;
   width: 100%;
+  padding: 10px;
+}
+
+.form-container {
+  border: solid 1px rgb(160, 160, 160);
+  border-radius: 15px;
+  width: 350px;
   padding: 10px;
 }
 
