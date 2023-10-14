@@ -25,53 +25,69 @@
 
                 <div class="list-item">
 
-                    <li><a href="cabin_drill_and_control.php">Cabin Drill and Control</a></li>
+                    <a href="cabin_drill_and_control.php">
+                        <li class="hover no-padding">Cabin Drill and Control</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="starting_up_and_shutting_down_engine.php">Starting Up and Shutting down the Engine</a></li>
+                    <a href="starting_up_and_shutting_down_engine.php">
+                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="Moving_off_from_kerb.php">Moving off from the Kerb</a></li>
+                    <a href="Moving_off_from_kerb.php">
+                        <li class="hover no-padding">Moving off from the Kerb</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="stopping_and_securing_vehicle.php">Stopping and Securing the Vehicle</a></li>
+                    <a href="stopping_and_securing_vehicle.php">
+                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="stop_and_go.php">Stop and go (Using the park brake)</a></li>
+                    <a href="stop_and_go.php">
+                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="gear_changing.php">Gear Changing (Up and Down)</a></li>
+                    <a href="gear_changing.php">
+                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="steering.php">Steering (Forward and Reverse)</a></li>
+                    <a href="steering.php">
+                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="review_basic_procedures.php">Review of all basic procedures</a></li>
+                    <a href="review_basic_procedures.php">
+                        <li class="hover no-padding">Review of all basic procedures</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
 
-            </ol>   
+            </ol>
 
         </div>
     </div>
@@ -86,49 +102,65 @@
 
                 <div class="list-item">
 
-                    <li><a href="cabin_drill_and_control.php">Cabin Drill and Control</a></li>
+                    <a href="cabin_drill_and_control.php">
+                        <li class="hover no-padding">Cabin Drill and Control</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="starting_up_and_shutting_down_engine.php">Starting Up and Shutting down the Engine</a></li>
+                    <a href="starting_up_and_shutting_down_engine.php">
+                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="Moving_off_from_kerb.php">Moving off from the Kerb</a></li>
+                    <a href="Moving_off_from_kerb.php">
+                        <li class="hover no-padding">Moving off from the Kerb</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="stopping_and_securing_vehicle.php">Stopping and Securing the Vehicle</a></li>
+                    <a href="stopping_and_securing_vehicle.php">
+                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="stop_and_go.php">Stop and go (Using the park brake)</a></li>
+                    <a href="stop_and_go.php">
+                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="gear_changing.php">Gear Changing (Up and Down)</a></li>
+                    <a href="gear_changing.php">
+                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="steering.php">Steering (Forward and Reverse)</a></li>
+                    <a href="steering.php">
+                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
                 <p></p>
 
                 <div class="list-item">
-                    <li><a href="review_basic_procedures.php">Review of all basic procedures</a></li>
+                    <a href="review_basic_procedures.php">
+                        <li class="hover no-padding">Review of all basic procedures</li>
+                    </a>
                     <input type="checkbox" class="checkboxs" disabled>
                 </div>
 
@@ -139,125 +171,157 @@
 
     <div class="column">
 
-<div class="cbta-Container1">
-    <h1 class="cbta-h1">Unit 3 - Example Placeholder</h1>
-    <hr>
+        <div class="cbta-Container1">
+            <h1 class="cbta-h1">Unit 3 - Example Placeholder</h1>
+            <hr>
 
-    <ol class="cbta-list1">
+            <ol class="cbta-list1">
 
-        <div class="list-item">
+                <div class="list-item">
 
-            <li><a href="cabin_drill_and_control.php">Cabin Drill and Control</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
+                    <a href="cabin_drill_and_control.php">
+                        <li class="hover no-padding">Cabin Drill and Control</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="starting_up_and_shutting_down_engine.php">
+                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="Moving_off_from_kerb.php">
+                        <li class="hover no-padding">Moving off from the Kerb</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="stopping_and_securing_vehicle.php">
+                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="stop_and_go.php">
+                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="gear_changing.php">
+                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="steering.php">
+                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="review_basic_procedures.php">
+                        <li class="hover no-padding">Review of all basic procedures</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+
+            </ol>
+
         </div>
-        <p></p>
+    </div>
 
-        <div class="list-item">
-            <li><a href="starting_up_and_shutting_down_engine.php">Starting Up and Shutting down the Engine</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
+    <div class="column">
+
+        <div class="cbta-Container1">
+            <h1 class="cbta-h1">Unit 4 - Example Placeholder</h1>
+            <hr>
+
+            <ol class="cbta-list1">
+
+                <div class="list-item">
+
+                    <a href="cabin_drill_and_control.php">
+                        <li class="hover no-padding">Cabin Drill and Control</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="starting_up_and_shutting_down_engine.php">
+                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="Moving_off_from_kerb.php">
+                        <li class="hover no-padding">Moving off from the Kerb</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="stopping_and_securing_vehicle.php">
+                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="stop_and_go.php">
+                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="gear_changing.php">
+                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="steering.php">
+                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+                <p></p>
+
+                <div class="list-item">
+                    <a href="review_basic_procedures.php">
+                        <li class="hover no-padding">Review of all basic procedures</li>
+                    </a>
+                    <input type="checkbox" class="checkboxs" disabled>
+                </div>
+
+            </ol>
+
         </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="Moving_off_from_kerb.php">Moving off from the Kerb</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="stopping_and_securing_vehicle.php">Stopping and Securing the Vehicle</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="stop_and_go.php">Stop and go (Using the park brake)</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="gear_changing.php">Gear Changing (Up and Down)</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="steering.php">Steering (Forward and Reverse)</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="review_basic_procedures.php">Review of all basic procedures</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-
-    </ol>   
-
-</div>
-</div>
-
-<div class="column">
-
-<div class="cbta-Container1">
-    <h1 class="cbta-h1">Unit 4 - Example Placeholder</h1>
-    <hr>
-
-    <ol class="cbta-list1">
-
-        <div class="list-item">
-
-            <li><a href="cabin_drill_and_control.php">Cabin Drill and Control</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="starting_up_and_shutting_down_engine.php">Starting Up and Shutting down the Engine</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="Moving_off_from_kerb.php">Moving off from the Kerb</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="stopping_and_securing_vehicle.php">Stopping and Securing the Vehicle</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="stop_and_go.php">Stop and go (Using the park brake)</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="gear_changing.php">Gear Changing (Up and Down)</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="steering.php">Steering (Forward and Reverse)</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-        <p></p>
-
-        <div class="list-item">
-            <li><a href="review_basic_procedures.php">Review of all basic procedures</a></li>
-            <input type="checkbox" class="checkboxs" disabled>
-        </div>
-
-    </ol>
-
-</div>
-</div>
+    </div>
 
 
 </body>

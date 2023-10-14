@@ -654,6 +654,7 @@ th {
 }
 
 a {
+  
   text-decoration: none !important;
   color: inherit;
 }
@@ -667,11 +668,19 @@ a {
 }
 
 .hover {
+  margin-top: 5px;
+  padding: 10px 0px;
+  border-radius: 15px;
   transform-origin: bottom left;
   transition-duration: 0.2s;
 }
 
+.no-padding {
+  padding: 0px !important;
+}
+
 .hover:hover {
+  background-image: linear-gradient(to right, rgb(208, 255, 208) , rgba(255, 255, 255, 0));
   transform: scale(1.03);
 }
 .dashboard {

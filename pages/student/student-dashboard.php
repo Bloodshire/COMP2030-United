@@ -152,8 +152,14 @@
             <a href="cbta.php">
                 <h3 class="hover">CBT&A Units & Tasks <i class="fa-solid fa-angles-right "></i></h3>
             </a>
-            <b>Unit 1: </b>
-            You have completed 3/8 tasks.
+            <b>Unit 1 </b>
+            &nbsp; You have completed 3/8 tasks.
+            <br><b>Unit 2 </b>
+            &nbsp; Not started.
+            <br><b>Unit 3 </b>
+            &nbsp; Not started.
+            <br><b>Unit 4 </b>
+            &nbsp; Not started.
         </div>
     </div>
     <!-- <div class="column c-ib">
