@@ -23,17 +23,14 @@ CREATE TABLE users (
     FOREIGN KEY (instructor_id) REFERENCES users(user_id)
 );
 
-CREATE TABLE cbta_progress (
-    student_id INT NOT NULL,
-    cbta_unit INT NOT NULL,
-    cbta_task INT NOT NULL,
-    cbta_notes VARCHAR(250),
-    cbta_subtask VARCHAR(50),
-    completion_status BOOLEAN NOT NULL,
-    completion_date DATE,
-    approver_id INT NOT NULL,
-    FOREIGN KEY (student_id) REFERENCES users(user_id),
-    FOREIGN KEY (approver_id) REFERENCES users(user_id) -- Reference to the instructor who approved the unit/task
+CREATE TABLE cbta_tasks (
+    task_id INT AUTO_INCREMENT PRIMARY KEY,
+    unit_id INT,  -- Foreign key to link tasks to specific units
+    elements JSON,  -- Store elements in JSON format or as a related table
+    checkboxes JSON,  -- Store checkboxes in JSON format or as a related table
+    student_id INT, 
+    instructor_id INT,  
+    completion_date DATE  
 );
 
 
@@ -87,7 +84,7 @@ GRANT all privileges ON TLDR.roles TO dbadmin@localhost;
 GRANT all privileges ON TLDR.logbook TO dbadmin@localhost;
 GRANT all privileges ON TLDR.pending_entries TO dbadmin@localhost;
 GRANT all privileges ON TLDR.approvals TO dbadmin@localhost;
-GRANT all privileges ON TLDR.cbta_progress TO dbadmin@localhost;
+GRANT all privileges ON TLDR.cbta_tasks TO dbadmin@localhost;
 GRANT all privileges ON TLDR.payments TO dbadmin@localhost;
 
 

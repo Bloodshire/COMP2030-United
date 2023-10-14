@@ -48,7 +48,8 @@ $instructor_allowed_uris = [
     '/add_student.php',
     '/find_student.php',
     '/process_add_student.php',
-    '/manage_cbta.php'
+    '/manage_cbta.php',
+    '/update_cbta_task.php'
 ];
 $government_allowed_uris = [
     '/reports.php',

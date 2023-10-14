@@ -35,7 +35,7 @@
                 if ($task == 1) {
                     echo '
                     <div class="cbta-container">
-                        <form id="cbta">
+                        <form id="cbta" action="update_cbta_task.php?unit=1&task=1" method="POST">
                             <h2 class="cbta-header">Task Assesment Records</h2>
                             <p>Cabin Drill
                             <input name="checkbox1" type="checkbox" class="checkboxs">

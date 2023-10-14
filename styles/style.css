@@ -217,7 +217,7 @@ body {
 }
 
 .vertical-menu a:hover {
-  background-color: #ccc;
+  background-color: #cccccc;
   font-weight: bold;
 }
 
@@ -892,7 +892,7 @@ a {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: #FFCB08;
 }
 
 .accordion:after {
