@@ -23,11 +23,12 @@
         if (isset($_POST['approve_entry_id'])) {
             $entry_id = $_POST['approve_entry_id'];
             $approval_status = 1; // Set to approved
+            $approval_date = date('Y-m-d H:i:s'); // Current date and time
 
-            // Update the approval status in the "approvals" table
-            $update_query = "UPDATE approvals SET approved = ? WHERE logbook_entry_id = ?";
+            // Update the approval status and date in the "approvals" table
+            $update_query = "UPDATE approvals SET approved = ?, approval_date = ? WHERE logbook_entry_id = ?";
             $stmt = $conn->prepare($update_query);
-            $stmt->bind_param("ii", $approval_status, $entry_id);
+            $stmt->bind_param("isi", $approval_status, $approval_date, $entry_id);
             if ($stmt->execute()) {
                 // Approval status updated successfully
                 echo "<span id='notification' class='notification fade-out'>Logbook entry <b>approved</b>!</span>";
@@ -38,12 +39,13 @@
             $stmt->close();
         } else if (isset($_POST['dispprove_entry_id'])) {
             $entry_id = $_POST['dispprove_entry_id'];
-            $approval_status = 2; // Set to dispproved
+            $approval_status = 2; // Set to disapproved
+            $approval_date = date('Y-m-d H:i:s'); // Current date and time
 
-            // Update the approval status in the "approvals" table
-            $update_query = "UPDATE approvals SET approved = ? WHERE logbook_entry_id = ?";
+            // Update the approval status and date in the "approvals" table
+            $update_query = "UPDATE approvals SET approved = ?, approval_date = ? WHERE logbook_entry_id = ?";
             $stmt = $conn->prepare($update_query);
-            $stmt->bind_param("ii", $approval_status, $entry_id);
+            $stmt->bind_param("isi", $approval_status, $approval_date, $entry_id);
             if ($stmt->execute()) {
                 // Approval status updated successfully
                 echo "<span id='notification' class='notification fade-out'>Logbook entry <b>disapproved</b>!</span>";
@@ -112,9 +114,6 @@
                     <input type='hidden' name='dispprove_entry_id' value='" . $row['entry_id'] . "'>
                     <button class='btn-custom btn-red btn-small' type='submit'><i class='fa-solid fa-thumbs-down'></i></button>
                 </form>
-                    
-
-                
             </td>";
             echo "</tr>";
         }

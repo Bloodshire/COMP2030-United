@@ -165,7 +165,7 @@ body {
 }
 
 
-#invoiceForm input, select {
+#invoiceForm input, #invoiceForm select {
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -299,6 +299,11 @@ div label {
 .btn-blue:hover {
   background-color: white;
   color: rgb(28, 119, 255);
+} 
+
+.btn-yellow:hover {
+  background-color: white;
+  color: rgb(0, 0, 0);
 }
 
 .heading-back-btn {
@@ -330,6 +335,13 @@ div label {
 .btn-blue {
   background-color: rgb(28, 119, 255); 
   border: 2px solid rgb(28, 119, 255) !important;
+}
+
+.btn-yellow {
+  color: black;
+  background-color: #ffcb08;
+  border: 2px solid #ffcb08 !important;
+
 }
 
 .btn-red {

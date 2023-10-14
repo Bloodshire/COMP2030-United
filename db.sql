@@ -61,7 +61,7 @@ CREATE TABLE approvals (
     approval_id INT AUTO_INCREMENT PRIMARY KEY,
     logbook_entry_id INT NOT NULL,
     approver_id INT NOT NULL,
-    approval_date DATE NOT NULL,
+    approval_date DATE,
     approved TINYINT(1) NOT NULL,
     FOREIGN KEY (logbook_entry_id) REFERENCES logbook (entry_id),
     FOREIGN KEY (approver_id) REFERENCES users (user_id)
@@ -132,7 +132,7 @@ VALUES
     (6, 2, '2023-05-02', '09:30:00', '11:00:00', 90, '789 Pine St', '101 Cedar St', 'W', 'R', 'H');
 
 -- Insert approvals for logbook entries that need approval
-INSERT INTO approvals (logbook_entry_id, approver_id, approval_date, approved)
+INSERT INTO approvals (logbook_entry_id, approver_id, approved)
 VALUES
-    (1, 1, '2023-05-03', 0),  -- Logbook entry 1 needs approval from instructor 1
-    (2, 2, '2023-05-03', 0);  -- Logbook entry 2 needs approval from instructor 2
+    (1, 1, 0),  -- Logbook entry 1 needs approval from instructor 1
+    (3, 2 , 0);  -- Logbook entry 2 needs approval from instructor 2
