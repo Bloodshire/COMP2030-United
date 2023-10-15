@@ -106,7 +106,7 @@
                 if ($stmt_approvals->execute()) {
                     echo "<h3>Success!</h3>";
                     echo "<p>Your drive entry has been logged and is currently awaiting approval.</p>";
-                    echo '<a href="logdrive.php"><button class="btn-custom btn-blue"><i class="fa-solid fa-square-plus"></i> Log Another Drive</button></a>';
+                    echo '<a href="find_instructor.php"><button class="btn-custom btn-blue"><i class="fa-solid fa-square-plus"></i> Log Another Drive</button></a>';
                 } else {
                     echo "Error: " . $stmt_approvals->error;
                 }
