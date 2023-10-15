@@ -36,12 +36,18 @@
         ?>
         <div class="container centre-div">
             <form id="invoiceForm" action="logdrive.php" method="post">
-                <p>
-                    <strong>Current Instructor:</strong> <?php echo $instructorGivenName . " " . $instructorSurname; ?>
-                </p>
-                <input type="hidden" name="instructor_name" value="<?php echo $instructorGivenName . " " . $instructorSurname; ?>">
-                <input type="hidden" name="instructor_license" value="<?php echo $instructorLicenseNo ?>">
-                <button class="btn-custom"><i class="fa-solid fa-user-tie"></i> Use Current Instructor</button>
+                
+                    <?php if ($instructorGivenName != "") { ?>
+                        <p><strong>Current Instructor:</strong> <?php echo $instructorGivenName . " " . $instructorSurname; ?></p>
+                        <input type="hidden" name="instructor_name" value="<?php echo $instructorGivenName . " " . $instructorSurname; ?>">
+                        <input type="hidden" name="instructor_license" value="<?php echo $instructorLicenseNo ?>">
+                        <button class="btn-custom"><i class="fa-solid fa-user-tie"></i> Use Current Instructor</button>
+                    <?php } else {
+                    ?>
+                        <p><strong>You do not have a delegated Instructor.</strong></p>
+                    <?php } ?>
+                
+
             </form>
         </div>
         <br>
