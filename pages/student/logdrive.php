@@ -89,11 +89,11 @@
             <label class="section-header">Instructor / QSD</label>
             <div>
                 <label>Name</label>
-                <input type="text" placeholder="" value="" name="instructor_name" required>
+                <input type="text" placeholder="" value="<?php echo isset($_POST['instructor_name']) ? $_POST['instructor_name'] : ''; ?>" name="instructor_name" required readonly>
             </div>
             <div>
                 <label>License No.</label>
-                <input type="text" placeholder="" value="" name="instructor_license" required>
+                <input type="text" placeholder="" value="<?php echo isset($_POST['instructor_license']) ? $_POST['instructor_license'] : ''; ?>" name="instructor_license" required readonly>
             </div>
             <br>
 
@@ -109,7 +109,7 @@
             </div>
             <br>
             <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit Drive</button>
-        </form>
+            </form>
 </body>
 
 </html>

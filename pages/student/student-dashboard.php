@@ -91,11 +91,9 @@
         $totalNightHours = floor($totalNightMinutes / 60);
         $remainingNightMinutes = $totalNightMinutes % 60;
 
-        if ($pendingApprovals > 0){
             echo "<p>You have <b>$pendingApprovals</b>";
             echo ($pendingApprovals == 1)? " drive " : " drives ";
             echo "pending approval.</p>";
-        }
 
             $totalHours = floor($totalMinutes / 60);
             $remainingMinutes = $totalMinutes % 60;
@@ -171,7 +169,7 @@
                 $selectStmt->close();
 
                 // Display the unit's completion status
-                echo "<b>Unit $unit_id </b>";
+                echo "<span class='unit-stat'><b>Unit $unit_id </b>";
 
                 if ($completedTasksCount > 0) {
                     echo "You have completed $completedTasksCount/8 tasks.";
@@ -179,7 +177,7 @@
                     echo "Not started.";
                 }
 
-                echo "<br>";
+                echo "</span>";
             }
 
             $conn->close();

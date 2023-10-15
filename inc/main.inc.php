@@ -28,7 +28,8 @@ $student_allowed_uris = [
     '/my_logbook.php',
     '/logdrive_process.php',
     '/pay_payment.php',
-    '/process_payment.php'
+    '/process_payment.php',
+    '/find_instructor.php'
 ];
 $qsd_allowed_uris = [
     '/reports.php',

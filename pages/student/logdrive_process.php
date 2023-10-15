@@ -127,7 +127,7 @@
     $conn->close();
     ?>
     
-    <a href="my_logbook.php"><button class="btn-custom"><i class="fa-solid fa-table"></i> Check My Logbook</button></a>
+    <a href="logbook.php"><button class="btn-custom"><i class="fa-solid fa-table"></i> Check My Logbook</button></a>
 
 
 </body>

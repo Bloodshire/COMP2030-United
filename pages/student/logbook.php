@@ -19,7 +19,7 @@
                 <a href="my_logbook.php">
                     <button class="btn-custom" type="button"><i class="fa-solid fa-table"></i> View My Logbook</button>
                 </a>
-                <a href="logdrive.php">
+                <a href="find_instructor.php">
                     <button class="btn-custom" type="button"><i class="fa-solid fa-xl fa-square-plus"></i> Log a Drive</button>
                 </a>
                 <br>
