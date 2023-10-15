@@ -26,7 +26,7 @@
         <div class="container centre-div">
 
 
-            <h2>Create Invoice for Student</h2>
+            <h2>Create Invoice for a Student</h2>
 
             <?php
             require_once "../../inc/dbconn.inc.php";
