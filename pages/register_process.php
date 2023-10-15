@@ -40,7 +40,7 @@ $stmt->store_result();
 // Check if a user with the provided email exists
 if ($stmt->num_rows == 1) {
     // User with the provided email already exists, show an error message
-    echo "A user was found with that email. <a href='register.php'>Try again</a>" . $license_no . "test";
+    echo "A user was found with that email.<br> <a href='register.php'>Try again</a>";
     
 } else {
     // INSERT user with respective data

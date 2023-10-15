@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Log a Drive</title>
+    <title>Log Drive</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Michael">
     <link rel="stylesheet" href="../../styles/style.css">
