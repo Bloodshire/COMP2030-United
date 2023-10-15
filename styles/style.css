@@ -200,7 +200,6 @@ body {
 }
 
 .vertical-menu a {
-  border-radius: 5px;
   background-color: #eee;
   color: black;
   display: block;
@@ -246,7 +245,7 @@ body {
 
 /* CSS for the fade-out animation */
 .fade-out {
-  animation: fadeOut 3s ease-in-out;
+  animation: fadeOut 4.5s ease-in-out;
 }
 
 @keyframes fadeOut {
@@ -884,10 +883,14 @@ a {
   padding: 18px;
   width: 100%;
   border: none;
+  box-shadow: black;
   text-align: center;
   outline: none;
   font-size: 15px;
   transition: 0.4s;
+  box-shadow:
+  0px 2.4px 5.4px rgba(0, 0, 0, 0.035),
+  0px 19px 43px rgba(0, 0, 0, 0.09);
 }
 
 .active,
@@ -907,6 +910,7 @@ a {
 }
 
 .panel {
+  
   padding: 0 18px;
   background-color: white;
   max-height: 0;

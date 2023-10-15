@@ -24,13 +24,13 @@ CREATE TABLE users (
 );
 
 CREATE TABLE cbta_tasks (
-    task_id INT AUTO_INCREMENT PRIMARY KEY,
-    unit_id INT,  -- Foreign key to link tasks to specific units
-    elements JSON,  -- Store elements in JSON format or as a related table
-    checkboxes JSON,  -- Store checkboxes in JSON format or as a related table
+    entry_id INT AUTO_INCREMENT PRIMARY KEY,
+    task_id INT,
+    unit_id INT,
+    elements JSON,  -- Store checkboxes in JSON format or as a related table
     student_id INT, 
     instructor_id INT,  
-    completion_date DATE  
+    completion_date DATE
 );
 
 

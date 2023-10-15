@@ -16,17 +16,20 @@
     <?php
     require_once "../../inc/main.inc.php";
 
+    if (isset($_GET['success']) && $_GET['success'] == 1) {
+        echo "<span id='notification' class='notification fade-out'>CBT&A Task has been updated <b>successfully</b>!</span>";
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $student_id = $_POST['user_id'];
         $student_given_name = $_POST['given_name'];
         $student_surname = $_POST['surname'];
         $student_license_no = $_POST['license_no'];
-        
+
         $_SESSION['student_user_id'] = $_POST['user_id'];
         $_SESSION['student_given_name'] = $_POST['given_name'];
         $_SESSION['student_surname'] = $_POST['surname'];
         $_SESSION['student_license_no'] = $_POST['license_no'];
-
     } else if (isset($_SESSION['student_user_id'])) {
         $student_id = $_SESSION['student_user_id'];
         $student_given_name = $_SESSION['student_given_name'];
@@ -50,14 +53,27 @@
 
             <div id="unit-1" class="tabcontent">
                 <div class="vertical-menu">
-                    <a href="manage_cbta.php?unit=1&task=1">Task 1</a>
-                    <a href="manage_cbta.php?unit=1&task=2">Task 2</a>
-                    <a href="manage_cbta.php?unit=1&task=3">Task 3</a>
-                    <a href="manage_cbta.php?unit=1&task=4">Task 4</a>
-                    <a href="manage_cbta.php?unit=1&task=5">Task 5</a>
-                    <a href="manage_cbta.php?unit=1&task=6">Task 6</a>
-                    <a href="manage_cbta.php?unit=1&task=7">Task 7</a>
-                    <a href="manage_cbta.php?unit=1&task=8">Task 8</a>
+
+                    <?php
+                    $unitId = 1;  // Change this to the unit ID you want to retrieve
+                    $tasks = [
+                        [1, "Cabin Drill and Control", "cabin_drill_and_control.php"],
+                        [2, "Starting Up and Shutting down the Engine", "starting_up_and_shutting_down_engine.php"],
+                        [3, "Moving off from the Kerb", "Moving_off_from_kerb.php"],
+                        [4, "Stopping and Securing the Vehicle", "stopping_and_securing_vehicle.php"],
+                        [5, "Stop and go (Using the park brake)", "stop_and_go.php"],
+                        [6, "Gear Changing (Up and Down)", "gear_changing.php"],
+                        [7, "Steering (Forward and Reverse)", "steering.php"],
+                        [8, "Review of all basic procedures", "review_basic_procedures.php"]
+                    ];
+
+                    // Loop through tasks and set checkboxes based on database entries
+                    foreach ($tasks as $index => $task) {
+                        $taskId = $task[0];
+                        $taskName = $task[1];
+                        echo "<a href=\"manage_cbta.php?unit=1&task=$taskId\">Task $taskId: $taskName</a>";
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -102,6 +118,14 @@
         </div>
 
         <script>
+            var notification = document.getElementById("notification");
+            if (notification) {
+                // Remove the element after the animation ends
+                notification.addEventListener("animationend", function() {
+                    notification.remove();
+                });
+            }
+
             var acc = document.getElementsByClassName("accordion");
             var i;
 

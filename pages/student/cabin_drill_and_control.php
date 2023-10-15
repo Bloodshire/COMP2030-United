@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <title>Task 1: Cabin Drill and Control</title>
@@ -7,15 +8,30 @@
     <link rel="stylesheet" href="../../styles/style.css">
     <script src="../../scripts/script.js" defer></script>
     <a href="cbta.php" id="menu-selected"></a>
-
 </head>
-
-<html>
 
 <body>
     <h1 id="heading-back-btn"><a href="cbta.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
 
-    <?php require_once "../../inc/main.inc.php"; ?>
+    <?php
+    require_once "../../inc/main.inc.php";
+    require_once "../../inc/dbconn.inc.php";
+
+
+    // If the form is not submitted, fetch data from the database
+    $studentId = $_SESSION['user_id'];
+    $selectQuery = "SELECT elements FROM cbta_tasks WHERE student_id = ? AND unit_id = 1 AND task_id = 1";
+    $selectStmt = $conn->prepare($selectQuery);
+    $selectStmt->bind_param("i", $studentId);
+    $selectStmt->execute();
+    $selectStmt->bind_result($elementsJson);
+
+    if ($selectStmt->fetch()) {
+        // Decode the JSON data
+        $elementsData = json_decode($elementsJson, true);
+    }
+    $selectStmt->close();
+    ?>
     <div class="column">
 
         <table id="cbta-table">
@@ -119,63 +135,60 @@
 
     <div class="column">
         <form id="cbta">
-            <h2 class="cbta-header">Task Assesment Records</h2>
+            <h2 class="cbta-header">Task Assessment Records</h2>
             <p>Cabin Drill
-                <input name="checkbox1" type="checkbox" class="checkboxs" disabled>
-                <input name="checkbox2" type="checkbox" class="checkboxs" disabled>
+                <input name="checkbox1" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox1']) && $elementsData['checkbox1'] ? 'checked' : ''; ?> disabled>
+                <input name="checkbox2" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox2']) && $elementsData['checkbox2'] ? 'checked' : ''; ?> disabled>
             </p>
             <p>Controls (Selected from the respective group)</p>
             <div>
                 <label for="group1">Group 1 - Control Name</label>
                 <select id="group1ID" name="group1" disabled>
                     <option value="">Select</option>
-                    <option>Brake</option>
-                    <option>Accelerator</option>
-                    <option>Steering Wheel</option>
-                    <option>Gear Level</option>
+                    <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Brake' ? 'selected' : ''; ?>>Brake</option>
+                    <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Accelerator' ? 'selected' : ''; ?>>Accelerator</option>
+                    <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Steering Wheel' ? 'selected' : ''; ?>>Steering Wheel</option>
+                    <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Gear Level' ? 'selected' : ''; ?>>Gear Level</option>
                 </select>
-                <input name="checkbox3" type="checkbox" class="checkboxs" disabled>
-                <input name="checkbox4" type="checkbox" class="checkboxs" disabled>
+                <input name="checkbox3" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox3']) && $elementsData['checkbox3'] ? 'checked' : ''; ?> disabled>
+                <input name="checkbox4" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox4']) && $elementsData['checkbox4'] ? 'checked' : ''; ?> disabled>
             </div>
-            <p></p>
+
+            <!-- Group 2 -->
             <div>
                 <label for="group2">Group 2 - Control Name</label>
                 <select id="group2ID" name="group2" disabled>
                     <option value="">Select</option>
-                    <option>Clutch</option>
-                    <option>Park Brake</option>
-                    <option>Warning Device</option>
-                    <option>Signals</option>
+                    <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Clutch' ? 'selected' : ''; ?>>Clutch</option>
+                    <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Park Brake' ? 'selected' : ''; ?>>Park Brake</option>
+                    <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Warning Device' ? 'selected' : ''; ?>>Warning Device</option>
+                    <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Signals' ? 'selected' : ''; ?>>Signals</option>
                 </select>
-                <input name="checkbox5" type="checkbox" class="checkboxs" disabled>
-                <input name="checkbox6" type="checkbox" class="checkboxs" disabled>
+                <input name="checkbox5" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox5']) && $elementsData['checkbox5'] ? 'checked' : ''; ?> disabled>
+                <input name="checkbox6" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox6']) && $elementsData['checkbox6'] ? 'checked' : ''; ?> disabled>
             </div>
-            <p></p>
+
+            <!-- Group 3 -->
             <div>
                 <label for="group3">Group 3 - Control Name</label>
-                <select id="group3ID" name="group" disabled>
+                <select id="group3ID" name="group3" disabled>
                     <option value="">Select</option>
-                    <option>Heater/Demister</option>
-                    <option>Wipers and Washers</option>
-                    <option>Warning Lights</option>
-                    <option>Guages</option>
+                    <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Heater/Demister' ? 'selected' : ''; ?>>Heater/Demister</option>
+                    <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Wipers and Washers' ? 'selected' : ''; ?>>Wipers and Washers</option>
+                    <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Warning Lights' ? 'selected' : ''; ?>>Warning Lights</option>
+                    <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Gauges' ? 'selected' : ''; ?>>Gauges</option>
                 </select>
-                <input name="checkbox7" type="checkbox" class="checkboxs" disabled>
-                <input name="checkbox8" type="checkbox" class="checkboxs" disabled>
+                <input name="checkbox7" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox7']) && $elementsData['checkbox7'] ? 'checked' : ''; ?> disabled>
+                <input name="checkbox8" type="checkbox" class="checkboxs" <?php echo isset($elementsData['checkbox8']) && $elementsData['checkbox8'] ? 'checked' : ''; ?> disabled>
             </div>
+
             <br>
             <div class="cbta-container cbta-outline">
                 <h2 class="cbta-header">Authorised Examiner Notes</h2>
-                <textarea id="examinernotes" maxlength="250" name="notes" rows="10" cols="50" disabled></textarea>
+                <textarea id="examinernotes" maxlength="250" name="examinernotes" rows="10" cols="50" disabled><?php echo isset($elementsData['examinernotes']) ? $elementsData['examinernotes'] : ''; ?></textarea>
             </div>
-            <br>
         </form>
     </div>
-
-
-
-
-
 
 
 </body>

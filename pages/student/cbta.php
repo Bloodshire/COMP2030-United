@@ -13,7 +13,21 @@
 <html>
 
 <body>
-    <?php require_once "../../inc/main.inc.php"; ?>
+    <?php
+    require_once "../../inc/main.inc.php";
+
+    // Define the unit and task information
+    $tasks = [
+        [1, "Cabin Drill and Control", "cabin_drill_and_control.php"],
+        [2, "Starting Up and Shutting down the Engine", "starting_up_and_shutting_down_engine.php"],
+        [3, "Moving off from the Kerb", "Moving_off_from_kerb.php"],
+        [4, "Stopping and Securing the Vehicle", "stopping_and_securing_vehicle.php"],
+        [5, "Stop and go (Using the park brake)", "stop_and_go.php"],
+        [6, "Gear Changing (Up and Down)", "gear_changing.php"],
+        [7, "Steering (Forward and Reverse)", "steering.php"],
+        [8, "Review of all basic procedures", "review_basic_procedures.php"]
+    ];
+    ?>
 
     <div class="column">
 
@@ -22,76 +36,31 @@
             <hr>
 
             <ol class="cbta-list1">
+                <?php
+                $unitId = 1;  // Change this to the unit ID you want to retrieve
 
-                <div class="list-item">
+                // Loop through tasks and set checkboxes based on database entries
+                foreach ($tasks as $index => $task) {
+                    $taskId = $task[0];
+                    $taskName = $task[1];
+                    $taskUrl = $task[2];
 
-                    <a href="cabin_drill_and_control.php">
-                        <li class="hover no-padding">Cabin Drill and Control</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    // Check if the task is completed (exists in cbta_tasks)
+                    $sql = "SELECT * FROM cbta_tasks WHERE unit_id = $unitId AND task_id = $taskId AND student_id = " . $_SESSION['user_id'];
+                    $result = $conn->query($sql);
 
-                <div class="list-item">
-                    <a href="starting_up_and_shutting_down_engine.php">
-                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    $isChecked = $result->num_rows > 0 ? 'checked' : '';
 
-                <div class="list-item">
-                    <a href="Moving_off_from_kerb.php">
-                        <li class="hover no-padding">Moving off from the Kerb</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stopping_and_securing_vehicle.php">
-                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stop_and_go.php">
-                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="gear_changing.php">
-                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="steering.php">
-                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="review_basic_procedures.php">
-                        <li class="hover no-padding">Review of all basic procedures</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-
+                    echo '<div class="list-item">';
+                    echo "<a href=\"$taskUrl\"><li class=\"hover no-padding\">$taskName</li></a>";
+                    echo "<input type=\"checkbox\" class=\"checkboxs\" disabled $isChecked>";
+                    echo '</div>';
+                    echo '<p></p>';
+                }
+                ?>
             </ol>
-
         </div>
     </div>
-
     <div class="column">
 
         <div class="cbta-Container1">
@@ -99,76 +68,31 @@
             <hr>
 
             <ol class="cbta-list1">
+                <?php
+                $unitId = 1;  // Change this to the unit ID you want to retrieve
 
-                <div class="list-item">
+                // Loop through tasks and set checkboxes based on database entries
+                foreach ($tasks as $index => $task) {
+                    $taskId = $task[0];
+                    $taskName = $task[1];
+                    $taskUrl = $task[2];
 
-                    <a href="cabin_drill_and_control.php">
-                        <li class="hover no-padding">Cabin Drill and Control</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    // Check if the task is completed (exists in cbta_tasks)
+                    $sql = "SELECT * FROM cbta_tasks WHERE unit_id = $unitId AND task_id = $taskId AND student_id = " . $_SESSION['user_id'];
+                    $result = $conn->query($sql);
 
-                <div class="list-item">
-                    <a href="starting_up_and_shutting_down_engine.php">
-                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    $isChecked = $result->num_rows > 0 ? 'checked' : '';
 
-                <div class="list-item">
-                    <a href="Moving_off_from_kerb.php">
-                        <li class="hover no-padding">Moving off from the Kerb</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stopping_and_securing_vehicle.php">
-                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stop_and_go.php">
-                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="gear_changing.php">
-                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="steering.php">
-                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="review_basic_procedures.php">
-                        <li class="hover no-padding">Review of all basic procedures</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-
+                    echo '<div class="list-item">';
+                    echo "<a href=\"$taskUrl\"><li class=\"hover no-padding\">$taskName</li></a>";
+                    echo "<input type=\"checkbox\" class=\"checkboxs\" disabled $isChecked>";
+                    echo '</div>';
+                    echo '<p></p>';
+                }
+                ?>
             </ol>
-
         </div>
     </div>
-
     <div class="column">
 
         <div class="cbta-Container1">
@@ -176,76 +100,31 @@
             <hr>
 
             <ol class="cbta-list1">
+                <?php
+                $unitId = 1;  // Change this to the unit ID you want to retrieve
 
-                <div class="list-item">
+                // Loop through tasks and set checkboxes based on database entries
+                foreach ($tasks as $index => $task) {
+                    $taskId = $task[0];
+                    $taskName = $task[1];
+                    $taskUrl = $task[2];
 
-                    <a href="cabin_drill_and_control.php">
-                        <li class="hover no-padding">Cabin Drill and Control</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    // Check if the task is completed (exists in cbta_tasks)
+                    $sql = "SELECT * FROM cbta_tasks WHERE unit_id = $unitId AND task_id = $taskId AND student_id = " . $_SESSION['user_id'];
+                    $result = $conn->query($sql);
 
-                <div class="list-item">
-                    <a href="starting_up_and_shutting_down_engine.php">
-                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    $isChecked = $result->num_rows > 0 ? 'checked' : '';
 
-                <div class="list-item">
-                    <a href="Moving_off_from_kerb.php">
-                        <li class="hover no-padding">Moving off from the Kerb</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stopping_and_securing_vehicle.php">
-                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stop_and_go.php">
-                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="gear_changing.php">
-                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="steering.php">
-                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="review_basic_procedures.php">
-                        <li class="hover no-padding">Review of all basic procedures</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-
+                    echo '<div class="list-item">';
+                    echo "<a href=\"$taskUrl\"><li class=\"hover no-padding\">$taskName</li></a>";
+                    echo "<input type=\"checkbox\" class=\"checkboxs\" disabled $isChecked>";
+                    echo '</div>';
+                    echo '<p></p>';
+                }
+                ?>
             </ol>
-
         </div>
     </div>
-
     <div class="column">
 
         <div class="cbta-Container1">
@@ -253,76 +132,31 @@
             <hr>
 
             <ol class="cbta-list1">
+                <?php
+                $unitId = 1;  // Change this to the unit ID you want to retrieve
 
-                <div class="list-item">
+                // Loop through tasks and set checkboxes based on database entries
+                foreach ($tasks as $index => $task) {
+                    $taskId = $task[0];
+                    $taskName = $task[1];
+                    $taskUrl = $task[2];
 
-                    <a href="cabin_drill_and_control.php">
-                        <li class="hover no-padding">Cabin Drill and Control</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    // Check if the task is completed (exists in cbta_tasks)
+                    $sql = "SELECT * FROM cbta_tasks WHERE unit_id = $unitId AND task_id = $taskId AND student_id = " . $_SESSION['user_id'];
+                    $result = $conn->query($sql);
 
-                <div class="list-item">
-                    <a href="starting_up_and_shutting_down_engine.php">
-                        <li class="hover no-padding">Starting Up and Shutting down the Engine</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
+                    $isChecked = $result->num_rows > 0 ? 'checked' : '';
 
-                <div class="list-item">
-                    <a href="Moving_off_from_kerb.php">
-                        <li class="hover no-padding">Moving off from the Kerb</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stopping_and_securing_vehicle.php">
-                        <li class="hover no-padding">Stopping and Securing the Vehicle</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="stop_and_go.php">
-                        <li class="hover no-padding">Stop and go (Using the park brake)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="gear_changing.php">
-                        <li class="hover no-padding">Gear Changing (Up and Down)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="steering.php">
-                        <li class="hover no-padding">Steering (Forward and Reverse)</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-                <p></p>
-
-                <div class="list-item">
-                    <a href="review_basic_procedures.php">
-                        <li class="hover no-padding">Review of all basic procedures</li>
-                    </a>
-                    <input type="checkbox" class="checkboxs" disabled>
-                </div>
-
+                    echo '<div class="list-item">';
+                    echo "<a href=\"$taskUrl\"><li class=\"hover no-padding\">$taskName</li></a>";
+                    echo "<input type=\"checkbox\" class=\"checkboxs\" disabled $isChecked>";
+                    echo '</div>';
+                    echo '<p></p>';
+                }
+                ?>
             </ol>
-
         </div>
     </div>
-
 
 </body>
 

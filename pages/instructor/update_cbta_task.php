@@ -1,5 +1,5 @@
 <?php
-require_once "../../inc/main.inc.php";
+session_start();
 require_once "../../inc/dbconn.inc.php";
 
 // Check if the form is submitted
@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $task = isset($_GET['task']) ? $_GET['task'] : '';
 
     // Check if the entry already exists in the database
-    $checkQuery = "SELECT task_id FROM cbta_tasks WHERE unit_id = ? AND task_id = ?";
+    $checkQuery = "SELECT entry_id FROM cbta_tasks WHERE unit_id = ? AND task_id = ?";
     $checkStmt = $conn->prepare($checkQuery);
     $checkStmt->bind_param("ii", $unit, $task);
     $checkStmt->execute();
@@ -19,48 +19,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $checkStmt->close();
 
         // Retrieve form data
-        $checkbox1 = isset($_POST['checkbox1']) ? 1 : 0;
-        $checkbox2 = isset($_POST['checkbox2']) ? 1 : 0;
-        $checkbox3 = isset($_POST['checkbox3']) ? 1 : 0;
-        $checkbox4 = isset($_POST['checkbox4']) ? 1 : 0;
-        $group1 = isset($_POST['group1']) ? $_POST['group1'] : '';
-        $checkbox5 = isset($_POST['checkbox5']) ? 1 : 0;
-        $checkbox6 = isset($_POST['checkbox6']) ? 1 : 0;
-        $group2 = isset($_POST['group2']) ? $_POST['group2'] : '';
-        $checkbox7 = isset($_POST['checkbox7']) ? 1 : 0;
-        $checkbox8 = isset($_POST['checkbox8']) ? 1 : 0;
-        $group3 = isset($_POST['group3']) ? $_POST['group3'] : '';
-        $examinerNotes = isset($_POST['examinernotes']) ? $_POST['examinernotes'] : '';
+        $elementsData = [];
 
-        // Sample JSON data
-        $elementsData = '{
-            "checkbox1": ' . ($checkbox1 ? 'true' : 'false') . ',
-            "checkbox2": ' . ($checkbox2 ? 'true' : 'false') . ',
-            "checkbox3": ' . ($checkbox3 ? 'true' : 'false') . ',
-            "checkbox4": ' . ($checkbox4 ? 'true' : 'false') . ',
-            "group1": "' . $group1 . '",
-            "checkbox5": ' . ($checkbox5 ? 'true' : 'false') . ',
-            "checkbox6": ' . ($checkbox6 ? 'true' : 'false') . ',
-            "group2": "' . $group2 . '",
-            "checkbox7": ' . ($checkbox7 ? 'true' : 'false') . ',
-            "checkbox8": ' . ($checkbox8 ? 'true' : 'false') . ',
-            "group3": "' . $group3 . '"
-        }';
+        foreach ($_POST as $key => $value) {
+            $elementsData[$key] = $_POST[$key];
+        }
 
         // Get the current user's student ID and instructor ID
-        $studentId = isset($_SESSION['student_user_id']) ? $_SESSION['student_user_id'] : 0;
-        $instructorId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
+        $studentId = $_SESSION['student_user_id'];
+        $instructorId = $_SESSION['user_id'];
 
         // Get the current date
         $completionDate = date('Y-m-d');
 
+        // Encode the dynamic JSON data
+        $elementsJson = json_encode($elementsData);
+
         // Update the JSON data in the elements field and set other fields
         $updateQuery = "UPDATE cbta_tasks SET elements = ?, student_id = ?, instructor_id = ?, completion_date = ? WHERE unit_id = ? AND task_id = ?";
         $updateStmt = $conn->prepare($updateQuery);
-        $updateStmt->bind_param("siissi", $elementsData, $studentId, $instructorId, $completionDate, $unit, $task);
+        $updateStmt->bind_param("siisii", $elementsJson, $studentId, $instructorId, $completionDate, $unit, $task);
 
         if ($updateStmt->execute()) {
-            echo "CBT&A Unit 1, Task 1 updated successfully!";
+            header("Location: manage_student.php?success=1");
         } else {
             echo "Error updating CBT&A Unit 1, Task 1: " . $conn->error;
         }
@@ -71,33 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $checkStmt->close();
 
         // Retrieve form data
-        $checkbox1 = isset($_POST['checkbox1']) ? 1 : 0;
-        $checkbox2 = isset($_POST['checkbox2']) ? 1 : 0;
-        $checkbox3 = isset($_POST['checkbox3']) ? 1 : 0;
-        $checkbox4 = isset($_POST['checkbox4']) ? 1 : 0;
-        $group1 = isset($_POST['group1']) ? $_POST['group1'] : '';
-        $checkbox5 = isset($_POST['checkbox5']) ? 1 : 0;
-        $checkbox6 = isset($_POST['checkbox6']) ? 1 : 0;
-        $group2 = isset($_POST['group2']) ? $_POST['group2'] : '';
-        $checkbox7 = isset($_POST['checkbox7']) ? 1 : 0;
-        $checkbox8 = isset($_POST['checkbox8']) ? 1 : 0;
-        $group3 = isset($_POST['group3']) ? $_POST['group3'] : '';
-        $examinerNotes = isset($_POST['examinernotes']) ? $_POST['examinernotes'] : '';
+        $elementsData = [];
 
-        // Sample JSON data
-        $elementsData = '{
-            "checkbox1": ' . ($checkbox1 ? 'true' : 'false') . ',
-            "checkbox2": ' . ($checkbox2 ? 'true' : 'false') . ',
-            "checkbox3": ' . ($checkbox3 ? 'true' : 'false') . ',
-            "checkbox4": ' . ($checkbox4 ? 'true' : 'false') . ',
-            "group1": "' . $group1 . '",
-            "checkbox5": ' . ($checkbox5 ? 'true' : 'false') . ',
-            "checkbox6": ' . ($checkbox6 ? 'true' : 'false') . ',
-            "group2": "' . $group2 . '",
-            "checkbox7": ' . ($checkbox7 ? 'true' : 'false') . ',
-            "checkbox8": ' . ($checkbox8 ? 'true' : 'false') . ',
-            "group3": "' . $group3 . '"
-        }';
+        foreach ($_POST as $key => $value) {
+            $elementsData[$key] = $_POST[$key];
+        }
 
         // Get the current user's student ID and instructor ID
         $studentId = isset($_SESSION['student_user_id']) ? $_SESSION['student_user_id'] : 0;
@@ -106,13 +65,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get the current date
         $completionDate = date('Y-m-d');
 
+        // Encode the dynamic JSON data
+        $elementsJson = json_encode($elementsData);
+
         // Insert the new entry into the database, including the additional fields
         $insertQuery = "INSERT INTO cbta_tasks (unit_id, task_id, elements, student_id, instructor_id, completion_date) VALUES (?, ?, ?, ?, ?, ?)";
         $insertStmt = $conn->prepare($insertQuery);
-        $insertStmt->bind_param("iissis", $unit, $task, $elementsData, $studentId, $instructorId, $completionDate);
+        $insertStmt->bind_param("iisiis", $unit, $task, $elementsJson, $studentId, $instructorId, $completionDate);
 
         if ($insertStmt->execute()) {
-            echo "CBT&A Unit 1, Task 1 inserted successfully!";
+            header("Location: manage_student.php?success=1");
         } else {
             echo "Error inserting CBT&A Unit 1, Task 1: " . $conn->error;
         }
