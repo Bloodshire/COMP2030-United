@@ -14,7 +14,7 @@
     <?php require_once "../../inc/main.inc.php";?>
 
         <form class="reportContainer" method="POST" action="studentList.php">
-    <h2>IN CONSTRUCTION</h2>
+    <h2><center>UNDER CONSTRUCTION</center></h2>
             
             <div class="selectWrapper">
                 <select id="insName" name="insName">

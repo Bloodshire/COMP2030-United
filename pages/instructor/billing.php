@@ -23,39 +23,42 @@
     ?>
 
     <div class="centre">
+        <div class="container centre-div">
 
-        <h2>Create Invoice for Student</h2>
 
-        <?php
-        require_once "../../inc/dbconn.inc.php";
-        // Retrieve a list of current students for this instructor
-        $instructor_id = $_SESSION['user_id'];
-        $query = "SELECT user_id, given_name, surname FROM users WHERE instructor_id = ? AND role_id = 3";
-        $stmt = $conn->prepare($query);
-        $stmt->execute([$instructor_id]);
-        $result = $stmt->get_result();
-        ?>
-        <form id="invoiceForm" action="process_invoice.php" method="post">
-            <label for="student">Select Student</label>
-            <select name="student" id="student" required>
-                <?php
-                while ($student = $result->fetch_assoc()) {
-                    echo '<option value="' . $student['user_id'] . '">' . $student['given_name'] . ' ' . $student['surname'] . '</option>';
-                }
-                ?>
-            </select>
+            <h2>Create Invoice for Student</h2>
 
-            <label for="invoice_date">Invoice Date</label>
-            <input type="date" name="invoice_date" id="invoice_date" required>
+            <?php
+            require_once "../../inc/dbconn.inc.php";
+            // Retrieve a list of current students for this instructor
+            $instructor_id = $_SESSION['user_id'];
+            $query = "SELECT user_id, given_name, surname FROM users WHERE instructor_id = ? AND role_id = 3";
+            $stmt = $conn->prepare($query);
+            $stmt->execute([$instructor_id]);
+            $result = $stmt->get_result();
+            ?>
+            <form id="invoiceForm" action="process_invoice.php" method="post">
+                <label for="student">Select Student</label>
+                <select name="student" id="student" required>
+                    <?php
+                    while ($student = $result->fetch_assoc()) {
+                        echo '<option value="' . $student['user_id'] . '">' . $student['given_name'] . ' ' . $student['surname'] . '</option>';
+                    }
+                    ?>
+                </select>
 
-            <label for="cost">Invoice Amount</label>
-            <input type="number" name="cost" id="cost" step="0.01" required>
+                <label for="invoice_date">Invoice Date</label>
+                <input type="date" name="invoice_date" id="invoice_date" required>
 
-            <label for="due_date">Due Date</label>
-            <input type="date" name="due_date" id="due_date" required>
-            <br>
-            <br><button class="btn-custom"><i class="fa-solid fa-square-plus"></i> Create Invoice</button>
-        </form>
+                <label for="cost">Invoice Amount</label>
+                <input type="number" name="cost" id="cost" step="0.01" required>
+
+                <label for="due_date">Due Date</label>
+                <input type="date" name="due_date" id="due_date" required>
+                <br>
+                <br><button class="btn-custom"><i class="fa-solid fa-square-plus"></i> Create Invoice</button>
+            </form>
+        </div>
     </div>
 
 
