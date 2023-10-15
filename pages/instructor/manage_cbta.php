@@ -74,6 +74,25 @@
     ?>
 
     <div class="cbta-container container centre-div">
+        <?php
+        $unit = 1;
+        $currentTask = $task;
+
+        // Define the URLs for the "Prev" and "Next" buttons
+        $prevURL = "manage_cbta.php?unit=$unit&task=" . ($currentTask - 1);
+        $nextURL = "manage_cbta.php?unit=$unit&task=" . ($currentTask + 1);
+
+        // Determine whether to disable the "Prev" button
+        $disablePrev = ($currentTask == 1) ? 'disabled' : '';
+
+        // Determine whether to disable the "Next" button
+        $disableNext = ($currentTask == 8) ? 'disabled' : '';
+        ?>
+
+        <div class="float-right">
+            <a href="<?php echo $prevURL; ?>"><button type="button" class="btn-custom btn-blue btn-cbta2" <?php echo $disablePrev; ?>><i class="fa-solid fa-chevron-left"></i> Prev</button></a>
+            <a href="<?php echo $nextURL; ?>"><button type="button" class="btn-custom btn-blue btn-cbta3" <?php echo $disableNext; ?>>Next <i class="fa-solid fa-chevron-right"></i></button></a>
+        </div>
         <p><?php echo "<i class=\"fa-solid fa-user-graduate\"></i> Student: " . $student_given_name . " " . $student_surname ?></p>
         <p><i class="fa-solid fa-marker"></i> Last updated: <?php echo isset($completionDate) ? $completionDate : 'Never'; ?><br>
             <?php echo isset($instructorId) ? "<i class=\"fa-solid fa-user-tie\"></i> Instructor: $instructorGivenName $instructorSurname" : ''; ?></p>
@@ -293,24 +312,7 @@
             </div>
             <br>
             <div class="center">
-                <?php
-                $unit = 1;
-                $currentTask = $task;
-
-                // Define the URLs for the "Prev" and "Next" buttons
-                $prevURL = "manage_cbta.php?unit=$unit&task=" . ($currentTask - 1);
-                $nextURL = "manage_cbta.php?unit=$unit&task=" . ($currentTask + 1);
-
-                // Determine whether to disable the "Prev" button
-                $disablePrev = ($currentTask == 1) ? 'disabled' : '';
-
-                // Determine whether to disable the "Next" button
-                $disableNext = ($currentTask == 8) ? 'disabled' : '';
-                ?>
-
-                <a href="<?php echo $prevURL; ?>"><button type="button" class="btn-custom btn-blue btn-cbta2" <?php echo $disablePrev; ?>><i class="fa-solid fa-chevron-left"></i> Prev</button></a>
                 <button class="btn-custom btn-cbta1">Update</button>
-                <a href="<?php echo $nextURL; ?>"><button type="button" class="btn-custom btn-blue btn-cbta3" <?php echo $disableNext; ?>>Next <i class="fa-solid fa-chevron-right"></i></button></a>
             </div>
 
 
