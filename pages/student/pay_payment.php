@@ -46,6 +46,8 @@
 
                 // Example: Display the payment form
                 echo '<form id="invoiceForm" action="process_payment.php" method="post">
+                <input type="hidden" name="payment_id" value="' . $payment_id . '">
+                
                     <br><h2>Credit Card Details</h2>
                     <div>
                         <label class="section-header">Card number</label>

@@ -46,7 +46,7 @@
                         $stmt_logbook->bind_param("i", $entry_id);
 
                         if ($stmt_logbook->execute()) {
-                            echo "<span id='notification' class='notification fade-out'>Entry removed successfully.</span>";
+                            echo "<span id='notification' class='notification fade-out'>Entry has been <b>removed</b>!</span>";
                         } else {
                             echo "Error deleting entry from logbook table: " . $stmt_logbook->error;
                         }
