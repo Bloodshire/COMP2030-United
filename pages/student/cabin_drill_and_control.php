@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Task 1: Cabin Drill and Control</title>
+    <title>Unit 1: Task 1 - Cabin Drill and Control</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Connor">
     <link rel="stylesheet" href="../../styles/style.css">
@@ -20,11 +20,15 @@
 
     // If the form is not submitted, fetch data from the database
     $studentId = $_SESSION['user_id'];
-    $selectQuery = "SELECT elements FROM cbta_tasks WHERE student_id = ? AND unit_id = 1 AND task_id = 1";
+    $selectQuery = "SELECT ct.elements, ct.completion_date, ct.instructor_id, u.given_name, u.surname
+               FROM cbta_tasks ct
+               LEFT JOIN users u ON ct.instructor_id = u.user_id
+               WHERE ct.student_id = ? AND ct.unit_id = 1 AND ct.task_id = 1";
+
     $selectStmt = $conn->prepare($selectQuery);
     $selectStmt->bind_param("i", $studentId);
     $selectStmt->execute();
-    $selectStmt->bind_result($elementsJson);
+    $selectStmt->bind_result($elementsJson, $completionDate, $instructorId, $instructorGivenName, $instructorSurname);
 
     if ($selectStmt->fetch()) {
         // Decode the JSON data
@@ -37,7 +41,11 @@
         <table id="cbta-table">
             <tr>
                 <th class="black-border">Learning Outcome</th>
-                <td>The learner will be able to set up the cabin of the vehicle in order to safely, efficiently and effectively drive the vehicle (cabin drill) and be able to locate and identify all controls</td>
+                <td>
+                    <p>
+                        The learner will be able to set up the cabin of the vehicle in order to safely, efficiently and effectively drive the vehicle (cabin drill) and be able to locate and identify all controls
+                    </p>
+                </td>
             </tr>
             <tr>
                 <th>Assessment Standard</th>
@@ -53,8 +61,8 @@
             <thead>
                 <tr>
                     <th class="large-column">Task 1 Requirements</th>
-                    <th class="small-column">Homework</th>
-                    <th class="small-column">Homework</th>
+                    <th class="small-column" colspan="2"><center>Homework</center></th>
+
                 </tr>
             </thead>
             <tbody>
@@ -144,7 +152,7 @@
             <div>
                 <label for="group1">Group 1 - Control Name</label>
                 <select id="group1ID" name="group1" disabled>
-                    <option value="">Select</option>
+                    <option value=""></option>
                     <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Brake' ? 'selected' : ''; ?>>Brake</option>
                     <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Accelerator' ? 'selected' : ''; ?>>Accelerator</option>
                     <option <?php echo isset($elementsData['group1']) && $elementsData['group1'] === 'Steering Wheel' ? 'selected' : ''; ?>>Steering Wheel</option>
@@ -158,7 +166,7 @@
             <div>
                 <label for="group2">Group 2 - Control Name</label>
                 <select id="group2ID" name="group2" disabled>
-                    <option value="">Select</option>
+                    <option value=""></option>
                     <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Clutch' ? 'selected' : ''; ?>>Clutch</option>
                     <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Park Brake' ? 'selected' : ''; ?>>Park Brake</option>
                     <option <?php echo isset($elementsData['group2']) && $elementsData['group2'] === 'Warning Device' ? 'selected' : ''; ?>>Warning Device</option>
@@ -172,7 +180,7 @@
             <div>
                 <label for="group3">Group 3 - Control Name</label>
                 <select id="group3ID" name="group3" disabled>
-                    <option value="">Select</option>
+                    <option value=""></option>
                     <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Heater/Demister' ? 'selected' : ''; ?>>Heater/Demister</option>
                     <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Wipers and Washers' ? 'selected' : ''; ?>>Wipers and Washers</option>
                     <option <?php echo isset($elementsData['group3']) && $elementsData['group3'] === 'Warning Lights' ? 'selected' : ''; ?>>Warning Lights</option>
@@ -185,10 +193,13 @@
             <br>
             <div class="cbta-container cbta-outline">
                 <h2 class="cbta-header">Authorised Examiner Notes</h2>
-                <textarea id="examinernotes" maxlength="250" name="examinernotes" rows="10" cols="50" disabled><?php echo isset($elementsData['examinernotes']) ? $elementsData['examinernotes'] : ''; ?></textarea>
+                <textarea id="examinernotes" maxlength="250" name="examinernotes" rows="10" cols="50" readonly><?php echo isset($elementsData['examinernotes']) ? $elementsData['examinernotes'] : ''; ?></textarea>
             </div>
+            <p><i class="fa-solid fa-marker"></i> Last updated: <?php echo isset($completionDate) ? $completionDate : 'Never'; ?><br>
+                <?php echo isset($instructorId) ? "<i class=\"fa-solid fa-user-tie\"></i> Instructor: $instructorGivenName $instructorSurname" : ''; ?></p>
         </form>
     </div>
+
 
 
 </body>

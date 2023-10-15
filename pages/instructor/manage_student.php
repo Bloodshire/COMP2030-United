@@ -16,10 +16,6 @@
     <?php
     require_once "../../inc/main.inc.php";
 
-    if (isset($_GET['success']) && $_GET['success'] == 1) {
-        echo "<span id='notification' class='notification fade-out'>CBT&A Task has been updated <b>successfully</b>!</span>";
-    }
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $student_id = $_POST['user_id'];
         $student_given_name = $_POST['given_name'];
@@ -41,7 +37,7 @@
     }
     ?>
     <div class="centre">
-        <h1><i class="fa-solid fa-circle-user fa-2xl"></i></h1>
+        <h1><i class="fa-solid fa-user-graduate fa-2xl"></i></h1>
         <h2><?php echo $student_given_name . " " . $student_surname ?></h2>
 
         <button class="accordion">CBT&A Units & Tasks</button>
@@ -118,14 +114,6 @@
         </div>
 
         <script>
-            var notification = document.getElementById("notification");
-            if (notification) {
-                // Remove the element after the animation ends
-                notification.addEventListener("animationend", function() {
-                    notification.remove();
-                });
-            }
-
             var acc = document.getElementsByClassName("accordion");
             var i;
 

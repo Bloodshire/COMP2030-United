@@ -251,6 +251,7 @@ body {
   background-color: #214dffc8;
   padding: 10px;
   width: 100%;
+  top: 0;
   color: white;
   text-align: center;
 }
@@ -378,10 +379,39 @@ div label {
   flex-shrink: 0;
 }
 
-.btn-cbta {
-  width: 100%;
+.float-left {
+  float: left !important;
+}
+
+.left-space {
+  margin-right: 45px;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.btn-cbta1 {
+  width: 60%;
   border-radius: 0px;
   font-weight: bold;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-cbta2 {
+  border-radius: 10px 0px 0px 10px !important;
+}
+
+.btn-cbta3 {
+  border-radius: 0px 10px 10px 0px !important;
 }
 
 .btn-cbta:hover {
@@ -437,8 +467,11 @@ div label {
   color: lightgray !important;
   background-color: #807478 !important;
   cursor: default;
-  border: 0px !important;
-  border-radius: 8px !important;
+  border: 2px solid #807478 !important;
+}
+
+.btn-custom[disabled]:hover {
+  transform: scale(1) !important;
 }
 
 .btn-black {
@@ -883,7 +916,8 @@ a {
 
 .hover {
   margin-top: 5px;
-  padding: 10px 0px;
+  padding: 10px 0px 10px 5px;
+  margin-left: 5px;;
   border-radius: 15px;
   transform-origin: bottom left;
   transition-duration: 0.2s;

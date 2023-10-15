@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updateStmt->bind_param("siisii", $elementsJson, $studentId, $instructorId, $completionDate, $unit, $task);
 
         if ($updateStmt->execute()) {
-            header("Location: manage_student.php?success=1");
+            header("Location: manage_cbta.php?unit=$unit&task=$task&success=1");
         } else {
             echo "Error updating CBT&A Unit 1, Task 1: " . $conn->error;
         }
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $insertStmt->bind_param("iisiis", $unit, $task, $elementsJson, $studentId, $instructorId, $completionDate);
 
         if ($insertStmt->execute()) {
-            header("Location: manage_student.php?success=1");
+            header("Location: manage_cbta.php?unit=$unit&task=$task&success=1");
         } else {
             echo "Error inserting CBT&A Unit 1, Task 1: " . $conn->error;
         }
