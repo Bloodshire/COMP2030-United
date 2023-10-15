@@ -3,7 +3,7 @@
 <head>
     <title>Mastercard</title>
     <meta charset="utf-8">
-    <meta name="Authors" content=" Callum and Michael">
+    <meta name="Authors" content="Callum and Michael">
     <link rel="stylesheet" href="../../styles/style.css">
     <script src="../../scripts/script.js" defer></script>
     <a href="payments.php" id="menu-selected"></a>
@@ -12,7 +12,9 @@
 <html>
 
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+<h1 id="heading-back-btn"><a href="payments.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
+    <?php require_once "../../inc/main.inc.php"; ?>
     <form>
     <div>
         <label class="section-header">Card number</label>

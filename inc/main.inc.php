@@ -24,13 +24,39 @@ $student_allowed_uris = [
     '/gear_changing.php',
     '/steering.php',
     '/review_basic_procedures.php',
-    '/mastercard.php'
+    '/mastercard.php',
+    '/my_logbook.php',
+    '/logdrive_process.php',
+    '/pay_payment.php',
+    '/process_payment.php',
+    '/find_instructor.php'
 ];
-$qsd_allowed_uris = ['/reports.php', '/qsd-dashboard.php', '/profile.php'];
-$instructor_allowed_uris = ['/reports.php', '/instructor-dashboard.php', '/profile.php'];
-$government_allowed_uris = ['/reports.php', '/government-dashboard.php', '/profile.php'];
+$qsd_allowed_uris = [
+    '/reports.php',
+    '/qsd-dashboard.php',
+    '/profile.php',
 
-
+];
+$instructor_allowed_uris = [
+    '/reports.php',
+    '/instructor-dashboard.php',
+    '/profile.php',
+    '/studentList.php',
+    '/students.php',
+    '/billing.php',
+    '/manage_student.php',
+    '/approvals.php',
+    '/add_student.php',
+    '/find_student.php',
+    '/process_add_student.php',
+    '/manage_cbta.php',
+    '/update_cbta_task.php'
+];
+$government_allowed_uris = [
+    '/reports.php',
+    '/government-dashboard.php',
+    '/profile.php'
+];
 
 // Get the current REQUEST_URI
 $current_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -103,8 +129,8 @@ if ($role_id == 3) {
         <li><a href="logbook.php"><i class="fa-xl fa-solid fa-car-side"></i><br>Log Book</a></li>
         <li><a href="cbta.php"><i class="fa-xl fa-solid fa-book"></i><br>CBT&A</a></li>
         <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
-        <li><a href="drivesummary.php"><i class="fa-xl fa-regular fa-clipboard"></i><br>Drive Summary</a></li>
-        <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Payments</a></li>
+        <!-- <li><a href="drivesummary.php"><i class="fa-xl fa-regular fa-clipboard"></i><br>Drive Summary</a></li> -->
+        <li><a href="payments.php"><i class="fa-solid fa-xl fa-file-invoice-dollar"></i><br>Bills & Payments</a></li>
         <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
     <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
@@ -134,10 +160,12 @@ else if ($role_id == 1) {
     <h1 class="nav-bar-title">TLDR</h1>
     <ul>
         <li><a href="instructor-dashboard.php"><i class="fa-xl fa-solid fa-house"></i><br>Dashboard</a></li>
-        <li><a href="logbook.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
-        <li><a href="cbta.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Repors</a></li>
-        <li><a href="payments.php"><i class="fa-solid fa-xl fa-dollar-sign"></i><br>Billing & Payments</a></li>
-        <!-- <li><a href="progresshours.php"><i class="fa-xl fa-solid fa-chart-line"></i><br>Progress & Hours</a></li> -->
+        <li><a href="students.php"><i class="fa-xl fa-solid fa-user-graduate"></i><br>Students</a></li>
+        <li><a href="approvals.php"><i class="fa-xl fa-solid fa-stamp"></i><br>Approvals</a></li>
+        <li><a href="billing.php"><i class="fa-solid fa-xl fa-file-invoice-dollar"></i><br>Billing & Payments</a></li>
+
+        <li><a href="reports.php"><i class="fa-xl fa-solid fa-file-invoice"></i><br>Reports</a></li>
+        <li><a href="profile.php"><i class="fa-xl fa-solid fa-user"></i><br>Profile</a></li>
     </ul>
     <div class="logout"><a href="../logout.php"><i class="fa-xl fa-solid fa-right-from-bracket"></i><br>Logout</a></div>
 </div>';
@@ -168,14 +196,11 @@ else if ($role_id == 4) {
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     // Redirect to the login page or display an access denied message
-    header("Location: login.php");
+    header("Location: /www/TLDR/pages/login.php");
     exit;
 }
 
 // Get the user's full name from the session data
 $user_given_name = isset($_SESSION['user_given_name']) ? $_SESSION['user_given_name'] : "Unknown User";
-
-// Display the welcome message
-echo "Welcome, " . $user_given_name . "!";
 ?>
 <hr>

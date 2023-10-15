@@ -4,9 +4,11 @@
 <head>
     <title>Register</title>
     <meta charset="utf-8">
-    <meta name="Authors" content="Harrison">
+    <meta name="Authors" content="Harrison and Michael">
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../scripts/registration.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 
 <body class="loginBody">
@@ -15,7 +17,10 @@
 
         <form id="registrationForm" method="POST" action="register_process.php">
 
-            <h1>Register</h1>
+
+            
+            <h1><a href="login.php"><i class="top-left heading-back-btn fa-solid fa-arrow-left"></i></a> Register</h1>
+
             <div id="loginInputs">
                 <p><i>Please give information as stated on your permit/licence</i></p>
 
@@ -110,10 +115,10 @@
 
                 <h2>Password Information</h2>
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="10" onchange="passStr()">
+                <input type="password" id="password" name="password" minlength="10" oninput="passStr()">
 
                 <div>
-                    <img src="images/no-pass.png" id="strengthImg">
+                    <img src="../images/no-pass.png" id="strengthImg">
                 </div>
 
                 <div id="passwordContainer">

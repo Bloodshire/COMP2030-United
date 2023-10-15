@@ -5,14 +5,15 @@
     <title>Reports: Students</title>
     <meta charset="utf-8">
     <meta name="Authors" content="Harrison">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
-    <a href="dashboard.php" id="menu-selected"></a>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <script src="../../scripts/script.js" defer></script>
+    <a href="reports.php" id="menu-selected"></a>
 </head>
 
 <body>
+<h1 id="heading-back-btn"><a href="reports.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
 
-    <?php require_once "inc/menu.inc.php";?>
+    <?php require_once "../../inc/main.inc.php";?>
 
     <form class="reportContainer" method="POST" action="reports.php">
             <div class="selectWrapper">

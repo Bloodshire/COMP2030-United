@@ -23,6 +23,15 @@ CREATE TABLE users (
     FOREIGN KEY (instructor_id) REFERENCES users(user_id)
 );
 
+CREATE TABLE cbta_tasks (
+    entry_id INT AUTO_INCREMENT PRIMARY KEY,
+    task_id INT,
+    unit_id INT,
+    elements JSON,  -- Store checkboxes in JSON format or as a related table
+    student_id INT, 
+    instructor_id INT,  
+    completion_date DATE
+);
 
 
 CREATE TABLE roles (
@@ -51,21 +60,22 @@ CREATE TABLE approvals (
     approval_id INT AUTO_INCREMENT PRIMARY KEY,
     logbook_entry_id INT NOT NULL,
     approver_id INT NOT NULL,
-    approval_date DATE NOT NULL,
-    approved BOOLEAN NOT NULL,
+    approval_date DATE,
+    approved TINYINT(1) NOT NULL,
     FOREIGN KEY (logbook_entry_id) REFERENCES logbook (entry_id),
     FOREIGN KEY (approver_id) REFERENCES users (user_id)
 );
 
-CREATE TABLE pending_entries (
-    pending_entry_id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    instructor_id INT NOT NULL,
     student_id INT NOT NULL,
-    approver_id INT NOT NULL,
-    entry_date DATE NOT NULL,
-    activity_description TEXT NOT NULL,
-    submitted_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (student_id) REFERENCES users (user_id),
-    FOREIGN KEY (approver_id) REFERENCES users (user_id)
+    invoice_amount DECIMAL(10, 2) NOT NULL,
+    due_date DATE NOT NULL,
+    payment_status TINYINT(1) NOT NULL, -- 0 = Outstanding payment; 1 = Paid; 2 = Unpaid and expired;
+    description TEXT,
+    FOREIGN KEY (instructor_id) REFERENCES users(user_id),
+    FOREIGN KEY (student_id) REFERENCES users(user_id)
 );
 
 CREATE user IF NOT EXISTS dbadmin@localhost;
@@ -73,6 +83,10 @@ GRANT all privileges ON TLDR.users TO dbadmin@localhost;
 GRANT all privileges ON TLDR.roles TO dbadmin@localhost;
 GRANT all privileges ON TLDR.logbook TO dbadmin@localhost;
 GRANT all privileges ON TLDR.pending_entries TO dbadmin@localhost;
+GRANT all privileges ON TLDR.approvals TO dbadmin@localhost;
+GRANT all privileges ON TLDR.cbta_tasks TO dbadmin@localhost;
+GRANT all privileges ON TLDR.payments TO dbadmin@localhost;
+
 
 -- Insert users into the 'roles' table
 INSERT INTO roles (role_name) VALUES
@@ -85,8 +99,8 @@ INSERT INTO users (email, password, given_name, surname, date_of_birth, street_a
 VALUES
     ('instructor1@example.com', '$2y$10$mrKQy6U46EC9cGdebUe7zeFsVoeG6yvC5.BJ/a1bTXXvKvXdDUx3G', 'Hans', 'Zimmer', '1980-01-15', '123 Main St', 'Hendon', 'CA', '90210', 'FN1023', 1),
     ('instructor2@example.com', '$2y$10$mrKQy6U46EC9cGdebUe7zeFsVoeG6yvC5.BJ/a1bTXXvKvXdDUx3G', 'Christopher', 'Nolan', '1975-07-30', '456 Elm St', 'Hendon', 'NY', '10001', 'FN7829', 1),
-    ('qsd1@example.com', '$2y$10$JvTv5GkQhn5TB89e23lapuqs/0cMzTW0lr6A8FgcUWMLYEq1ab.Ei', 'James', 'Cameron', '1982-03-22', '789 Oak St', 'TX', 'Hendon', '77002', 'FN2710', 2),
-    ('qsd2@example.com', '$2y$10$JvTv5GkQhn5TB89e23lapuqs/0cMzTW0lr6A8FgcUWMLYEq1ab.Ei', 'Michael', 'Bay', '1978-12-10', '101 Pine St', 'FL', 'Hendon', '33001', 'FN7291', 2);
+    ('qsd1@example.com', '$2y$10$JvTv5GkQhn5TB89e23lapuqs/0cMzTW0lr6A8FgcUWMLYEq1ab.Ei', 'James', 'Cameron', '1982-03-22', '789 Oak St', 'TX', 'Hendon', '77002', 'FN2710', 1),
+    ('qsd2@example.com', '$2y$10$JvTv5GkQhn5TB89e23lapuqs/0cMzTW0lr6A8FgcUWMLYEq1ab.Ei', 'Michael', 'Bay', '1978-12-10', '101 Pine St', 'FL', 'Hendon', '33001', 'FN7291', 1);
 
 INSERT INTO users (email, password, given_name, surname, date_of_birth, street_address, suburb, state, postcode, license_no, role_id, instructor_id)
 VALUES
@@ -97,3 +111,16 @@ VALUES
     -- Instructor password: PasswordI1
     -- QSD password: PasswordQ1
     -- Student password: PasswordS1
+
+    -- Insert logbook entries for students that need approval
+INSERT INTO logbook (student_id, approver_id, date, start_time, finish_time, duration, from_location, to_location, road_condition, weather_condition, traffic_condition)
+VALUES
+    (5, 1, '2023-05-01', '08:00:00', '09:30:00', 90, '123 Elm St', '456 Oak St', 'D', 'C', 'L'),
+    (5, 1, '2023-06-02', '18:00:00', '19:30:00', 90, '123 Elm St', '456 Oak St', 'W', 'R', 'H'),
+    (6, 2, '2023-05-02', '09:30:00', '11:00:00', 90, '789 Pine St', '101 Cedar St', 'W', 'R', 'H');
+
+-- Insert approvals for logbook entries that need approval
+INSERT INTO approvals (logbook_entry_id, approver_id, approved)
+VALUES
+    (1, 1, 0),  -- Logbook entry 1 needs approval from instructor 1
+    (3, 2 , 0);  -- Logbook entry 2 needs approval from instructor 2

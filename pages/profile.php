@@ -3,7 +3,7 @@
 <head>
     <title>Profile</title>
     <meta charset="utf-8">
-    <meta name="Authors" content="Callum">
+    <meta name="Authors" content="Callum and Michael">
     <link rel="stylesheet" href="../styles/style.css">
     <script src="scripts/script.js" defer></script>
     <script src="scripts/edit-and-save-details.js" defer></script>
@@ -13,7 +13,7 @@
 <html>
 
 <body>
-    <?php require_once "inc/menu.inc.php"; ?>
+    <?php require_once "inc/main.inc.php"; ?>
     <div>
         <?php
         // Get the user's full name from the session data

@@ -4,16 +4,18 @@
 <head>
     <title>Log Drive</title>
     <meta charset="utf-8">
-    <meta name="Authors" content=" Callum and Michael">
+    <meta name="Authors" content="Michael">
     <link rel="stylesheet" href="../../styles/style.css">
     <script src="../../scripts/script.js" defer></script>
     <a href="logbook.php" id="menu-selected"></a>
 </head>
 
 <body>
-    <?php require_once "../../inc/menu.inc.php"; ?>
+    <h1 id="heading-back-btn"><a href="logbook.php"><i class="heading-back-btn fa-solid fa-arrow-left"></i></a></h1>
+
+    <?php require_once "../../inc/main.inc.php"; ?>
     <div class="row">
-        <div class="column">
+        <div class="column c-ib">
             <form id="logbook-entry" method="POST" action="logdrive_process.php">
                 <div>
                     <label class="section-header">Date</label>
@@ -83,18 +85,18 @@
                 </div>
         </div>
 
-        <div class="column">
+        <div class="column c-ib">
             <label class="section-header">Instructor / QSD</label>
-                <div>
-                    <label>Name</label>
-                    <input type="text" placeholder="" value="" name="instructor_name" required>
-                </div>
-                <div>
-                    <label>License No.</label>
-                    <input type="text" placeholder="" value="" name="instructor_license" required>
-                </div>
-                <br>
-                
+            <div>
+                <label>Name</label>
+                <input type="text" placeholder="" value="<?php echo isset($_POST['instructor_name']) ? $_POST['instructor_name'] : ''; ?>" name="instructor_name" required readonly>
+            </div>
+            <div>
+                <label>License No.</label>
+                <input type="text" placeholder="" value="<?php echo isset($_POST['instructor_license']) ? $_POST['instructor_license'] : ''; ?>" name="instructor_license" required readonly>
+            </div>
+            <br>
+
             <br>
             <br>
 
@@ -106,35 +108,8 @@
                 </div>
             </div>
             <br>
-            <a href="logbook.php"><button class="btn-custom btn-black" type="button"><i class="fa-solid fa-chevron-left"></i> Back</button></a>
-            <a href="#modal1" class="button"><button type="button" class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit Drive</button></a>
-        </div>
-
-        <div id="modal1" class="overlay">
-            <a class="cancel" href="#"></a>
-            <div class="modal centre">
-                <!-- <a href="#"><span class="close">&times;</span></a> -->
-                <h2>Are you sure you want to submit the drive?</h2>
-                <div class="content">
-                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
-                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="modal2" class="overlay">
-            <a class="cancel" href="#"></a>
-            <div class="modal centre">
-                <!-- <a href="#"><span class="close">&times;</span></a> -->
-                <h2>Add QSD</h2>
-                <div class="content">
-                    <a href="#"><button class="btn-custom btn-red" type="button"><i class="fa-solid fa-xmark"></i> Cancel</button></a>
-                    <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit</button>
-                </div>
-            </div>
-        </div>
-
-        </form>
+            <button class="btn-custom bold"><i class="fa-solid fa-check"></i> Submit Drive</button>
+            </form>
 </body>
 
 </html>

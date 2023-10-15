@@ -4,7 +4,7 @@
 <head>
     <title>Login</title>
     <meta charset="utf-8">
-    <meta name="Authors" content="Harrison">
+    <meta name="Authors" content="Michael">
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../scripts/script.js" defer></script>
 </head>
