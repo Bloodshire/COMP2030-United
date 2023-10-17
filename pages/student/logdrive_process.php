@@ -107,14 +107,17 @@
                         $stmt_approvals = $conn->prepare($sql_approvals);
                         $stmt_approvals->bind_param("ii", $logbook_entry_id, $instructor_id);
 
-                if ($stmt_approvals->execute()) {
-                    echo "<h3>Success!</h3>";
-                    echo "<p>Your drive entry has been logged and is currently awaiting approval.</p>";
-                    echo '<a href="find_instructor.php"><button class="btn-custom btn-blue"><i class="fa-solid fa-square-plus"></i> Log Another Drive</button></a>';
-                } else {
-                    echo "Instructor with the provided license number not found.";
+                        if ($stmt_approvals->execute()) {
+                            echo "<h3>Success!</h3>";
+                            echo "<p>Your drive entry has been logged and is currently awaiting approval.</p>";
+                            echo '<a href="find_instructor.php"><button class="btn-custom btn-blue"><i class="fa-solid fa-square-plus"></i> Log Another Drive</button></a>';
+                        } else {
+                            echo "Instructor with the provided license number not found.";
+                        }
+                    }
                 }
             }
+
             // Close the database connection
             $conn->close();
             ?> <a href="logbook.php"><button class="btn-custom"><i class="fa-solid fa-table"></i> Check My Logbook</button></a>
@@ -122,4 +125,5 @@
     </div>
 
 </body>
+
 </html>
